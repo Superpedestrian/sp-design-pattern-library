@@ -4,6 +4,7 @@
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
 var gulp = require('gulp'),
+  sass = require('gulp-sass'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   argv = require('minimist')(process.argv.slice(2));
@@ -11,6 +12,14 @@ var gulp = require('gulp'),
 function resolvePath(pathInput) {
   return path.resolve(pathInput).replace(/\\/g,"/");
 }
+
+// SASS compilation
+gulp.task('pl-sass', function(){
+  return gulp.src(path.resolve(paths().source.css, '**/*.scss'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.resolve(paths().source.css)));
+});
+
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
@@ -89,7 +98,7 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:img',
     'pl-copy:favicon',
     'pl-copy:font',
-    'pl-copy:css',
+    gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
     'pl-copy:styleguide',
     'pl-copy:styleguide-css'
   ),
@@ -156,6 +165,11 @@ function reloadCSS() {
 function watch() {
   gulp.watch(resolvePath(paths().source.css) + '/**/*.css', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:css', reloadCSS));
   gulp.watch(resolvePath(paths().source.styleguide) + '/**/*.*', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS));
+
+
+
+
+  gulp.watch(path.resolve(paths().source.css, '**/*.scss')).on('change', gulp.series('pl-sass'));
 
   var patternWatches = [
     resolvePath(paths().source.patterns) + '/**/*.json',

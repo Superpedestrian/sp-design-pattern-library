@@ -1,0 +1,69 @@
+/*------------------------------------*\
+    #FONTS
+\*------------------------------------*/
+
+@font-face {
+  font-family: 'Graphik Regular';
+  src: url('Graphik-Regular-Web.eot');
+  src: url('Graphik-Regular-Web.eot?#iefix') format('embedded-opentype'),
+  url('Graphik-Regular-Web.woff2') format('woff2'),
+  url('Graphik-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Medium';
+  src: url('Graphik-Medium-Web.eot');
+  src: url('Graphik-Medium-Web.eot?#iefix') format('embedded-opentype'),
+  url('Graphik-Medium-Web.woff2') format('woff2'),
+  url('Graphik-Medium-Web.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Semibold';
+  src: url('Graphik-Semibold-Web.eot');
+  src: url('Graphik-Semibold-Web.eot?#iefix') format('embedded-opentype'),
+  url('Graphik-Semibold-Web.woff2') format('woff2'),
+  url('Graphik-Semibold-Web.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Bold';
+  src: url('Graphik-Bold-Web.eot');
+  src: url('Graphik-Bold-Web.eot?#iefix') format('embedded-opentype'),
+  url('Graphik-Bold-Web.woff2') format('woff2'),
+  url('Graphik-Bold-Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Black';
+  src: url('Graphik-Black-Web.eot');
+  src: url('Graphik-Black-Web.eot?#iefix') format('embedded-opentype'),
+  url('Graphik-Black-Web.woff2') format('woff2'),
+  url('Graphik-Black-Web.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Super';
+  src: url('Graphik-Super-Web.eot');
+  src: url('Graphik-Super-Web.eot?#iefix') format('embedded-opentype'),
+  url('Graphik-Super-Web.woff2') format('woff2'),
+  url('Graphik-Super-Web.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
