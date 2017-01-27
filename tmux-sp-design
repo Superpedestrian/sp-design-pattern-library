@@ -1,0 +1,16 @@
+tmux has-session -t despat
+
+if [ $? != 0 ]
+then
+  tmux new-session -s despat -n editor -d
+  tmux send-keys -t despat:1.1 'cd /Users/sarah/code/work/sp-design-pattern-library' C-m
+  tmux send-keys -t despat:1.1 'gulp patternlab:serve' C-m
+  
+  tmux split-window -h -t despat:1.1
+  tmux send-keys -t despat:1.2 'cd /Users/sarah/code/work/sp-design-pattern-library' C-m
+  tmux send-keys -t despat:1.2 'atom .' C-m
+  tmux send-keys -t despat:1.2 'cl' C-m
+  tmux send-keys -t despat:1.2 'ls' C-m
+fi
+
+tmux attach -t despat
