@@ -1,0 +1,50 @@
+/*------------------------------------
+    #PRIMARY NAVIGATION
+------------------------------------*/
+
+/**
+ * Navigation tag
+ */
+.c-primary-nav {
+  display: none;
+
+  &--is-active {
+    display: block;
+    position: absolute;
+    top: 67px;
+    right: 0;
+    z-index: 2;
+  }
+
+  @media all and (min-width: $bp-med) {
+    display: block;
+  }
+}
+
+/**
+ * Nav List
+ */
+.c-primary-nav__list {
+  display: none;
+
+  @media all and (min-width: $bp-med) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .c-primary-nav--is-active & {
+    display: block;
+  }
+}
+
+/**
+ * Nav Links
+ */
+.c-primary-nav__link {
+  display: block;
+  padding: 0 20px;
+  color: $color-white;
+  font: 16px "Graphik Regular", Helvetica, sans-serif;
+  text-transform: uppercase;
+}

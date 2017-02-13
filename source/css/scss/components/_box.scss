@@ -1,0 +1,20 @@
+/*------------------------------------
+    #BOX
+------------------------------------*/
+
+/**
+ * 1) This component is a modal-like
+ */
+.c-box {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 32em;
+  align-self: center;
+  justify-content: center;
+  border: 1px solid $color-gray-60;
+}
+
+.c-box__header {
+  margin-bottom: 2rem;
+  text-align: center;
+}

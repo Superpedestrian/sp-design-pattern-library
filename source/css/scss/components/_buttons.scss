@@ -1,0 +1,94 @@
+/*------------------------------------
+    #BUTTONS
+------------------------------------*/
+
+/**
+ * Button
+ */
+.c-btn {
+  display: inline-block;
+  min-width: 200px;
+  padding: $pad-double $pad-quad;
+  border: 0;
+  background: $color-brand-red;
+  color: $color-white;
+  font: 18px "Graphik Semibold", Helvetica, sans-serif;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+
+  &:hover, &:focus {
+    background: $color-brand-red;
+    color: $color-white;
+  }
+
+  /**
+   * Disabled button
+   */
+  &.disabled {
+    background: $color-gray-10;
+    color: $color-gray-60;
+  }
+}
+
+/**
+ * Small button
+ */
+.c-btn-small {
+  padding: $pad-half;
+}
+
+/**
+ * Large button
+ */
+.c-btn-large {
+  padding: $pad-half;
+  background: $color-gray-60;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/**
+ * Text button
+ */
+.c-text-btn {
+  position: relative;
+  border: none;
+  background: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  &:after {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 7px;
+    right: -26px;
+    background: url("../../../images/icon-arrowhead.svg") no-repeat;
+    content: "";
+    transition: all 0.2s ease;
+  }
+
+  &:hover, &:focus {
+    color: $color-gray-85;
+
+    &:after {
+      right: -28px;
+    }
+  }
+
+  .c-block-media--small & {
+    font-size: 1rem;
+  }
+}
+
+/**
+ * Button on overlay
+ */
+
+.c-btn--overlay {
+  background: $color-gray-40;
+}

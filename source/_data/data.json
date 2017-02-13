@@ -1,4 +1,116 @@
 {
+  "company" : {
+        "name" : "Superpedestrian",
+        "url" : "http://superpedestrian.com"
+    },
+  "btnText": "Button",
+  "primaryNav" : [
+    {
+      "label": "Copenhagen Wheel",
+      "icon" : false,
+      "url": "link.pages-cphw"
+    },
+    {
+      "label": "Bicycles",
+      "icon" : false,
+      "url": "link.pages-bikes"
+    },
+    {
+      "label": "Events",
+      "icon": false,
+      "url": "link.pages-events"
+    },
+    {
+      "label": "Support",
+      "icon": false,
+      "url": "link.pages-support"
+    },
+    {
+      "label": "Cart",
+      "icon" : "icon-cart",
+      "url": "link.pages-cart"
+    },
+    {
+      "label": "Login",
+      "icon" : false,
+      "url": "link.pages-login"
+    }
+  ],
+  "footerNav" : {
+    "company" : [
+      {
+        "label" : "About Us",
+        "url" : "link.pages-about"
+      },
+      {
+        "label" : "Careers",
+        "url" : "link.pages-careers"
+      },
+      {
+        "label" : "Legal",
+        "url" : "link.pages-legal"
+      },
+      {
+        "label" : "Resources & Advocacy",
+        "url" : "link.pages-resources"
+      }
+    ],
+    "partners" : [
+      {
+        "label" : "HUB Program",
+        "url" : "link.pages-partners"
+      },
+      {
+        "label" : "HUB Application",
+        "url" : "link.pages-partners-application"
+      },
+      {
+        "label" : "HUB Locator",
+        "url" : "link.pages-locator"
+      },
+      {
+        "label" : "Fleet Inquiry",
+        "url" : "link.pages-fleet"
+      }
+    ],
+    "shop" : [
+      {
+        "label": "Copenhagen Wheel",
+        "url" : "link.pages-cphw"
+      },
+      {
+        "label" : "Bicycles",
+        "url" : "link.pages-bicycles"
+      },
+      {
+        "label" : "Parts & Accessories",
+        "url" : "link.pages-parts"
+      }
+    ],
+    "community" : [
+      {
+        "label" : "Sign up for our newsletter",
+        "url" : "link.pages-newsletter"
+      },
+      {
+        "label" : "Facebook",
+        "url" : "https://www.facebook.com/copenhagenwheel"
+      },
+      {
+        "label" : "Twitter",
+        "url" : "https://twitter.com/CPHWheel"
+      },
+      {
+        "label" : "Instagram",
+        "url" : "https://www.instagram.com/copenhagenwheel"
+      },
+      {
+        "label" : "Medium",
+        "url" : "https://medium.com/@CopenhagenWheel"
+      }
+    ]
+  },
+  "copyright" : "&copy; 2017 Superpedestrian, Inc. All Rights Reserved.",
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",

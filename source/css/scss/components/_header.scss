@@ -1,0 +1,47 @@
+/*------------------------------------
+    #HEADER
+------------------------------------*/
+
+/**
+ * Header
+ */
+.c-header {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: $color-gray-90;
+
+  @media all and (min-height: $bp-med) {
+    padding: 32px;
+  }
+}
+
+/**
+ * Header Controls
+ * 1) This container holds the primary nav
+ */
+.c-header__controls {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+/**
+ * Nav toggle button
+ * 1) Styles for the general nav toggle button
+ */
+.nav-toggle {
+  display: block;
+  padding: 0.9rem 1rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1;
+
+  @media all and (min-width: $bp-med) {
+    display: none;
+  }
+
+  @media all and (max-width: 17em) {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+}

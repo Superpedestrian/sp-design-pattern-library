@@ -1,4 +1,73 @@
-/*------------------------------------*\
+/*==============================================================================
+    TABLE OF CONTENTS
+    based on CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
+  ============================================================================*/
+/**
+ * ABSTRACTS.................Declarations of Sass variables mixins
+ * Mixins....................Mixin styles that are included in the site
+ * Variables.................Variables for styles t
+**/
+
+
+
+
+
+/*==============================================================================
     $ABSTRACTS
-\*------------------------------------*/
+  ============================================================================*/
 @import "scss/abstracts/variables";
+@import "scss/abstracts/fonts";
+
+
+
+
+
+/*==============================================================================
+    $BASE
+  ============================================================================*/
+@import "scss/base/animation";
+@import "scss/base/body";
+@import "scss/base/forms";
+@import "scss/base/global-classes";
+@import "scss/base/headings";
+@import "scss/base/links";
+@import "scss/base/lists";
+@import "scss/base/main";
+@import "scss/base/media";
+@import "scss/base/reset";
+@import "scss/base/tables";
+@import "scss/base/text";
+
+
+
+
+
+/*==============================================================================
+    $COMPONENTS
+  ============================================================================*/
+@import "scss/components/blocks";
+@import "scss/components/box";
+@import "scss/components/buttons";
+@import "scss/components/fields";
+@import "scss/components/footer-nav";
+@import "scss/components/footer";
+@import "scss/components/forms";
+@import "scss/components/header";
+@import "scss/components/icons";
+@import "scss/components/lists";
+@import "scss/components/logo";
+@import "scss/components/messaging";
+@import "scss/components/nav";
+@import "scss/components/page-header";
+@import "scss/components/primary-nav";
+@import "scss/components/sections";
+@import "scss/components/text";
+
+
+
+
+
+/*==============================================================================
+    $LAYOUT
+  ============================================================================*/
+@import "scss/layout/layout";
