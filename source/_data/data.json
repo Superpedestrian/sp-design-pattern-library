@@ -11,11 +11,6 @@
       "url": "link.pages-cphw"
     },
     {
-      "label": "Bicycles",
-      "icon" : false,
-      "url": "link.pages-bikes"
-    },
-    {
       "label": "Events",
       "icon": false,
       "url": "link.pages-events"
@@ -43,16 +38,16 @@
         "url" : "link.pages-about"
       },
       {
+        "label" : "Team",
+        "url" : "link.pages-team"
+      },
+      {
         "label" : "Careers",
         "url" : "link.pages-careers"
       },
       {
         "label" : "Legal",
         "url" : "link.pages-legal"
-      },
-      {
-        "label" : "Resources & Advocacy",
-        "url" : "link.pages-resources"
       }
     ],
     "partners" : [
@@ -79,7 +74,7 @@
         "url" : "link.pages-cphw"
       },
       {
-        "label" : "Bicycles",
+        "label" : "Bike + CW",
         "url" : "link.pages-bicycles"
       },
       {
@@ -89,7 +84,7 @@
     ],
     "community" : [
       {
-        "label" : "Sign up for our newsletter",
+        "label" : "Newsletter",
         "url" : "link.pages-newsletter"
       },
       {
