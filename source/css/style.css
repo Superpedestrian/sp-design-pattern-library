@@ -931,6 +931,19 @@ abbr {
   .c-footer-nav__link:hover, .c-footer-nav__link:focus {
     color: #999797; }
 
+.c-footer__apps {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  font-size: 1rem; }
+
+.c-footer__app-badges {
+  display: block;
+  flex-direction: column;
+  margin-top: 8px; }
+  .c-footer__app-badges img {
+    margin-right: 24px; }
+
 /*------------------------------------
     #FOOTER
 ------------------------------------*/

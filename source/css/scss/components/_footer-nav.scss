@@ -46,3 +46,22 @@
     color: $color-gray-40;
   }
 }
+
+
+// Footer Mobile App Badges
+.c-footer__apps {
+  display: flex;
+  flex-direction: column;
+  margin-top: $space-quint;
+  font-size: $font-size-med;
+}
+
+.c-footer__app-badges {
+  display: block;
+  flex-direction: column;
+  margin-top: $space;
+
+  img {
+    margin-right: $space-triple;
+  }
+}
