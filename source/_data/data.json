@@ -32,80 +32,94 @@
     }
   ],
   "footerNav" : {
-    "company" : [
+    "sections" : [
       {
-        "label" : "About Us",
-        "url" : "link.pages-about"
+        "title" : "Company",
+        "links" : [
+          {
+            "label" : "About Us",
+            "url" : "link.pages-about"
+          },
+          {
+            "label" : "Team",
+            "url" : "link.pages-team"
+          },
+          {
+            "label" : "Careers",
+            "url" : "link.pages-careers"
+          },
+          {
+            "label" : "Legal",
+            "url" : "link.pages-legal"
+          }
+        ]
       },
       {
-        "label" : "Team",
-        "url" : "link.pages-team"
+        "title" : "Partners",
+        "links" : [
+          {
+            "label" : "HUB Program",
+            "url" : "link.pages-partners"
+          },
+          {
+            "label" : "HUB Application",
+            "url" : "link.pages-partners-application"
+          },
+          {
+            "label" : "HUB Locator",
+            "url" : "link.pages-locator"
+          },
+          {
+            "label" : "Fleet Inquiry",
+            "url" : "link.pages-fleet"
+          }
+        ]
       },
       {
-        "label" : "Careers",
-        "url" : "link.pages-careers"
+        "title" : "Shop",
+        "links" : [
+          {
+            "label": "Copenhagen Wheel",
+            "url" : "link.pages-cphw"
+          },
+          {
+            "label" : "Bike + CW",
+            "url" : "link.pages-bicycles"
+          },
+          {
+            "label" : "Parts & Accessories",
+            "url" : "link.pages-parts"
+          }
+        ]
       },
-      {
-        "label" : "Legal",
-        "url" : "link.pages-legal"
-      }
-    ],
-    "partners" : [
-      {
-        "label" : "HUB Program",
-        "url" : "link.pages-partners"
-      },
-      {
-        "label" : "HUB Application",
-        "url" : "link.pages-partners-application"
-      },
-      {
-        "label" : "HUB Locator",
-        "url" : "link.pages-locator"
-      },
-      {
-        "label" : "Fleet Inquiry",
-        "url" : "link.pages-fleet"
-      }
-    ],
-    "shop" : [
-      {
-        "label": "Copenhagen Wheel",
-        "url" : "link.pages-cphw"
-      },
-      {
-        "label" : "Bike + CW",
-        "url" : "link.pages-bicycles"
-      },
-      {
-        "label" : "Parts & Accessories",
-        "url" : "link.pages-parts"
-      }
-    ],
-    "community" : [
-      {
-        "label" : "Newsletter",
-        "url" : "link.pages-newsletter"
-      },
-      {
-        "label" : "Facebook",
-        "url" : "https://www.facebook.com/copenhagenwheel"
-      },
-      {
-        "label" : "Twitter",
-        "url" : "https://twitter.com/CPHWheel"
-      },
-      {
-        "label" : "Instagram",
-        "url" : "https://www.instagram.com/copenhagenwheel"
-      },
-      {
-        "label" : "Medium",
-        "url" : "https://medium.com/@CopenhagenWheel"
+        {
+        "title" : "community",
+        "links" : [
+          {
+            "label" : "Newsletter",
+            "url" : "link.pages-newsletter"
+          },
+          {
+            "label" : "Facebook",
+            "url" : "https://www.facebook.com/copenhagenwheel"
+          },
+          {
+            "label" : "Twitter",
+            "url" : "https://twitter.com/CPHWheel"
+          },
+          {
+            "label" : "Instagram",
+            "url" : "https://www.instagram.com/copenhagenwheel"
+          },
+          {
+            "label" : "Medium",
+            "url" : "https://medium.com/@CopenhagenWheel"
+          }
+        ]
       }
     ]
   },
-  "copyright" : "&copy; 2017 Superpedestrian, Inc. All Rights Reserved.",
+  "copyright" : "© 2017 Superpedestrian, Inc. All Rights Reserved.",
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
