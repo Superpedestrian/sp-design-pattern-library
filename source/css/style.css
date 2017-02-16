@@ -969,6 +969,12 @@ abbr {
     .c-footer__info a:hover, .c-footer__info a:focus {
       text-decoration: none; }
 
+.c-footer__copyright {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #1a1818; }
+
 /*------------------------------------*    #FORMS
 \*------------------------------------*/
 /**
