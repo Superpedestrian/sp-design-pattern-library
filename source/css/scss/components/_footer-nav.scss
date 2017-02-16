@@ -8,6 +8,9 @@
 .c-footer-nav {
   display: flex;
   flex-direction: row;
+  padding-top: $space-quint;
+  width: 1024px;
+  margin: 0 auto;
 }
 
 /**
@@ -26,7 +29,7 @@
  * Footer Nav List Item
  */
 .c-footer-nav__item {
-  font-size: 16px;
+  font-size: $font-size-small-2;
   padding-bottom: $space;
   /*width: 50%;
 
@@ -39,13 +42,7 @@
  * Footer Nav Links
  */
 .c-footer-nav__link {
-  display: block;
-  padding: 1rem 2rem 1rem 0;
   color: $color-white;
-
-  /*&:hover, &:focus {
-    color: $color-gray-40;
-  }*/
 }
 
 
@@ -53,8 +50,11 @@
 .c-footer__apps {
   display: flex;
   flex-direction: column;
-  margin-top: $space-quint;
-  font-size: $font-size-med;
+  padding: $space-quint 0;
+  width: 1024px;
+  margin: 0 auto;
+  font-size: $font-size-small-2;
+
 }
 
 .c-footer__app-badges {

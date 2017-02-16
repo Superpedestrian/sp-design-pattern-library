@@ -899,7 +899,10 @@ abbr {
  */
 .c-footer-nav {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-top: 40px;
+  width: 1024px;
+  margin: 0 auto; }
 
 /**
  * Footer Nav List
@@ -914,7 +917,7 @@ abbr {
  * Footer Nav List Item
  */
 .c-footer-nav__item {
-  font-size: 16px;
+  font-size: 0.875rem;
   padding-bottom: 8px;
   /*width: 50%;
 
@@ -926,18 +929,15 @@ abbr {
  * Footer Nav Links
  */
 .c-footer-nav__link {
-  display: block;
-  padding: 1rem 2rem 1rem 0;
-  color: #fff;
-  /*&:hover, &:focus {
-    color: $color-gray-40;
-  }*/ }
+  color: #fff; }
 
 .c-footer__apps {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
-  font-size: 1rem; }
+  padding: 40px 0;
+  width: 1024px;
+  margin: 0 auto;
+  font-size: 0.875rem; }
 
 .c-footer__app-badges {
   display: block;
@@ -955,10 +955,9 @@ abbr {
 .c-footer {
   clear: both;
   overflow: hidden;
-  padding: 1em 0;
-  background: #e3321a;
-  color: #fff;
-  line-height: 1.2; }
+  /*padding: 1em 0;*/
+  background: #272525;
+  color: #fff; }
 
 /**
  * Footer nav
@@ -975,7 +974,13 @@ abbr {
   display: block;
   width: 100%;
   padding: 16px;
-  background-color: #1a1818; }
+  background-color: #1a1818;
+  font-size: 0.875rem;
+  margin-bottom: 0; }
+  .c-footer__copyright p {
+    display: block;
+    width: 1024px;
+    margin: 0 auto; }
 
 /*------------------------------------*    #FORMS
 \*------------------------------------*/

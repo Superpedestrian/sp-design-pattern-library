@@ -8,10 +8,9 @@
 .c-footer {
   clear: both;
   overflow: hidden;
-  padding: 1em 0;
-  background: $color-brand-red;
+  /*padding: 1em 0;*/
+  background: $color-gray-85;
   color: $color-white;
-  line-height: 1.2;
 }
 
 /**
@@ -36,4 +35,12 @@
   width: 100%;
   padding: $space-double;
   background-color: $color-gray-90;
+  font-size: $font-size-small-2;
+  margin-bottom: 0;
+
+  p {
+    display: block;
+    width: 1024px;
+    margin: 0 auto;
+  }
 }
