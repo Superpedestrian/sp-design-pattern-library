@@ -437,7 +437,7 @@ h5 {
  */
 h6 {
   font-size: 16px;
-  font-family: "Graphik Black", Helvetica, sans-serif;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
   line-height: 1.2;
   text-transform: uppercase; }
 
@@ -898,27 +898,29 @@ abbr {
  * Footer Nav
  */
 .c-footer-nav {
-  display: block;
-  margin-right: 1rem; }
+  display: flex;
+  flex-direction: row; }
 
 /**
  * Footer Nav List
  */
 .c-footer-nav__list {
-  display: flex;
-  flex-direction: column; }
-  @media all and (min-width: 24em) {
-    .c-footer-nav__list {
-      flex-direction: row; } }
+  width: 230px;
+  margin-right: 32px; }
+  .c-footer-nav__list ul {
+    margin-top: 8px; }
 
 /**
  * Footer Nav List Item
  */
 .c-footer-nav__item {
-  width: 50%; }
-  @media all and (min-width: 24em) {
-    .c-footer-nav__item {
-      width: inherit; } }
+  font-size: 16px;
+  padding-bottom: 8px;
+  /*width: 50%;
+
+  @media all and (min-width: $bp-small) {
+    width: inherit;
+  }*/ }
 
 /**
  * Footer Nav Links
@@ -927,9 +929,9 @@ abbr {
   display: block;
   padding: 1rem 2rem 1rem 0;
   color: #fff;
-  font-weight: bold; }
-  .c-footer-nav__link:hover, .c-footer-nav__link:focus {
-    color: #999797; }
+  /*&:hover, &:focus {
+    color: $color-gray-40;
+  }*/ }
 
 .c-footer__apps {
   display: flex;

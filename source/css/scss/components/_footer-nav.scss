@@ -6,19 +6,19 @@
  * Footer Nav
  */
 .c-footer-nav {
-  display: block;
-  margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
 }
 
 /**
  * Footer Nav List
  */
 .c-footer-nav__list {
-  display: flex;
-  flex-direction: column;
+  width: 230px;
+  margin-right: $space-quad;
 
-  @media all and (min-width: $bp-small) {
-    flex-direction: row;
+  ul {
+    margin-top: $space;
   }
 }
 
@@ -26,11 +26,13 @@
  * Footer Nav List Item
  */
 .c-footer-nav__item {
-  width: 50%;
+  font-size: 16px;
+  padding-bottom: $space;
+  /*width: 50%;
 
   @media all and (min-width: $bp-small) {
     width: inherit;
-  }
+  }*/
 }
 
 /**
@@ -40,11 +42,10 @@
   display: block;
   padding: 1rem 2rem 1rem 0;
   color: $color-white;
-  font-weight: bold;
 
-  &:hover, &:focus {
+  /*&:hover, &:focus {
     color: $color-gray-40;
-  }
+  }*/
 }
 
 
