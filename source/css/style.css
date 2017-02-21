@@ -439,7 +439,8 @@ h6 {
   font-size: 16px;
   font-family: "Graphik Bold", Helvetica, sans-serif;
   line-height: 1.2;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 2; }
 
 /*------------------------------------*    #LINKS
 \*------------------------------------*/
@@ -917,7 +918,7 @@ abbr {
  * Footer Nav List Item
  */
 .c-footer-nav__item {
-  font-size: 0.875rem;
+  font-size: 16px;
   padding-bottom: 8px;
   /*width: 50%;
 
