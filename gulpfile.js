@@ -19,7 +19,9 @@ var templates = [
 ];
 
 var gulp = require('gulp'),
+  csslint = require('gulp-csslint'),
   sass = require('gulp-sass'),
+  sassLint = require('gulp-sass-lint'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
   argv = require('minimist')(process.argv.slice(2));
@@ -35,6 +37,26 @@ gulp.task('pl-sass', function(){
     .pipe(gulp.dest(path.resolve(paths().source.css)));
 });
 
+// Linting
+gulp.task('scsslint', function () {
+  return gulp.src('source/css/**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+});
+gulp.task('csslintreport', function() {
+  return gulp.src('source/**/*.css')
+    .pipe(csslint())
+    .pipe(csslint.formatter());
+});
+// CSS linter either fails or reports errors, but not both, so running
+// fail separately
+gulp.task('csslint', function() {
+  return gulp.src('source/**/*.css')
+    .pipe(csslint())
+    .pipe(csslint.formatter('fail'));
+});
+gulp.task('lint', gulp.parallel('csslintreport', 'csslint', 'scsslint'));
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
