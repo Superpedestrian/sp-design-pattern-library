@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "6"
+install:
+  - npm install -g gulp-cli bower
+  - npm install
+  - bower install
+script:
+  - gulp patternlab:build
+  - gulp lint
+deploy:
+  provider: script
+  script: gulp deploy
+  on:
+    branch: master
