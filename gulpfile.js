@@ -19,7 +19,9 @@ var templates = [
 ];
 
 var gulp = require('gulp'),
-  csslint = require('gulp-csslint'),
+  Promise = require("bluebird");
+  gutil = require('gulp-util'),
+  git = Promise.promisifyAll(require('gulp-git')),
   sass = require('gulp-sass'),
   sassLint = require('gulp-sass-lint'),
   path = require('path'),
@@ -36,27 +38,6 @@ gulp.task('pl-sass', function(){
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.resolve(paths().source.css)));
 });
-
-// Linting
-gulp.task('scsslint', function () {
-  return gulp.src('source/css/**/*.s+(a|c)ss')
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
-});
-gulp.task('csslintreport', function() {
-  return gulp.src('source/**/*.css')
-    .pipe(csslint())
-    .pipe(csslint.formatter());
-});
-// CSS linter either fails or reports errors, but not both, so running
-// fail separately
-gulp.task('csslint', function() {
-  return gulp.src('source/**/*.css')
-    .pipe(csslint())
-    .pipe(csslint.formatter('fail'));
-});
-gulp.task('lint', gulp.parallel('csslintreport', 'csslint', 'scsslint'));
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
@@ -311,3 +292,60 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
 gulp.task('default', gulp.series('patternlab:build'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
 gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+
+/******************************************************
+ * CUSTOM TASKS - tasks unique to this repo
+******************************************************/
+
+// Linting
+gulp.task('scsslint', function () {
+  return gulp.src('source/css/**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+});
+
+// Compound tasks
+gulp.task('lint', gulp.parallel('scsslint'));
+gulp.task('commitdist', gulp.series('patternlab:build', function(done) {
+  var version = require('./package.json').version;
+  var tag;
+  var branch;
+
+  git.revParseAsync({args: '--abbrev-ref HEAD'})
+  .then(function(parsedBranch) {
+      branch = parsedBranch;
+      if (branch === 'master') {
+        tag = new Date().toISOString().replace(/:/g, '.') + '-' + version;
+      } else if (branch === 'release') {
+        tag = version;
+      } else {
+          tag = branch + '-' + new Date().toISOString().replace(/:/g, '.') + '-' + version;
+      }
+  }).then(function() {
+    return git.checkoutAsync(tag, {args: '-b'})
+  }).then(function() {
+    gutil.log('Force adding public to git');
+    var stream = gulp.src('public/')
+      .pipe(git.add({args: '-f'}))
+      .pipe(git.commit('Distribution for ' + version));
+    stream.on('end', function() {
+      gutil.log('Tagging');
+      git.tagAsync(tag, '')
+      .then(function() {
+        gutil.log('Checking out original branch');
+        return git.checkoutAsync(branch);
+      }).then(function() {
+        gutil.log('Pushing tag to remote');
+        return git.pushAsync('origin', [], {args: " --tags"});
+      }).error(function(err) {
+        throw err;
+        gutil.log('Added and commited');
+      }).done(function() {
+        done()
+      })
+    });
+  }).error(function(err) {
+    throw err;
+  });
+}));
