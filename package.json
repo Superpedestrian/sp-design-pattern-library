@@ -3,9 +3,12 @@
   "description": "Superpedestrian pattern lab",
   "version": "0.0.0",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "browser-sync": "^2.0.0",
     "gulp": "gulpjs/gulp#4.0",
+    "gulp-git": "^2.0.1",
     "gulp-sass": "^3.1.0",
+    "gulp-util": "^3.0.8",
     "minimist": "^1.2.0",
     "patternlab-node": "^2.0.0",
     "styleguidekit-assets-default": "^3.0.0",
