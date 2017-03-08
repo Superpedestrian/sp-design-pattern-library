@@ -6,23 +6,20 @@
  * Footer Nav
  */
 .c-footer-nav {
-  display: flex;
-  flex-direction: row;
-  padding-top: $space-quint;
-  width: 1024px;
-  margin: 0 auto;
+  @media (max-width: $bp-med) {
+    padding-left: 24px;
+  }
 }
 
 /**
  * Footer Nav List
  */
 .c-footer-nav__list {
-  width: 230px;
-  margin-right: $space-quad;
-
   ul {
     margin-top: $space;
   }
+
+  margin-top: 40px;
 }
 
 /**
@@ -31,11 +28,6 @@
 .c-footer-nav__item {
   font-size: 16px;
   padding-bottom: $space;
-  /*width: 50%;
-
-  @media all and (min-width: $bp-small) {
-    width: inherit;
-  }*/
 }
 
 /**
@@ -45,21 +37,18 @@
   color: $color-white;
 }
 
-
 // Footer Mobile App Badges
 .c-footer__apps {
-  display: flex;
-  flex-direction: column;
-  padding: $space-quint 0;
-  width: 1024px;
-  margin: 0 auto;
-  font-size: $font-size-small-2;
+  padding: $space-quint 15px;
+  font-size: 16px;;
 
+  @media (max-width: $bp-med) {
+    padding-left: 24px;
+  }
 }
 
 .c-footer__app-badges {
   display: block;
-  flex-direction: column;
   margin-top: $space;
 
   img {
