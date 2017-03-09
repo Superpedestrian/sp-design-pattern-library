@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title>Nullizzle shizznit velizzle, hizzle, suscipit own yo&#39;, gravida vizzle, arcu.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://use.fontawesome.com/a9bf041a16.js"></script>
+  <link rel="stylesheet" href="../../css/style.css?1489102522339" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1489102522339" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+  <!-- never cache patterns -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1489102522339" media="all">
+  <link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1489102522339" media="all" />
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="">
+  <div class="c-footer-nav">
+    <div class="c-footer-nav__list">
+      <h6>Company</h6>
+      <ul>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-about">About Us</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-team">Team</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-careers">Careers</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-legal">Legal</a></li>
+      </ul>
+    </div>
+    <div class="c-footer-nav__list">
+      <h6>Partners</h6>
+      <ul>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-partners">HUB Program</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-partners-application">HUB Application</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-locator">HUB Locator</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-fleet">Fleet Inquiry</a></li>
+      </ul>
+    </div>
+    <div class="c-footer-nav__list">
+      <h6>Shop</h6>
+      <ul>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-cphw">Copenhagen Wheel</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-bicycles">Bike + CW</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-parts">Parts &amp; Accessories</a></li>
+      </ul>
+    </div>
+    <div class="c-footer-nav__list">
+      <h6>community</h6>
+      <ul>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="link.pages-newsletter">Newsletter</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="https:&#x2F;&#x2F;www.facebook.com&#x2F;copenhagenwheel">Facebook</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="https:&#x2F;&#x2F;twitter.com&#x2F;CPHWheel">Twitter</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="https:&#x2F;&#x2F;www.instagram.com&#x2F;copenhagenwheel">Instagram</a></li>
+        <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="https:&#x2F;&#x2F;medium.com&#x2F;@CopenhagenWheel">Medium</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": true,
+      "patternLineagesR": [{
+        "lineagePattern": "organisms-footer",
+        "lineagePath": "../../patterns/02-organisms-00-global-footer/02-organisms-00-global-footer.rendered.html"
+      }],
+      "lineageR": [{
+        "lineagePattern": "organisms-footer",
+        "lineagePath": "../../patterns/02-organisms-00-global-footer/02-organisms-00-global-footer.rendered.html"
+      }],
+      "patternLineageEExists": true,
+      "patternDesc": "<p>Styling and columnar layout for displaying links in the footer.</p>\n",
+      "patternBreadcrumb": {
+        "patternType": "molecules",
+        "patternSubtype": "navigation"
+      },
+      "patternExtension": "mustache",
+      "patternName": "Footer Links",
+      "patternPartial": "molecules-footer-links",
+      "patternState": "",
+      "patternEngineName": "mustache",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1489102522339">
+    (function() {
+      if (self != top) {
+        var cb = '1489102522339';
+        var js = [];
+        if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+          js.push('styleguide/bower_components/classList.min.js');
+        }
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+  <script id="pl-js-insert-1489102522339">
+    (function() {
+      if (self != top) {
+        var cb = '1489102522339';
+        var js = [{
+          'src': 'styleguide/bower_components/jwerty.min.js',
+          'dep': ['styleguide/js/patternlab-pattern.min.js']
+        }];
+        scriptLoader.run(js, cb, 'pl-js-insert');
+      }
+    })();
+  </script>
+
+
+  <script src="/js/retina.min.js"></script>
+</body>
+
+</html>
