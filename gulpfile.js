@@ -150,6 +150,7 @@ gulp.task('dist-assets', gulp.series(
   gulp.parallel(
     'dist-copy:js',
     'dist-copy:img',
+    'dist-copy:css',
     'dist-copy:favicon',
     'dist-copy:font'
   ),
