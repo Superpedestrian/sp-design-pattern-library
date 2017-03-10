@@ -16,7 +16,7 @@ after_script:
 deploy:
   skip_cleanup: yes
   provider: script
-  script: gulp commitdist
+  script: dist.sh
   on:
     branch:
     - master
