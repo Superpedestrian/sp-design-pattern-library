@@ -1,0 +1,110 @@
+/*------------------------------------
+    #MESSAGING
+------------------------------------*/
+
+/**
+ * Alert
+ */
+.alert {
+  overflow: hidden;
+  padding: 0 1rem;
+  background: $color-gray-02;
+  text-align: center;
+  font-size: 1em;
+  animation: slideDown 2s forwards;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Error alert
+ */
+.alert--error {
+  background: $color-utility-negative-subtle;
+  color: $color-utility-negative;
+}
+
+/**
+ * Success alert
+ */
+.alert--success {
+  background: $color-utility-postitive-subtle;
+  color: $color-utility-positive;
+}
+
+/**
+ * Warning alert
+ */
+.alert--warning {
+  background: $color-utility-caution-subtle;
+  color: $color-utility-caution;
+}
+
+/**
+ * Info alert
+ */
+.alert--info {
+  background: $color-utility-neutral-subtle;
+  color: $color-utility-neutral;
+}
+
+/**
+ * Slidedown animation
+ */
+@keyframes slideDown {
+  0%   {
+    max-height: 0;
+    padding: 0;
+  }
+
+  100% {
+    max-height: 12em;
+    padding: 1rem;
+  }
+}
+
+
+/**
+ * Overlay
+ */
+.c-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+
+  &--is-hidden {
+    display: none;
+  }
+
+  .c-tile-grid__primary & {
+    position: absolute;
+  }
+
+  .c-tile-list__item & {
+    position: absolute;
+  }
+
+  .c-section & {
+    position: absolute;
+  }
+ }
+
+ /**
+ * Overlay Intro
+ */
+ .c-overlay__intro {
+   color: $color-white;
+   font-size: 1.5rem;
+ }

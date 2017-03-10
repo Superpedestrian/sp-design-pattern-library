@@ -1,0 +1,88 @@
+/*------------------------------------
+    #SECTIONS
+------------------------------------*/
+
+/**
+ * Section
+ */
+.c-section {
+  margin: 0 0 $space-double;
+  position: relative;
+
+  .l-sidebar & {
+    @media all and (min-width: $bp-small-3) {
+      margin-right: 2em;
+      width: 50%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @media all and (min-width: $bp-large) {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+/**
+ * Section title
+ */
+.c-section__title {
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: $color-gray-60;
+
+  &:after {
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 0.3rem;
+    top: 30px;
+    left: 1px;
+    background: $color-gray-40;
+    content: "";
+  }
+}
+
+
+/**
+ * Section block
+ */
+.c-tile-grid {
+  background: url(../../images/sample/hero-mountains.jpg) no-repeat 50% 50% $color-gray-85;
+  background-size: cover;
+}
+
+.c-tile-grid__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: $bp-med) {
+    flex-direction: row;
+  }
+}
+
+.c-tile-grid__primary {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+
+  @media all and (min-width: $bp-med) {
+    width: 50%;
+  }
+
+  @media all and (min-width: 55rem) {
+    width: 30%;
+  }
+}
+
+.c-tile-grid__secondary {
+  flex: 1;
+
+  @media all and (min-width: $bp-med){
+    padding: 0 0 0 1em;
+  }
+}

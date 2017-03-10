@@ -1,4 +1,117 @@
 {
+  "company" : {
+        "name" : "Superpedestrian",
+        "url" : "http://superpedestrian.com"
+    },
+  "btnText": "Button",
+  "primaryNav" : [
+    {
+      "label": "Copenhagen Wheel",
+      "icon" : false,
+      "url": "link.pages-cphw"
+    },
+    {
+      "label": "Events",
+      "icon": false,
+      "url": "link.pages-events"
+    },
+    {
+      "label": "Support",
+      "icon": false,
+      "url": "link.pages-support"
+    },
+    {
+      "label": "Cart",
+      "icon" : "icon-cart",
+      "url": "link.pages-cart"
+    },
+    {
+      "label": "Login",
+      "icon" : false,
+      "url": "link.pages-login"
+    }
+  ],
+  "footerNav" : {
+    "sections" : [
+      {
+        "title" : "Company",
+        "links" : [
+          {
+            "label" : "About Us",
+            "url" : "https://superpedestrian.com/team"
+          },
+          {
+            "label" : "Careers",
+            "url" : "https://superpedestrian.com/jobs"
+          },
+          {
+            "label" : "Legal",
+            "url" : "https://superpedestrian.com/legal"
+          }
+        ]
+      },
+      {
+        "title" : "Partners",
+        "links" : [
+          {
+            "label" : "HUB Program",
+            "url" : "https://superpedestrian.com/partners"
+          },
+          {
+            "label" : "HUB Application",
+            "url" : "https://superpedestrian.com/partners/apply"
+          },
+          {
+            "label" : "HUB Locator",
+            "url" : "https://superpedestrian.com/partners/locator"
+          },
+          {
+            "label" : "Fleet Inquiry",
+            "url" : "https://superpedestrian.com/partners/contact"
+          }
+        ]
+      },
+      {
+        "title" : "Shop",
+        "links" : [
+          {
+            "label": "Copenhagen Wheel",
+            "url" : "https://superpedestrian.com/the-copenhagen-wheel"
+          },
+          {
+            "label" : "Bike + CW",
+            "url" : "https://superpedestrian.com/bike"
+          }
+        ]
+      },
+      {
+        "title" : "community",
+        "links" : [
+          {
+            "label" : "Newsletter",
+            "url" : "https://superpedestrian.com/email"
+          },
+          {
+            "label" : "Facebook",
+            "url" : "https://www.facebook.com/copenhagenwheel"
+          },
+          {
+            "label" : "Twitter",
+            "url" : "https://twitter.com/CPHWheel"
+          },
+          {
+            "label" : "Instagram",
+            "url" : "https://www.instagram.com/copenhagenwheel"
+          },
+          {
+            "label" : "Medium",
+            "url" : "https://medium.com/@CopenhagenWheel"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright" : "© 2017 Superpedestrian, Inc. All Rights Reserved.",
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",

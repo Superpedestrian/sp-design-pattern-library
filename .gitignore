@@ -6,3 +6,6 @@ patternlab.json
 Thumbs.db
 .idea/
 public
+/source/components
+/source/css/style.css
+dist

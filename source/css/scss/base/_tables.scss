@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #TABLE
+\*------------------------------------*/
+
+/**
+ * Table base styles
+ */
+table {
+  width: 100%;
+  border: 1px solid $color-gray-60;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * Table header base styles
+ */
+th {
+  padding: 0.2em;
+  border: 1px solid $color-gray-60;
+  text-align: left;
+}
+
+/**
+ * Table cell base styles
+ */
+td {
+  padding: 0.2em;
+  border: 1px solid $color-gray-60;
+}

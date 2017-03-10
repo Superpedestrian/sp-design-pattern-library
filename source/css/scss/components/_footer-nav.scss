@@ -1,0 +1,57 @@
+/*------------------------------------
+    #FOOTER NAVIGATION
+------------------------------------*/
+
+/**
+ * Footer Nav
+ */
+.c-footer-nav {
+  @media (max-width: $bp-med) {
+    padding-left: 24px;
+  }
+}
+
+/**
+ * Footer Nav List
+ */
+.c-footer-nav__list {
+  ul {
+    margin-top: $space;
+  }
+
+  margin-top: 40px;
+}
+
+/**
+ * Footer Nav List Item
+ */
+.c-footer-nav__item {
+  font-size: 16px;
+  padding-bottom: $space;
+}
+
+/**
+ * Footer Nav Links
+ */
+.c-footer-nav__link {
+  color: $color-white;
+}
+
+// Footer Mobile App Badges
+.c-footer__apps {
+  padding: $space-quint 15px;
+  font-size: 16px;;
+
+  @media (max-width: $bp-med) {
+    padding-left: 24px;
+  }
+}
+
+.c-footer__app-badges {
+  display: block;
+  margin-top: $space;
+
+  img {
+    margin-right: $space-triple;
+  }
+}

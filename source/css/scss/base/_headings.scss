@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+
+/**
+ * Heading 1
+ */
+h1  {
+  font-size: 48px;
+  font-family: "Graphik Black", Helvetica, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/**
+ * Heading 2
+ */
+h2 {
+  font-size: 40px;
+  font-family: "Graphik Black", Helvetica, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/**
+ * Heading 3
+ */
+h3  {
+  font-size: 32px;
+  font-family: "Graphik Black", Helvetica, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/**
+ * Heading 4
+ */
+h4  {
+  font-size: 24px;
+  font-family: "Graphik Black", Helvetica, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/**
+ * Heading 5
+ */
+h5 {
+  font-size: 18px;
+  font-family: "Graphik Black", Helvetica, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/**
+ * Heading 6
+ */
+h6 {
+  font-size: 16px;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2;
+}

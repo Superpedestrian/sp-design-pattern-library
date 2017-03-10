@@ -1,0 +1,44 @@
+/*------------------------------------
+    #FOOTER
+------------------------------------*/
+
+/**
+ * Footer
+ */
+.c-footer {
+  clear: both;
+  overflow: hidden;
+  background: $color-gray-85;
+  color: $color-white;
+  text-align: left;
+}
+
+/**
+ * Footer nav
+ */
+.c-footer__info {
+  max-width: 40em;
+  a {
+    color: $color-gray-20;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+// Footer copyright block
+.c-footer__copyright {
+  display: block;
+  width: 100%;
+  padding: $space-double 0px;
+  background-color: $color-gray-90;
+  font-size: $font-size-small-2;
+  margin-bottom: 0;
+
+  p {
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}

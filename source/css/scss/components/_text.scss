@@ -1,0 +1,45 @@
+/*------------------------------------
+    #TEXT
+------------------------------------*/
+
+/**
+ * Passages of text
+ */
+.text {
+  a {
+    text-decoration: underline;
+  }
+
+  ul {
+    margin: 0 0 $space 1.2em;
+    list-style: disc;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  ol {
+    margin: 0 0 $space 1.5em;
+    list-style: decimal;
+
+    ol {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+ * Text passage
+ */
+
+ .s-text-passage {
+   margin-bottom: 1rem;
+ }
+
+/**
+ * Image within text passage
+ */
+.c-text-passage__img {
+  margin-bottom: 1rem;
+}
