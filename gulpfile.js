@@ -3,8 +3,20 @@
  * EDITION-NODE-GULP
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
-var dist = {"root":"./dist/","templates":"./dist/templates/","js":"./dist/js","images":"./dist/images","fonts":"./dist/fonts","css":"./dist/css"};
-var templates = ["02-organisms-00-global/*.*", "02-organisms-00-global-footer/*.*", "02-organisms-00-global-header/*.*"];
+var dist = {
+  "root":"./dist/",
+  "templates":"./dist/templates/",
+  "js":"./dist/js",
+  "images":"./dist/images",
+  "fonts":"./dist/fonts",
+  "css":"./dist/css"
+};
+
+var templates = [
+  "02-organisms-00-global/*.*",
+  "02-organisms-00-global-footer/*.*",
+  "02-organisms-00-global-header/*.*"
+];
 
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
@@ -146,17 +158,14 @@ gulp.task('pl-assets', gulp.series(
   })
 );
 
-gulp.task('dist-assets', gulp.series(
+gulp.task('dist-assets',
   gulp.parallel(
     'dist-copy:js',
     'dist-copy:img',
     'dist-copy:css',
     'dist-copy:favicon',
     'dist-copy:font'
-  ),
-  function(done){
-    done();
-  })
+  )
 );
 
 gulp.task('patternlab:version', function (done) {
