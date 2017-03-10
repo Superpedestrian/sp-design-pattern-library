@@ -38,19 +38,15 @@
         "links" : [
           {
             "label" : "About Us",
-            "url" : "link.pages-about"
-          },
-          {
-            "label" : "Team",
-            "url" : "link.pages-team"
+            "url" : "https://superpedestrian.com/team"
           },
           {
             "label" : "Careers",
-            "url" : "link.pages-careers"
+            "url" : "https://superpedestrian.com/jobs"
           },
           {
             "label" : "Legal",
-            "url" : "link.pages-legal"
+            "url" : "https://superpedestrian.com/legal"
           }
         ]
       },
@@ -59,19 +55,19 @@
         "links" : [
           {
             "label" : "HUB Program",
-            "url" : "link.pages-partners"
+            "url" : "https://superpedestrian.com/partners"
           },
           {
             "label" : "HUB Application",
-            "url" : "link.pages-partners-application"
+            "url" : "https://superpedestrian.com/partners/apply"
           },
           {
             "label" : "HUB Locator",
-            "url" : "link.pages-locator"
+            "url" : "https://superpedestrian.com/partners/locator"
           },
           {
             "label" : "Fleet Inquiry",
-            "url" : "link.pages-fleet"
+            "url" : "https://superpedestrian.com/partners/contact"
           }
         ]
       },
@@ -80,24 +76,20 @@
         "links" : [
           {
             "label": "Copenhagen Wheel",
-            "url" : "link.pages-cphw"
+            "url" : "https://superpedestrian.com/the-copenhagen-wheel"
           },
           {
             "label" : "Bike + CW",
-            "url" : "link.pages-bicycles"
-          },
-          {
-            "label" : "Parts & Accessories",
-            "url" : "link.pages-parts"
+            "url" : "https://superpedestrian.com/bike"
           }
         ]
       },
-        {
+      {
         "title" : "community",
         "links" : [
           {
             "label" : "Newsletter",
-            "url" : "link.pages-newsletter"
+            "url" : "https://superpedestrian.com/email"
           },
           {
             "label" : "Facebook",

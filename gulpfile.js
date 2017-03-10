@@ -3,6 +3,21 @@
  * EDITION-NODE-GULP
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
+var dist = {
+  "root":"./dist/",
+  "templates":"./dist/templates/",
+  "js":"./dist/js",
+  "images":"./dist/images",
+  "fonts":"./dist/fonts",
+  "css":"./dist/css"
+};
+
+var templates = [
+  "02-organisms-00-global/*.*",
+  "02-organisms-00-global-footer/*.*",
+  "02-organisms-00-global-header/*.*"
+];
+
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   path = require('path'),
@@ -30,10 +45,22 @@ gulp.task('pl-copy:js', function(){
     .pipe(gulp.dest(resolvePath(paths().public.js)));
 });
 
+// JS copy dist
+gulp.task('dist-copy:js', function(){
+  return gulp.src('**/*.js', {cwd: resolvePath(paths().public.js)} )
+    .pipe(gulp.dest(resolvePath(dist.js)));
+});
+
 // Images copy
 gulp.task('pl-copy:img', function(){
   return gulp.src('**/*.*',{cwd: resolvePath(paths().source.images)} )
     .pipe(gulp.dest(resolvePath(paths().public.images)));
+});
+
+// Images copy dist
+gulp.task('dist-copy:img', function(){
+  return gulp.src('**/*.*',{cwd: resolvePath(paths().public.images)} )
+    .pipe(gulp.dest(resolvePath(dist.images)));
 });
 
 // Favicon copy
@@ -42,10 +69,22 @@ gulp.task('pl-copy:favicon', function(){
     .pipe(gulp.dest(resolvePath(paths().public.root)));
 });
 
+// Favicon copy dist
+gulp.task('dist-copy:favicon', function(){
+  return gulp.src('favicon.ico', {cwd: resolvePath(paths().public.root)} )
+    .pipe(gulp.dest(resolvePath(dist.root)));
+});
+
 // Fonts copy
 gulp.task('pl-copy:font', function(){
   return gulp.src('*', {cwd: resolvePath(paths().source.fonts)})
     .pipe(gulp.dest(resolvePath(paths().public.fonts)));
+});
+
+// Fonts copy dist
+gulp.task('dist-copy:font', function(){
+  return gulp.src('*', {cwd: resolvePath(paths().public.fonts)})
+    .pipe(gulp.dest(resolvePath(dist.fonts)));
 });
 
 // CSS Copy
@@ -53,6 +92,12 @@ gulp.task('pl-copy:css', function(){
   return gulp.src(resolvePath(paths().source.css) + '/*.css')
     .pipe(gulp.dest(resolvePath(paths().public.css)))
     .pipe(browserSync.stream());
+});
+
+// CSS Copy dist
+gulp.task('dist-copy:css', function(){
+  return gulp.src(resolvePath(paths().public.css) + '/*.css')
+    .pipe(gulp.dest(resolvePath(dist.css)));
 });
 
 // Styleguide Copy everything but css
@@ -71,6 +116,12 @@ gulp.task('pl-copy:styleguide-css', function(){
       return resolvePath(path.join(paths().public.styleguide, '/css'));
     }))
     .pipe(browserSync.stream());
+});
+
+// Templates copy to dist from public
+gulp.task('dist-copy:templates', function(){
+    return gulp.src(templates, {cwd: resolvePath(paths().public.patterns)})
+      .pipe(gulp.dest(resolvePath(dist.templates)));
 });
 
 /******************************************************
@@ -107,6 +158,16 @@ gulp.task('pl-assets', gulp.series(
   })
 );
 
+gulp.task('dist-assets',
+  gulp.parallel(
+    'dist-copy:js',
+    'dist-copy:img',
+    'dist-copy:css',
+    'dist-copy:favicon',
+    'dist-copy:font'
+  )
+);
+
 gulp.task('patternlab:version', function (done) {
   patternlab.version();
   done();
@@ -140,6 +201,9 @@ gulp.task('patternlab:installplugin', function (done) {
   done();
 });
 
+gulp.task('dist', gulp.series('patternlab:build', 'dist-assets', 'dist-copy:templates', function (done) {
+  done();
+}));
 /******************************************************
  * SERVER AND WATCH TASKS
 ******************************************************/
