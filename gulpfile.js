@@ -307,7 +307,7 @@ gulp.task('scsslint', function () {
 
 // Compound tasks
 gulp.task('lint', gulp.parallel('scsslint'));
-gulp.task('commitdist', gulp.series('patternlab:build', function(done) {
+gulp.task('commitdist', gulp.series('dist', function(done) {
   var version = require('./package.json').version;
   var tag;
   var branch;
@@ -325,8 +325,8 @@ gulp.task('commitdist', gulp.series('patternlab:build', function(done) {
   }).then(function() {
     return git.checkoutAsync(tag, {args: '-b'})
   }).then(function() {
-    gutil.log('Force adding public to git');
-    var stream = gulp.src('public/')
+    gutil.log('Force adding dist to git');
+    var stream = gulp.src('dist/')
       .pipe(git.add({args: '-f'}))
       .pipe(git.commit('Distribution for ' + version));
     stream.on('end', function() {
