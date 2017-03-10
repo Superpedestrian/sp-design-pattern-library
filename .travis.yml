@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+- '6'
+install:
+- npm install -g gulp-cli bower
+- npm install
+- bower install
+script:
+- gulp patternlab:build
+- gulp lint || true
+after_script:
+- git config --global user.email "dev-ops@superpedestrian.com"
+- git config --global user.name "Travis-CI"
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- gulp commitdist
+deploy:
+  provider: script
+  script: gulp commitdist
+  on:
+    branch:
+    - master
+    - release
+env:
+  global:
+    secure: J7CwSINV3eT0oyaSEwvmqMGZqVnJQ4GsTMio0RBT/aiTxexxCLM1LzUyZwuTFn3vmjIL0ws+Q4f7ayuH1RfPRJEXhfc8zzPCrByQ7Y2b7e81qcPO+skaBo7gyxIoiQmGbZX12Pfv+/T9DOskHWIZpiDl0n8psS5axWzIjX2AJ88jXc2rk/TNYeB5gvauG1YwuBLynrkZ4INBb3EB0R2iPyPUcQvwK1LZvZd6Fs/nfwReqi3Pw9vZe5WWHEXlakJtjJodudGDs66qIQ8F5WqWvl4duRwQMLBxfZdv6iZmFApsdomv1ORNYRyVCHjM0AWbUOCDsr7fKxptyPPg6Xd8+mPhZf92OcI/6hIAqDwIvjTyWxeAUJ6uzcDN+iDV9VkEPnJFfPppjOcRBICU0YxRaaxJZsnNfgT5WxKF5FcKS7xToI0wEw2tEksJkBcSzBdU8y+kpl9ZdicdY6jD0PGMcmrnh3oZ7XSpL+Z9esLlFG5T9e0W+51PX7syBiTTMIQdxbp3FZHD2uw5uv9i7nP+Pp6x2L7d88AhQbype9nu3eekVYbhK/n6RORSRyErCJf/45RuDFAjd7en5QGTC9+nqIPuW3+ZitYnYhcKhhmT4pOY0JTMned9j8Ye/ZBr6UaufxB1Yoo6lOITojSS2V6jnKmfGVO0SsIzDcuvHyzNlmA=
