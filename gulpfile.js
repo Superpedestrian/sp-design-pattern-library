@@ -314,21 +314,28 @@ gulp.task('commitdist', gulp.series('dist', function(done) {
 
   git.revParseAsync({args: '--abbrev-ref HEAD'})
   .then(function(parsedBranch) {
+    if (parsedBranch === 'HEAD') {
+      // We're on Travis and need to check it.
+      branch = process.env.PULL_REQUEST !== 'false' ?
+        process.env.TRAVIS_BRANCH :
+        process.env.TRAVIS_PULL_REQUEST_BRANCH;
+    } else {
       branch = parsedBranch;
-      if (branch === 'master') {
-        tag = new Date().toISOString().replace(/:/g, '.') + '-' + version;
-      } else if (branch === 'release') {
-        tag = version;
-      } else {
-          tag = branch + '-' + new Date().toISOString().replace(/:/g, '.') + '-' + version;
-      }
+    }
+    if (branch === 'master') {
+      tag = new Date().toISOString().replace(/:/g, '.') + '-' + version;
+    } else if (branch === 'release') {
+      tag = version;
+    } else {
+      tag = branch + '-' + new Date().toISOString().replace(/:/g, '.') + '-' + version;
+    }
   }).then(function() {
     return git.checkoutAsync(tag, {args: '-b'})
   }).then(function() {
     gutil.log('Force adding dist to git');
     var stream = gulp.src('dist/')
-      .pipe(git.add({args: '-f'}))
-      .pipe(git.commit('Distribution for ' + version));
+                 .pipe(git.add({args: '-f'}))
+                 .pipe(git.commit('Distribution for ' + version));
     stream.on('end', function() {
       gutil.log('Tagging');
       git.tagAsync(tag, '')
