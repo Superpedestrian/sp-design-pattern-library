@@ -51,7 +51,18 @@
   display: block;
   margin-top: $space;
 
-  img {
+  div {
     margin-right: $space-triple;
+    width: 120px;
+    height: 36px;
+    display: inline-block;
+  }
+  
+  .c-footer__appstore {
+    background: url("../../../images/badge-app-store.png") no-repeat;
+  }
+  
+  .c-footer__playstore {
+    background: url("../../../images/badge-google-play.png") no-repeat;
   }
 }
