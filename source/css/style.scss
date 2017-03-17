@@ -7,68 +7,71 @@
  * Mixins....................Mixin styles that are included in the site
  * Variables.................Variables for styles t
 **/
-
-
-/* Bring in bootstrap */
-@import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
-
-
-/*==============================================================================
-    $ABSTRACTS
-  ============================================================================*/
-@import "scss/abstracts/variables";
+ 
 @import "scss/abstracts/fonts";
+@import "scss/abstracts/variables";
+ 
+.sp-global  {
+  
+  
+  /* Bring in bootstrap */
+  @import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
+  
+  /*==============================================================================
+      $ABSTRACTS
+    ============================================================================*/
+  
+  display: flex;
+  flex-direction: column;
+  background: $color-white;
+  color: $color-gray-85;
+  font: 18px $font;
+  -webkit-text-size-adjust: 100%;
+  
+  /*==============================================================================
+      $BASE
+    ============================================================================*/
+  @import "scss/base/animation";
+  @import "scss/base/forms";
+  @import "scss/base/global-classes";
+  @import "scss/base/headings";
+  @import "scss/base/links";
+  @import "scss/base/lists";
+  @import "scss/base/main";
+  @import "scss/base/media";
+  @import "scss/base/reset";
+  @import "scss/base/tables";
+  @import "scss/base/text";
 
+  /*==============================================================================
+      $COMPONENTS
+    ============================================================================*/
+  @import "scss/components/blocks";
+  @import "scss/components/box";
+  @import "scss/components/buttons";
+  @import "scss/components/fields";
+  @import "scss/components/footer-nav";
+  @import "scss/components/footer";
+  @import "scss/components/forms";
+  @import "scss/components/header";
+  @import "scss/components/icons";
+  @import "scss/components/lists";
+  @import "scss/components/logo";
+  @import "scss/components/messaging";
+  @import "scss/components/nav";
+  @import "scss/components/page-header";
+  @import "scss/components/primary-nav";
+  @import "scss/components/sections";
+  @import "scss/components/text";
 
+  /*==============================================================================
+      $LAYOUT
+    ============================================================================*/
+  @import "scss/layout/layout";
+}
 
+body.sp-global {
+  /* body styles */
+  min-height: 100vh;
 
-
-/*==============================================================================
-    $BASE
-  ============================================================================*/
-@import "scss/base/animation";
-@import "scss/base/body";
-@import "scss/base/forms";
-@import "scss/base/global-classes";
-@import "scss/base/headings";
-@import "scss/base/links";
-@import "scss/base/lists";
-@import "scss/base/main";
-@import "scss/base/media";
-@import "scss/base/reset";
-@import "scss/base/tables";
-@import "scss/base/text";
-
-
-
-
-
-/*==============================================================================
-    $COMPONENTS
-  ============================================================================*/
-@import "scss/components/blocks";
-@import "scss/components/box";
-@import "scss/components/buttons";
-@import "scss/components/fields";
-@import "scss/components/footer-nav";
-@import "scss/components/footer";
-@import "scss/components/forms";
-@import "scss/components/header";
-@import "scss/components/icons";
-@import "scss/components/lists";
-@import "scss/components/logo";
-@import "scss/components/messaging";
-@import "scss/components/nav";
-@import "scss/components/page-header";
-@import "scss/components/primary-nav";
-@import "scss/components/sections";
-@import "scss/components/text";
-
-
-
-
-
-/*==============================================================================
-    $LAYOUT
-  ============================================================================*/
-@import "scss/layout/layout";
+}
