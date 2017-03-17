@@ -9,17 +9,17 @@
 **/
  
 @import "scss/abstracts/fonts";
-@import "scss/abstracts/variables";
  
 .sp-global  {
   
   
   /* Bring in bootstrap */
   @import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
+  @import "scss/abstracts/variables";
   
   /*==============================================================================
       $ABSTRACTS
-    ============================================================================*/
+    ============================================================================*/ 
   
   display: flex;
   flex-direction: column;
