@@ -21,8 +21,6 @@
       $ABSTRACTS
     ============================================================================*/ 
   
-  display: flex;
-  flex-direction: column;
   background: $color-white;
   color: $color-gray-85;
   font: 18px $font;
@@ -73,5 +71,6 @@
 body.sp-global {
   /* body styles */
   min-height: 100vh;
-
+  display: flex;
+  flex-direction: column;
 }
