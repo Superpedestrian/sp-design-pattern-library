@@ -1,4 +1,5 @@
 {
+  "bodyClass" : "sp-global",
   "company" : {
         "name" : "Superpedestrian",
         "url" : "http://superpedestrian.com"
@@ -47,6 +48,10 @@
           {
             "label" : "Legal",
             "url" : "https://superpedestrian.com/legal"
+          },
+          {
+            "label" : "Press",
+            "url" : "https://superpedestrian.com/press"
           }
         ]
       },
@@ -79,7 +84,7 @@
             "url" : "https://superpedestrian.com/the-copenhagen-wheel"
           },
           {
-            "label" : "Bike + CW",
+            "label" : "Bikes",
             "url" : "https://superpedestrian.com/bike"
           }
         ]
@@ -87,6 +92,10 @@
       {
         "title" : "community",
         "links" : [
+          {
+            "label" : "Support",
+            "url" : "https://superpedestrian.com/support"
+          },
           {
             "label" : "Newsletter",
             "url" : "https://superpedestrian.com/email"
