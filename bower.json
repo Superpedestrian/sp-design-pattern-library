@@ -2,7 +2,7 @@
   "name": "sp-design-pattern-library",
   "description": "Design pattern library for Superpedestrian",
   "version": "0.2.1",
-  "main": "public/css/style.css",
+  "main": "dist/css/style.css",
   "authors": [
     "Superpedestrian"
   ],
