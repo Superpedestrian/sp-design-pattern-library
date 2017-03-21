@@ -1,5 +1,9 @@
 # Changes
 
+## 0.2.1
+
+- Fix footer to follow the same grid as the header
+
 ## 0.2.0
 
 - Properly namespace contain all body styles
