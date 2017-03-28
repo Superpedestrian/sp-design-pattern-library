@@ -1,5 +1,9 @@
 # Changes
 
+## 0.2.3
+
+- Reflow footer to match correct grid
+
 ## 0.2.2
 
 - Corrected bower.json main file path
