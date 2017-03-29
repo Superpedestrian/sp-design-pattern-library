@@ -9,13 +9,22 @@ script:
 - gulp patternlab:build
 - gulp lint || true
 deploy:
-  skip_cleanup: yes
-  provider: script
-  script: ./dist.sh
-  on:
-    branch:
-    - master
-    - release
+  - provider: script
+    skip_cleanup: true
+    script: "./dist.sh"
+    on:
+      branch:
+      - master
+      - release
+  - provider: s3
+    bucket: sparkle-thunder.internal.superpedestrian.com
+    access_key_id: AKIAJYETZ5IGEOWT5WCQ
+    secret_access_key:
+      secure: uOUfMRLvzCVk52lzLy97iCoFSmq6gZWQd52oZi4FGYS1Pw9ss8xU+q6UYoJAaqXme8NT/CcqLpMmaPYf0HeESW3dLr75dHMCn5EQITPcNuvpLdK3wPetMmfYYRIQKptgdq8dVq5EMooi8TPq7OMMzNG2nbijDSERXluAN7DZwVBOOJOlbbkte+PdvCT3cgnlewxfWDlRqXVymUbtZhtMPqklPMLrTrP2ZNPZeIGYyM1xTNt8OYj7AWcFXtD5kI1EKk+qn+C3c/KBLTFtIk2+gzqYft1o6y04Toe7Hj+r8+N4If3GuxG8Kz2uJ3oSun8gfL3xHvJNlwxuJ8WZlBWaEKTZevmorsIKWFyiV3dHlwhsu9oXpNYrVtbML0V8VfQVtHhkq1LqzLtG5Jpiz+HiEWXflt57xQbKAM3xOE2Ya+lhKJsvrN5I2DCCyyc5HG5roxV/c//WYmd62x+lT3ihnBN85OItNr4s/PUVyVfGje848BT0qvM5h1dAVDX7LXXtMRM/Vk4dYQVP7Go5UGBFMl+mC1HOXbnLLCFR7iDtj/7Q1CDFVz2nRtf3cFtwCJfXA5PPLqK90CJS/s+HndnhJhFWv79ihoJ5HjKoNIPM4xSJoz3Hcui2oJwmMxCWWNzD9jAoymPt/sWPvLSptqb8LgoI/Ke+uqEw4GAVMaz31g4=
+    local_dir: public
+    on:
+      branch:
+      - master
 env:
   global:
     secure: J7CwSINV3eT0oyaSEwvmqMGZqVnJQ4GsTMio0RBT/aiTxexxCLM1LzUyZwuTFn3vmjIL0ws+Q4f7ayuH1RfPRJEXhfc8zzPCrByQ7Y2b7e81qcPO+skaBo7gyxIoiQmGbZX12Pfv+/T9DOskHWIZpiDl0n8psS5axWzIjX2AJ88jXc2rk/TNYeB5gvauG1YwuBLynrkZ4INBb3EB0R2iPyPUcQvwK1LZvZd6Fs/nfwReqi3Pw9vZe5WWHEXlakJtjJodudGDs66qIQ8F5WqWvl4duRwQMLBxfZdv6iZmFApsdomv1ORNYRyVCHjM0AWbUOCDsr7fKxptyPPg6Xd8+mPhZf92OcI/6hIAqDwIvjTyWxeAUJ6uzcDN+iDV9VkEPnJFfPppjOcRBICU0YxRaaxJZsnNfgT5WxKF5FcKS7xToI0wEw2tEksJkBcSzBdU8y+kpl9ZdicdY6jD0PGMcmrnh3oZ7XSpL+Z9esLlFG5T9e0W+51PX7syBiTTMIQdxbp3FZHD2uw5uv9i7nP+Pp6x2L7d88AhQbype9nu3eekVYbhK/n6RORSRyErCJf/45RuDFAjd7en5QGTC9+nqIPuW3+ZitYnYhcKhhmT4pOY0JTMned9j8Ye/ZBr6UaufxB1Yoo6lOITojSS2V6jnKmfGVO0SsIzDcuvHyzNlmA=
