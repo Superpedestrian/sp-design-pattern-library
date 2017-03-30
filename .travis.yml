@@ -18,7 +18,7 @@ deploy:
       - release
   - provider: s3
     skip_cleanup: true
-    bucket: thunder-sparkle.internal.superpedestrian.com
+    bucket: sparkle-thunder.internal.superpedestrian.com
     access_key_id: AKIAJYETZ5IGEOWT5WCQ
     secret_access_key:
       secure: uOUfMRLvzCVk52lzLy97iCoFSmq6gZWQd52oZi4FGYS1Pw9ss8xU+q6UYoJAaqXme8NT/CcqLpMmaPYf0HeESW3dLr75dHMCn5EQITPcNuvpLdK3wPetMmfYYRIQKptgdq8dVq5EMooi8TPq7OMMzNG2nbijDSERXluAN7DZwVBOOJOlbbkte+PdvCT3cgnlewxfWDlRqXVymUbtZhtMPqklPMLrTrP2ZNPZeIGYyM1xTNt8OYj7AWcFXtD5kI1EKk+qn+C3c/KBLTFtIk2+gzqYft1o6y04Toe7Hj+r8+N4If3GuxG8Kz2uJ3oSun8gfL3xHvJNlwxuJ8WZlBWaEKTZevmorsIKWFyiV3dHlwhsu9oXpNYrVtbML0V8VfQVtHhkq1LqzLtG5Jpiz+HiEWXflt57xQbKAM3xOE2Ya+lhKJsvrN5I2DCCyyc5HG5roxV/c//WYmd62x+lT3ihnBN85OItNr4s/PUVyVfGje848BT0qvM5h1dAVDX7LXXtMRM/Vk4dYQVP7Go5UGBFMl+mC1HOXbnLLCFR7iDtj/7Q1CDFVz2nRtf3cFtwCJfXA5PPLqK90CJS/s+HndnhJhFWv79ihoJ5HjKoNIPM4xSJoz3Hcui2oJwmMxCWWNzD9jAoymPt/sWPvLSptqb8LgoI/Ke+uqEw4GAVMaz31g4=
