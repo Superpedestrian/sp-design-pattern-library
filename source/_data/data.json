@@ -42,16 +42,24 @@
             "url" : "https://superpedestrian.com/team"
           },
           {
+            "label" : "Team",
+            "url" : "https://superpedestrian.com/team"
+          },
+          {
             "label" : "Careers",
             "url" : "https://superpedestrian.com/jobs"
+          },
+          {
+            "label" : "Press",
+            "url" : "https://superpedestrian.com/press"
           },
           {
             "label" : "Legal",
             "url" : "https://superpedestrian.com/legal"
           },
           {
-            "label" : "Press",
-            "url" : "https://superpedestrian.com/press"
+            "label" : "Photo Credits",
+            "url" : "https://superpedestrian.com/photo-credits"
           }
         ]
       },
@@ -86,6 +94,26 @@
           {
             "label" : "Bikes",
             "url" : "https://superpedestrian.com/bike"
+          },
+          {
+            "label" : "Terms of Sale",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Return Policy",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Shipping",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Privacy Policy",
+            "url" : "https://superpedestrian.com/legal/website-privacy-policy"
+          },
+          {
+            "label" : "Warranty",
+            "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           }
         ]
       },
