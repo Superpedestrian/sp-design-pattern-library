@@ -86,6 +86,26 @@
           {
             "label" : "Bikes",
             "url" : "https://superpedestrian.com/bike"
+          },
+          {
+            "label" : "Terms of Sale",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Return Policy",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Shipping",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Privacy Policy",
+            "url" : "https://superpedestrian.com/legal/website-privacy-policy"
+          },
+          {
+            "label" : "Warranty",
+            "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           }
         ]
       },
