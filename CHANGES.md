@@ -1,5 +1,10 @@
 # Changes
 
+## 0.2.4
+
+- Update footer links
+- Added staging build process
+
 ## 0.2.3
 
 - Reflow footer to match correct grid
