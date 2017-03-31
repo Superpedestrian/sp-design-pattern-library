@@ -1,5 +1,7 @@
 # Pattern Lab Node - Gulp Edition
 
+Visit current master at [Sparkle-Thunder](http://sparkle-thunder.internal.superpedestrian.com).
+
 The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
 
 ## Packaged Components
