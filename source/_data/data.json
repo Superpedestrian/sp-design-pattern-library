@@ -42,16 +42,24 @@
             "url" : "https://superpedestrian.com/team"
           },
           {
+            "label" : "Team",
+            "url" : "https://superpedestrian.com/team"
+          },
+          {
             "label" : "Careers",
             "url" : "https://superpedestrian.com/jobs"
+          },
+          {
+            "label" : "Press",
+            "url" : "https://superpedestrian.com/press"
           },
           {
             "label" : "Legal",
             "url" : "https://superpedestrian.com/legal"
           },
           {
-            "label" : "Press",
-            "url" : "https://superpedestrian.com/press"
+            "label" : "Photo Credits",
+            "url" : "https://superpedestrian.com/photo-credits"
           }
         ]
       },
