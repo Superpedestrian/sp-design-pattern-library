@@ -1,17 +1,18 @@
-<header class="c-header" role="banner">
+<nav class="sp-header-container">
+    <div class="sp-logo-left c-header">
+        {{> molecules-logo-link }}
+    </div>
+    <header class="c-header sp-flex-container" role="banner">
 
-	{{> molecules-logo-link }}
+        {{> molecules-wordmark-link }}
+        <label for="menu-toggle" class="label-toggle"></label>
+        <div class="c-header__controls links">
+            <input type="checkbox" id="menu-toggle">
+            {{> molecules-primary-nav }}
+        </div><!-- end c-header__controls -->
 
-	<div class="c-header__controls">
-
-		<a href="#nav" class="nav-toggle">
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
-    </a>
-
-		{{> molecules-primary-nav }}
-
-	</div><!-- end c-header__controls -->
-
-</header><!-- end c-header -->
+    </header><!-- end c-header -->
+    <div class="sp-logo-right">
+        {{> molecules-logo-link }}
+    </div>
+</nav>

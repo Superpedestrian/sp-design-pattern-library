@@ -5,7 +5,7 @@
 /**
  * Make media elements responsive
  */
-img, video, object {
+.img-responsive, video, object {
   height: auto;
   max-width: 100%;
 }
