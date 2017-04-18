@@ -1,18 +1,22 @@
-<nav class="sp-header-container">
-    <div class="sp-logo-left c-header">
-        {{> molecules-logo-link }}
-    </div>
-    <header class="c-header sp-flex-container" role="banner">
-
-        {{> molecules-wordmark-link }}
-        <label for="menu-toggle" class="label-toggle"></label>
-        <div class="c-header__controls links">
+<div class="header-nav">
+    <nav class="navBar">
+        <div class="logo-left">
+            {{> molecules-logo-link }}
+        </div>
+        <nav class="wrapper">
+            <div class="logo">
+                {{> molecules-wordmark-link }}
+            </div><!-- Logo -->
             <input type="checkbox" id="menu-toggle">
-            {{> molecules-primary-nav }}
-        </div><!-- end c-header__controls -->
-
-    </header><!-- end c-header -->
-    <div class="sp-logo-right">
-        {{> molecules-logo-link }}
-    </div>
-</nav>
+            <label for="menu-toggle" class="label-toggle"></label>
+            </input>
+            <ul>
+                <a href="#"><li>Copenhagen Wheel</li></a>
+                <a href="#"><li>Bikes</li></a>
+                <a href="#"><li>Try</li></a>
+                <a href="#"><li>Buy</li></a>
+                <a href="#"><li>Login</li></a>
+            </ul>
+        </nav>
+    </nav>
+</div>

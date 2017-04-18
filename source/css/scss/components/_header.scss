@@ -1,91 +1,97 @@
-.sp-flex-container {
-  display: flex;
-  margin: 0 auto;
-  width: 1024px;
-}
-
-.sp-header-container {
-  display: flex;
-  height: 80px;
-  align-items: center;
-}
-
-.links {
-  margin-left: auto;
-}
-
-.c-header__controls {
-  float: right;
-}
-
-.c-primary-nav {
-  float: right;
-  background-color: $color-white;
-}
-
-.sp-logo-right {
-  visibility: hidden;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.label-toggle {
-  display: none;
-}
-
-@media screen and (max-width: $bp-large-2) {
-  .label-toggle {
-    background: linear-gradient(to bottom,
-            $color-gray-85 0%, $color-gray-85 20%,
-            transparent 20%, transparent 40%,
-            $color-gray-85 40%, $color-gray-85 60%,
-            transparent 60%, transparent 80%,
-            $color-gray-85 80%, $color-gray-85 100%); //Gradient Hamburger
-    cursor: pointer;
-    display: block;
-    float: right;
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
-    transition: all 1s ease;
+.header-nav {
+  .navBar {
+    background-color: $color-white;
+    min-width: 100%;
+    display: flex;
   }
-
-  ul {
-    display: block;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 2s ease;
-    height: 0;
+  .sp-logo-left{
+    display: flex;
   }
-
-  li {
-    display: block;
-    transition: all 1s ease;
+  .logo {
+    display: inline-block;
+    margin: 1.5em 0;
   }
-
-  #menu-toggle:checked ~ nav ul {
-    display: block;
-    visibility: visible;
-    opacity: 1;
+  .logo-left {
+    display: flex;
+    align-items: center;
   }
-
-  #navigation {
+  // Content Wrapper
+  .wrapper {
+    margin: 0 auto;
+    max-width: 1024px;
     width: 100%;
-    left: 0;
-    right: 0;
-    float: left;
-    transition: all 1s ease;
+    padding: 0 1%;
+    height: 80px;
   }
 
-  .links {
-    width: 100%;
-    transition: all 1s ease;
-  }
+  // Full Navigation, including mobile menu
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      list-style-type: none;
+      width: 60%;
 
-  .sp-flex-container {
-    display: block;
-    transition: all 1s ease;
+      a {
+        color: $color-gray-85;
+        text-decoration: none;
+        transition: all .5s ease;
+
+        &:hover {color: $color-gray-85;}
+      }
+    }
+
+    li  {
+      display: inline-block;
+    }
+
+    #menu-toggle {display: none;}
+
+    .label-toggle {display: none;}
+
+    .wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 768px) {
+      ul {
+        background-color: $color-white;
+        display: block;
+        height: 0;
+        list-style-type: none;
+        opacity: 0;
+        text-align: center;
+        transition: all 0.5s linear;
+        width: 100%;
+        visibility: hidden;
+      }
+
+      li {
+        color: $color-gray-85;
+        display: block;
+        font-size: 1.7em;
+        padding: 2em 0;
+      }
+
+      #menu-toggle:checked ~ ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .label-toggle {
+        background: linear-gradient(to bottom, $color-gray-85 0%, $color-gray-85 20%, transparent 20%, transparent 40%, $color-gray-85 40%, $color-gray-85 60%, transparent 60%, transparent 80%, $color-gray-85 80%, $color-gray-85 100%); //Gradient Hamburger
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 35px;
+        margin-top: 1.3em;
+        width: 35px;
+      }
+
+      .wrapper {display: block;}
+    }
   }
 }

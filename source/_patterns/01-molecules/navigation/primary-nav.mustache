@@ -1,17 +1,10 @@
-<nav id="navigation" class="c-primary-nav">
-
-
-	<ul class="c-primary-nav__list" id="nav-list">
-
-		{{# primaryNav }}
-    {{#icon}}
-		<li class="c-primary-nav__item"><a href="{{ url }}" class="c-primary-nav__link"><img src="/images/{{ icon }}.png" data-rjs="3" alt="{{ label }}" /></a></li>
-    {{/icon}}
-    {{^icon}}
-    <li class="c-primary-nav__item"><a href="{{ url }}" class="c-primary-nav__link">{{ label }}</a></li>
-    {{/icon}}
-		{{/ primaryNav }}
-
-	</ul><!--end c-primary-nav__list-->
-
-</nav><!--end c-primary-nav-->
+<ul class="c-primary-nav__list" id="nav-list">
+    {{# primaryNav }}
+        {{#icon}}
+            <li><a href="{{ url }}" class="c-primary-nav__link"><img src="/images/{{ icon }}.png" data-rjs="3" alt="{{ label }}" /></a></li>
+        {{/icon}}
+        {{^icon}}
+        <a href="{{ url }}"><li>{{ label }}</li></a>
+        {{/icon}}
+    {{/ primaryNav }}
+</ul><!--end c-primary-nav__list-->
