@@ -20,6 +20,7 @@
 
 .c-primary-nav {
   float: right;
+  background-color: $color-white;
 }
 
 .sp-logo-right {
@@ -48,22 +49,26 @@
     height: 20px;
     width: 20px;
     vertical-align: middle;
+    transition: all 1s ease;
   }
 
   ul {
     display: block;
     visibility: hidden;
+    opacity: 0;
+    transition: all 2s ease;
     height: 0;
-    transition: all 1s ease;
   }
 
   li {
     display: block;
+    transition: all 1s ease;
   }
 
   #menu-toggle:checked ~ nav ul {
     display: block;
     visibility: visible;
+    opacity: 1;
   }
 
   #navigation {
@@ -71,13 +76,16 @@
     left: 0;
     right: 0;
     float: left;
+    transition: all 1s ease;
   }
 
   .links {
     width: 100%;
+    transition: all 1s ease;
   }
 
   .sp-flex-container {
     display: block;
+    transition: all 1s ease;
   }
 }
