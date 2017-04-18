@@ -14,14 +14,18 @@
   .logo-left {
     display: flex;
     align-items: center;
+    margin: 0 auto;
   }
   // Content Wrapper
   .wrapper {
-    margin: 0 auto;
     max-width: 1024px;
     width: 100%;
     padding: 0 1%;
     height: 80px;
+  }
+  .logo-right {
+    visibility: hidden;
+    min-width: 28px;
   }
 
   // Full Navigation, including mobile menu
@@ -73,7 +77,7 @@
         color: $color-gray-85;
         display: block;
         font-size: 1.7em;
-        padding: 2em 0;
+        padding: 1em 0;
       }
 
       #menu-toggle:checked ~ ul {
