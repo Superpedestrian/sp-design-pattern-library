@@ -15,3 +15,15 @@
 .c-logo-link {
 	display: inline-block;
 }
+
+#logo {
+	background: url("/images/sp-logomark.svg") no-repeat;
+	width: 30px;
+	height: 45px;
+}
+
+#wordmark {
+	background: url("/images/sp-wordmark.svg") no-repeat;
+	width: 180px;
+	height: 20px;
+}
