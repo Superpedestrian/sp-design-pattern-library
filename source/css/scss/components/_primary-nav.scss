@@ -15,10 +15,6 @@
     right: 0;
     z-index: 2;
   }
-
-  //@media all and (min-width: $bp-med) {
-  //  display: block;
-  //}
 }
 
 /**
@@ -45,6 +41,6 @@
   display: block;
   padding: 0 20px;
   color: $color-gray-85;
-  font: 16px "Graphik Regular", Helvetica, sans-serif;
+  font: 14px "Graphik Regular", Helvetica, sans-serif;
   text-transform: uppercase;
 }
