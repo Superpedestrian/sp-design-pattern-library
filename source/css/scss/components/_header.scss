@@ -1,11 +1,18 @@
 .header-nav {
+
   .navBar {
     background-color: $color-white;
     min-width: 100%;
     display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
   }
   .sp-logo-left{
     display: flex;
+  }
+  .logo-left-mobile {
+    display: inline-block;
   }
   .logo {
     display: inline-block;
@@ -20,7 +27,6 @@
   .wrapper {
     max-width: 1024px;
     width: 100%;
-    padding: 0 1%;
     height: 80px;
   }
   .logo-right {
@@ -58,6 +64,7 @@
       align-items: center;
       display: flex;
       justify-content: space-between;
+      overflow: visible;
     }
 
     @media screen and (max-width: 768px) {
@@ -68,16 +75,21 @@
         list-style-type: none;
         opacity: 0;
         text-align: center;
-        transition: all 0.5s linear;
+        transition: all .5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
         width: 100%;
         visibility: hidden;
       }
 
       li {
         color: $color-gray-85;
+        background-color: $color-white;
         display: block;
         font-size: 1.7em;
         padding: 1em 0;
+        z-index: 999;
       }
 
       #menu-toggle:checked ~ ul {
