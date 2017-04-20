@@ -4,7 +4,7 @@
             <li><a href="{{ url }}" class="c-primary-nav__link"><img src="/images/{{ icon }}.png" data-rjs="3" alt="{{ label }}" /></a></li>
         {{/icon}}
         {{^icon}}
-        <a href="{{ url }}"><li class="c-primary-nav__link">{{ label }}</li></a>
+        <li class="c-primary-nav__link"><a href="{{ url }}">{{ label }}</a></li>
         {{/icon}}
     {{/ primaryNav }}
 </ul><!--end c-primary-nav__list-->
