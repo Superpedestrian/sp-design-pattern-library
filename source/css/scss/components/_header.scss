@@ -1,5 +1,4 @@
 .header-nav {
-
   .navBar {
     background-color: $color-white;
     min-width: 100%;
@@ -7,9 +6,6 @@
     position: fixed;
     top: 0;
     z-index: 9999;
-  }
-  .sp-logo-left{
-    display: flex;
   }
   .logo-left-mobile {
     display: block;
@@ -99,7 +95,7 @@
         color: $color-gray-85;
         background-color: $color-white;
         display: block;
-        font-size: 16px;
+        font-size: 14px;
         padding-top: 10px;
         padding-bottom: 10px;
         z-index: 999;
