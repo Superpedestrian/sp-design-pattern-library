@@ -12,11 +12,19 @@
     display: flex;
   }
   .logo-left-mobile {
-    display: inline-block;
+    display: block;
+    float: left;
   }
   .logo {
-    display: inline-block;
+    display: block;
+    float: left;
     margin: 1.5em 0;
+  }
+  .c-logo-link {
+    display: block;
+  }
+  #logo {
+    margin-top: 20px;
   }
   .logo-left {
     display: flex;
@@ -54,6 +62,7 @@
 
     li  {
       display: inline-block;
+      clear: left;
     }
 
     #menu-toggle {display: none;}
@@ -71,9 +80,10 @@
       ul {
         background-color: $color-white;
         display: block;
-        height: 0;
+        margin-bottom: 0;
         list-style-type: none;
         opacity: 0;
+        height: 0;
         text-align: center;
         transition: all .5s ease-in-out;
         -webkit-transition: all 0.5s ease-in-out;
@@ -87,7 +97,7 @@
         color: $color-gray-85;
         background-color: $color-white;
         display: block;
-        font-size: 1.7em;
+        font-size: 16px;
         padding: 1em 0;
         z-index: 999;
       }
