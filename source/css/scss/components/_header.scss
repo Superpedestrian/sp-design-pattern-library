@@ -24,7 +24,7 @@
     display: block;
   }
   #logo {
-    margin-top: 20px;
+    margin-top: 16px;
   }
   .logo-left {
     display: flex;
@@ -83,13 +83,16 @@
         margin-bottom: 0;
         list-style-type: none;
         opacity: 0;
-        text-align: center;
         transition: all .5s ease-in-out;
         -webkit-transition: all 0.5s ease-in-out;
         -moz-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
         width: 100%;
         visibility: hidden;
+        margin-top: 80px;
+      }
+      .logo {
+        margin-top: 30px;
       }
 
       li {
@@ -97,7 +100,8 @@
         background-color: $color-white;
         display: block;
         font-size: 16px;
-        padding: 1em 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
         z-index: 999;
       }
 
@@ -111,9 +115,9 @@
         cursor: pointer;
         display: block;
         float: right;
-        height: 35px;
+        height: 15px;
         margin-top: 1.3em;
-        width: 35px;
+        width: 15px;
       }
 
       .wrapper {display: block;}
