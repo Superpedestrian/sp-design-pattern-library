@@ -1,7 +1,7 @@
 .header-nav {
   .navBar {
     background-color: $color-white;
-    min-width: 100%;
+    width: 100vw;
     display: flex;
     position: fixed;
     top: 0;
@@ -99,6 +99,8 @@
         padding-top: 10px;
         padding-bottom: 10px;
         z-index: 999;
+        padding-left: 30px;
+        width: 100vw;
       }
 
       #menu-toggle:checked ~ ul {
@@ -113,6 +115,7 @@
         float: right;
         height: 15px;
         margin-top: 1.3em;
+        margin-right: 50px;
         width: 15px;
       }
 
