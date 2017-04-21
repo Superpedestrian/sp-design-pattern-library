@@ -86,9 +86,14 @@
         width: 100%;
         visibility: hidden;
         margin-top: 80px;
+        padding-bottom: 38px;
       }
       .logo {
         margin-top: 30px;
+      }
+
+      #logo {
+        background-size: 20px 50px;
       }
 
       li {
