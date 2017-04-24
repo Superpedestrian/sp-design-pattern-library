@@ -128,6 +128,10 @@ $pad-quad: $pad*4;
 $pad-half: $pad/2;
 $pad-quarter:$pad/4;
 
+// Grid measurements for website redesign
+$primary-column:    1024px;
+$secondary-column:  488px;
+$column-padding:    ($primary-column - (2*488))/2;
 
 
 
