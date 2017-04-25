@@ -6,7 +6,7 @@
  * Navigation tag
  */
 .c-primary-nav {
-  display: none;
+  display: block;
 
   &--is-active {
     display: block;
@@ -14,10 +14,6 @@
     top: 67px;
     right: 0;
     z-index: 2;
-  }
-
-  @media all and (min-width: $bp-med) {
-    display: block;
   }
 }
 
@@ -27,7 +23,7 @@
 .c-primary-nav__list {
   display: none;
 
-  @media all and (min-width: $bp-med) {
+  @media all and (min-width: $bp-large-2) {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -43,8 +39,7 @@
  */
 .c-primary-nav__link {
   display: block;
-  padding: 0 20px;
-  color: $color-white;
-  font: 16px "Graphik Regular", Helvetica, sans-serif;
+  color: $color-gray-85;
+  font: 14px "Graphik Regular", Helvetica, sans-serif;
   text-transform: uppercase;
 }
