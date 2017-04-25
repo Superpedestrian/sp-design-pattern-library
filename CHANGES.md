@@ -1,4 +1,7 @@
 # Changes
+## 0.2.5
+
+- Added header
 
 ## 0.2.4
 

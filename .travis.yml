@@ -17,6 +17,7 @@ deploy:
       - master
       - release
   - provider: s3
+    acl: public_read
     skip_cleanup: true
     bucket: sparkle-thunder.internal.superpedestrian.com
     access_key_id: AKIAJYETZ5IGEOWT5WCQ

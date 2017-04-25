@@ -288,3 +288,21 @@
     }
   }
 }
+
+@media (min-width: $primary-column) {
+  .col-sm-6, .col-lg-6, .col-md-6 {
+    max-width: $secondary-column;
+  }
+
+  .text-section, .header-section {
+    max-width: $primary-column
+  }
+
+  .col-left {
+    padding-right: $column-padding;
+  }
+
+  .col-right {
+    padding-left: $column-padding;
+  }
+}

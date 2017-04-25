@@ -1,47 +1,130 @@
-/*------------------------------------
-    #HEADER
-------------------------------------*/
-
-/**
- * Header
- */
-.c-header {
-  display: flex;
-  align-items: center;
-  padding: 40px;
-  background-color: $color-gray-90;
-
-  @media all and (min-height: $bp-med) {
-    padding: 32px;
+.header-nav {
+  .navBar {
+    background-color: $color-white;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
   }
-}
-
-/**
- * Header Controls
- * 1) This container holds the primary nav
- */
-.c-header__controls {
-  display: flex;
-  align-items: flex-end;
-  margin-left: auto;
-}
-
-/**
- * Nav toggle button
- * 1) Styles for the general nav toggle button
- */
-.nav-toggle {
-  display: block;
-  padding: 0.9rem 1rem 0.7rem;
-  font-size: 1.3rem;
-  line-height: 1;
-
-  @media all and (min-width: $bp-med) {
-    display: none;
+  .logo-left-mobile {
+    display: block;
+    float: left;
+  }
+  .logo {
+    display: block;
+    float: left;
+    margin: 1.5em 0;
+  }
+  .c-logo-link {
+    display: block;
+  }
+  #logo {
+    margin-top: 16px;
+  }
+  .logo-left {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  // Content Wrapper
+  .wrapper {
+    max-width: 1024px;
+    width: 100%;
+    height: 80px;
+  }
+  .logo-right {
+    visibility: hidden;
+    min-width: 28px;
   }
 
-  @media all and (max-width: 17em) {
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
+  // Full Navigation, including mobile menu
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      list-style-type: none;
+      width: 60%;
+
+      a {
+        color: $color-gray-85;
+        text-decoration: none;
+        transition: all .5s ease;
+
+        &:hover {color: $color-gray-85;}
+      }
+    }
+
+    li  {
+      display: inline-block;
+      clear: left;
+    }
+
+    #menu-toggle {display: none;}
+
+    .label-toggle {display: none;}
+
+    .wrapper {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      overflow: visible;
+    }
+
+    @media screen and (max-width: 768px) {
+      ul {
+        background-color: $color-white;
+        display: block;
+        margin-bottom: 0;
+        list-style-type: none;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        width: 100%;
+        visibility: hidden;
+        margin-top: 80px;
+        padding-bottom: 38px;
+      }
+      .logo {
+        margin-top: 30px;
+      }
+
+      #logo {
+        background-size: 20px 50px;
+      }
+
+      li {
+        color: $color-gray-85;
+        background-color: $color-white;
+        display: block;
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        z-index: 999;
+        padding-left: 30px;
+        width: 100vw;
+      }
+
+      #menu-toggle:checked ~ ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .label-toggle {
+        background: linear-gradient(to bottom, $color-gray-85 0%, $color-gray-85 20%, transparent 20%, transparent 40%, $color-gray-85 40%, $color-gray-85 60%, transparent 60%, transparent 80%, $color-gray-85 80%, $color-gray-85 100%); //Gradient Hamburger
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 15px;
+        margin-top: 32px;
+        margin-right: 50px;
+        width: 15px;
+      }
+
+      .wrapper {display: block;}
+    }
   }
 }

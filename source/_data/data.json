@@ -9,27 +9,27 @@
     {
       "label": "Copenhagen Wheel",
       "icon" : false,
-      "url": "link.pages-cphw"
+      "url": "http://www.superpedestrian.com/the-copenhagen-wheel"
     },
     {
-      "label": "Events",
+      "label": "Bikes",
       "icon": false,
-      "url": "link.pages-events"
+      "url": "http://www.superpedestrian.com/bike"
     },
     {
-      "label": "Support",
+      "label": "Try",
       "icon": false,
-      "url": "link.pages-support"
+      "url": "http://www.superpedestrian.com/ride"
     },
     {
-      "label": "Cart",
-      "icon" : "icon-cart",
-      "url": "link.pages-cart"
+      "label": "Buy",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/choose"
     },
     {
       "label": "Login",
       "icon" : false,
-      "url": "link.pages-login"
+      "url": "http://www.account.superpedestrian.com/login"
     }
   ],
   "footerNav" : {
