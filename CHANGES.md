@@ -1,4 +1,9 @@
 # Changes
+## 0.2.6
+
+- Added simpler radio button
+- Updated footer link for return policy
+
 ## 0.2.5
 
 - Added header
