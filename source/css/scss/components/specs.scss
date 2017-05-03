@@ -1,0 +1,52 @@
+table {
+  width: auto;
+  border: none;
+  td {
+    border: none;
+    padding-right: 15px;
+    padding-bottom: 24px;
+    font-size: 18px;
+    font-family: "Graphik Bold", Helvetica, sans-serif;
+    color: $color-gray-40;
+  }
+}
+.grey-heading {
+  font-size: 24px;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
+  color: $color-gray-40;
+  margin-bottom: 8px;
+}
+
+.bike-model-heading {
+  color: $color-gray-85;
+}
+
+.spec-label {
+  font-size: 18px;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
+  color: $color-gray-60;
+}
+
+.large-grey-heading {
+  font-size: 24px;
+  color: $color-gray-40;
+}
+
+.size-info-label {
+  font-size: 18px;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
+  color: $color-gray-20;
+}
+.grey-text {
+  font-size: 18px;
+  font-family: "Graphik Regular", Helvetica, sans-serif;
+  color: $color-gray-40;
+}
+.light-grey-text {
+  font-size: large;
+  color: $color-gray-20;
+}
+
+.title-section {
+  margin-bottom: 32px;
+}
