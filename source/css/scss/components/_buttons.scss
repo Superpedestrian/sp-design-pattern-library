@@ -12,8 +12,8 @@
   font-size: 18px;
   font-family: "Graphik Bold", Helvetica, sans-serif;
   padding: 8px 28px 8px 28px;
-  max-width: 244px;
-  min-width: 100%;
+  min-width: 244px;
+  max-width: 100%;
   min-height: 44px;
   background: $color-brand-red;
   color: $color-white;
@@ -38,6 +38,10 @@
     background: $color-brand-red;
     color: $color-white;
   }
+  &:active {
+    background-color: $color-active-red;
+    border-color: $color-active-border;
+  }
 
   /**
    * Disabled button
@@ -45,6 +49,23 @@
   &.disabled {
     background: $color-gray-10;
     color: $color-gray-60;
+  }
+}
+
+.sp-btn-white {
+  color: $color-brand-red;
+  background: $color-white;
+  &:hover, &:focus {
+    color: $color-brand-red;
+    background: $color-white;
+  }
+  &:active {
+    color: $color-brand-red;
+    background: $color-white;
+    border: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
   }
 }
 
