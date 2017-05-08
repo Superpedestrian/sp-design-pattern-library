@@ -27,6 +27,11 @@
       "url": "http://www.superpedestrian.com/choose"
     },
     {
+      "label": "Support",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/support"
+    },
+    {
       "label": "Login",
       "icon" : false,
       "url": "http://www.account.superpedestrian.com/login"
