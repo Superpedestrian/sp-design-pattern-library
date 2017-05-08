@@ -11,7 +11,7 @@ a {
   outline: 0;
   transition: all $anim-speed-quick $anim-ease;
 
-  /*&:hover, &:focus {
-    color: $color-gray-85;
-  }*/
+  &:hover, &:focus {
+    text-decoration: none;
+  }
 }
