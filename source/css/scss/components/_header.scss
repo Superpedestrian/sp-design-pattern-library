@@ -122,11 +122,15 @@
         float: right;
         height: 15px;
         margin-top: 32px;
-        margin-right: 50px;
+        margin-right: 30px;
         width: 15px;
       }
 
-      .wrapper {display: block;}
+      .wrapper {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 }
