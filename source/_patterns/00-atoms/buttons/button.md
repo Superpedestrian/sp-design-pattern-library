@@ -2,4 +2,4 @@
 title: Button
 ---
 
-The standard website button.
+The standard website buttons.
