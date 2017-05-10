@@ -2,4 +2,4 @@
 title: Disabled Button
 ---
 
-Disabled button.
+A disabled button.
