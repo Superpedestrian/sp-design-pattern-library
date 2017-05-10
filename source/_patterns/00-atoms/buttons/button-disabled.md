@@ -1,5 +1,5 @@
 ---
 title: Disabled Button
 ---
-A disabled button.
 
+A disabled button.
