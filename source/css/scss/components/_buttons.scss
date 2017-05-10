@@ -5,22 +5,42 @@
 /**
  * Button
  */
-.c-btn {
+.sp-btn {
+
   display: inline-block;
-  min-width: 200px;
-  padding: $pad-double $pad-quad;
-  border: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
+  padding: 8px 28px 8px 28px;
+  min-width: 244px;
+  max-width: 100%;
+  min-height: 44px;
   background: $color-brand-red;
   color: $color-white;
-  font: 18px "Graphik Semibold", Helvetica, sans-serif;
-  line-height: 1;
+  line-height: 44px;
   text-align: center;
   text-transform: uppercase;
   transition: background 0.2s ease;
+  touch-action: manipulation;
+
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
 
   &:hover, &:focus {
     background: $color-brand-red;
     color: $color-white;
+  }
+  &:active {
+    background-color: $color-active-red;
+    border-color: $color-active-border;
   }
 
   /**
@@ -28,7 +48,26 @@
    */
   &.disabled {
     background: $color-gray-10;
-    color: $color-gray-60;
+    color: $color-gray-02;
+    border-color: $color-gray-10;
+    opacity: 1;
+  }
+}
+
+.sp-btn-white {
+  color: $color-brand-red;
+  background: $color-white;
+  &:hover, &:focus {
+    color: $color-brand-red;
+    background: $color-white;
+  }
+  &:active {
+    color: $color-brand-red;
+    background: $color-white;
+    border: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
   }
 }
 

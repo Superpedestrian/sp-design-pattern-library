@@ -50,6 +50,23 @@
 /**
  * Section block
  */
+
+.section-top {
+  margin-top: 104px;
+}
+
+.section-bottom {
+  margin-bottom: 104px;
+}
+
+.stretch {
+  width: 100%;
+}
+
+.grey-bar {
+  background-color: $color-gray-85;
+}
+
 .c-tile-grid {
   background: url(../../images/sample/hero-mountains.jpg) no-repeat 50% 50% $color-gray-85;
   background-size: cover;

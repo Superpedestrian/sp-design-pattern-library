@@ -114,10 +114,10 @@ select {
  * Radio button styling.
  */
 
-$shadow: #000000;
-$outline: #ffffff;
-$selected: #e3321a;
-$unselected: #ffffff;
+$shadow: $color-gray-90;
+$outline:  $color-white;
+$selected: $color-brand-red;
+$unselected:  $color-white;
 
 input[type="radio"] {
   display: none;
@@ -153,7 +153,7 @@ input[type="radio"]:checked + label span{
     width: 30px;
     top: 0;
     left: 0;
-    border: 1px solid black;
+    border: 1px solid $color-gray-90;
     border-radius: 1px;
     background: white;
     cursor: pointer;
@@ -163,7 +163,7 @@ input[type="radio"]:checked + label span{
       height: 8px;
       top: 4px;
       left: 4px;
-      border: 6px solid #e3321a;
+      border: 6px solid $color-brand-red;
       border-top: none;
       border-right: none;
       background: transparent;
