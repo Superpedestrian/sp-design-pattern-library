@@ -1,4 +1,9 @@
 # Changes
+## 0.2.7
+- Added button styles
+- Added mobile styles for headers 
+- Added section styles for drupal
+
 ## 0.2.6
 
 - Added simpler radio button
