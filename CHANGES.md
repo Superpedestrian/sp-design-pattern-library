@@ -1,4 +1,7 @@
 # Changes
+## 0.2.8
+- Modified fonts for mobile displays
+ 
 ## 0.2.7
 - Added button styles
 - Added mobile styles for headers 
