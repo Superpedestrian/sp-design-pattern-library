@@ -1,4 +1,7 @@
 # Changes
+## 0.2.9
+- Added Bootstrap halfings font for glyphicons
+
 ## 0.2.8
 - Modified fonts for mobile displays
  

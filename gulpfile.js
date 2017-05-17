@@ -80,13 +80,13 @@ gulp.task('dist-copy:favicon', function(){
 
 // Fonts copy
 gulp.task('pl-copy:font', function(){
-  return gulp.src('*', {cwd: resolvePath(paths().source.fonts)})
+  return gulp.src('**/*.*', {cwd: resolvePath(paths().source.fonts)})
     .pipe(gulp.dest(resolvePath(paths().public.fonts)));
 });
 
 // Fonts copy dist
 gulp.task('dist-copy:font', function(){
-  return gulp.src('*', {cwd: resolvePath(paths().public.fonts)})
+  return gulp.src('**/*.*', {cwd: resolvePath(paths().public.fonts)})
     .pipe(gulp.dest(resolvePath(dist.fonts)));
 });
 
