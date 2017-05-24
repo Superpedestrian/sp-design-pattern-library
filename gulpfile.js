@@ -243,6 +243,7 @@ function watch() {
     resolvePath(paths().source.patterns) + '/**/*.md',
     resolvePath(paths().source.data) + '/*.json',
     resolvePath(paths().source.fonts) + '/*',
+    resolvePath(paths().source.js) + '/*',
     resolvePath(paths().source.images) + '/*',
     resolvePath(paths().source.meta) + '/*',
     resolvePath(paths().source.annotations) + '/*'
@@ -250,7 +251,7 @@ function watch() {
 
   console.log(patternWatches);
 
-  gulp.watch(patternWatches, { awaitWriteFinish: true }).on('change', gulp.series(build, reload));
+  gulp.watch(patternWatches, { awaitWriteFinish: true }).on('change', gulp.series(build, 'pl-copy:js', reload));
 }
 
 gulp.task('patternlab:connect', gulp.series(function(done) {
