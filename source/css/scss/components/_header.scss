@@ -40,7 +40,7 @@
 
   // Full Navigation, including mobile menu
   nav {
-    ul {
+    .c-primary-nav__list {
       display: flex;
       justify-content: space-between;
       align-items: stretch;
@@ -56,7 +56,7 @@
       }
     }
 
-    li  {
+    .c-primary-nav__link  {
       display: inline-block;
       clear: left;
     }
@@ -75,7 +75,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      ul {
+      .c-primary-nav__list, .arrow-menu ul {
         background-color: $color-white;
         display: block;
         margin-bottom: 0;
@@ -98,7 +98,7 @@
         background-size: 20px 50px;
       }
 
-      li {
+      .c-primary-nav__link, .arrow-menu li {
         color: $color-gray-85;
         background-color: $color-white;
         display: block;
@@ -108,6 +108,10 @@
         z-index: 999;
         padding-left: 30px;
         width: 100vw;
+      }
+
+      .sub-menu {
+        margin-left: 24px;
       }
 
       #menu-toggle:checked ~ ul {
@@ -131,6 +135,68 @@
         padding-left: 0;
         padding-right: 0;
       }
+    }
+  }
+
+  // Section with My Account dropdown
+  .dropdown-area {
+    display: relative;
+  }
+
+  .glyphicon-triangle-bottom, .glyphicon-triangle-top {
+    font-size: 10px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .arrow-menu {
+      width: 234px;
+      padding:  32px 24px 16px 24px;
+      margin-left: -120px;
+      margin-top: 24px;
+      position: absolute;
+      background: $color-white;
+      border: 1px solid $color-gray-10;
+      -moz-box-shadow:    0px 2px 4px 0px $color-gray-40;
+      -webkit-box-shadow: 0px 2px 4px 0px $color-gray-40;
+      box-shadow:         0px 2px 4px 0px $color-gray-40;
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: block;
+        padding: 0 0 16px 0;
+        font: 14px Arial, sans-serif;
+        text-transform: uppercase;
+      }
+      .sp-global .header-nav nav li {
+        display: block;
+      }
+    }
+
+    .arrow-menu:after, .arrow-menu:before {
+      bottom: 100%;
+      left: 80%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .arrow-menu:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: $color-white;
+      border-width: 16px;
+      margin-left: -16px;
+    }
+    .arrow-menu:before {
+      border-color: rgba(228, 226, 226, 0);
+      border-bottom-color: $color-gray-10;
+      border-width: 17px;
+      margin-left: -17px;
     }
   }
 }
