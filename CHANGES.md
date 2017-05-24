@@ -1,4 +1,7 @@
 # Changes
+## 0.3.0
+- Added logged in/logged out state to the header
+
 ## 0.2.9
 - Added Bootstrap halfings font for glyphicons
 
