@@ -27,11 +27,11 @@
       trayOpen = !trayOpen;
       if(trayOpen){
         performOnElement('arrow-menu', showElement);  
-        document.getElementById('account-caret').className = "fa fa-caret-up";
+        document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-top";
       }
       else {
         performOnElement('arrow-menu', hideElement);
-        document.getElementById('account-caret').className = "fa fa-caret-down";
+        document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-bottom";
       }
     }
   }
@@ -52,6 +52,9 @@
   function init() {
     var cookies = document.cookie;
     performOnElement('arrow-menu', hideElement);
+    // Allow dropdown area to be shown after we've hidden the submenu
+    document.getElementById('dropdown-area').className = '';
+
     setLinks();
 
     if((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)){
