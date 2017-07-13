@@ -1,4 +1,8 @@
 # Changes
+
+## 0.3.1
+- Changed bike page link in header to point to shop link
+
 ## 0.3.0
 - Added logged in/logged out state to the header
 
