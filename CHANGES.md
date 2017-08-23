@@ -1,5 +1,8 @@
 # Changes
 
+## 0.3.2
+- Changed header on mobile
+
 ## 0.3.1
 - Changed bike page link in header to point to shop link
 
