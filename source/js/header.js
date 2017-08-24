@@ -61,10 +61,10 @@
           cartCount = value;
         }
       }
-    }
 
-    document.getElementById('shop-badge').innerHTML= (cartCount > 9) ? '9+': cartCount;
-    return cartCount;
+      document.getElementById('shop-badge').innerHTML= (cartCount > 9) ? '9+': cartCount;
+      performOnElement('shop-badge', showElement);
+    }
   }
 
   function init() {
