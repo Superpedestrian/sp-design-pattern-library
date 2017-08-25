@@ -1,5 +1,8 @@
 # Changes
 
+## 0.4.0
+- Added cart button to header
+
 ## 0.3.2
 - Changed header on mobile
 
