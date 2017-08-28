@@ -1,5 +1,8 @@
 # Changes
 
+## 0.4.1
+- Fixed cart asset
+
 ## 0.4.0
 - Added cart button to header
 
