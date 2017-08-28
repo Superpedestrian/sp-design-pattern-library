@@ -49,6 +49,24 @@
     document.getElementById('sp-logout-url').href = logoutURL + '?next=' + logoutNext;
   }
 
+
+  var setCartCount = function(cookies) {
+    var cartCount = 0;
+    if(cookies.indexOf('item_count=') > -1){
+      var splitCookies = cookies.split('; ');
+      for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+        var key = splitCookies[cookieIndex].split('=')[0];
+        var value = splitCookies[cookieIndex].split('=')[1];
+        if(key == 'item_count') {
+          cartCount = value;
+        }
+      }
+
+      document.getElementById('shop-badge').innerHTML= (cartCount > 9) ? '9+': cartCount;
+      performOnElement('shop-badge', showElement);
+    }
+  }
+
   function init() {
     var cookies = document.cookie;
     performOnElement('arrow-menu', hideElement);
@@ -56,6 +74,7 @@
     document.getElementById('dropdown-area').className = '';
 
     setLinks();
+    setCartCount(cookies);
 
     if((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)){
       // Cookies found display My Account
