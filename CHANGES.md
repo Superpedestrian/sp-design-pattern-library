@@ -1,5 +1,8 @@
 # Changes
 
+## 0.4.2
+- Switch to SVG for cart
+
 ## 0.4.1
 - Fixed cart asset
 
