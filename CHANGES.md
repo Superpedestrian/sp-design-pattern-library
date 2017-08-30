@@ -1,5 +1,8 @@
 # Changes
 
+## 0.4.3
+- Fixing header cut off issue
+
 ## 0.4.2
 - Switch to SVG for cart
 
