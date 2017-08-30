@@ -38,6 +38,10 @@
     min-width: 28px;
   }
 
+  ul#nav-list {
+    padding-left: 34px;
+  }
+
   // Full Navigation, including mobile menu
   nav {
     .c-primary-nav__list {
@@ -98,6 +102,10 @@
         background-size: 20px 50px;
       }
 
+      .logo-left-mobile.hidden-md.hidden-lg {
+        padding-left: 30px;
+      }
+
       .c-primary-nav__link, .arrow-menu li {
         color: $color-gray-85;
         background-color: $color-white;
@@ -133,6 +141,7 @@
       .wrapper {
         display: block;
         padding-right: 0;
+        padding-left: 0;
       }
     }
   }
