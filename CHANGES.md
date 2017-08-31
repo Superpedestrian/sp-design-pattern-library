@@ -1,5 +1,8 @@
 # Changes
 
+## 0.4.4
+- Fixed header and footer links
+
 ## 0.4.3
 - Fixing header cut off issue
 
