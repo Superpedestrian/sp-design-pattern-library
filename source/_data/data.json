@@ -14,7 +14,7 @@
     {
       "label": "Bikes",
       "icon": false,
-      "url": "shop.superpedestrian.com/t/categories/bikes"
+      "url": "http://shop.superpedestrian.com/t/categories/bikes"
     },
     {
       "label": "Try",
@@ -93,7 +93,7 @@
           },
           {
             "label" : "Bikes",
-            "url" : "https://superpedestrian.com/bike"
+            "url" : "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
             "label" : "Terms of Sale",
