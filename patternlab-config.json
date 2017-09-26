@@ -12,7 +12,8 @@
       "images" : "./source/images",
       "fonts" : "./source/fonts",
       "css" : "./source/css/",
-      "scss" : "./source/css/scss/"
+      "scss" : "./source/css/scss/",
+      "flags" : "./source/components/flag-icon-css/flags"
     },
     "public" : {
       "root" : "./public/",
@@ -23,7 +24,8 @@
       "js" : "./public/js",
       "images" : "./public/images",
       "fonts" : "./public/fonts",
-      "css" : "./public/css"
+      "css" : "./public/css",
+      "flags" : "./public/flags"
     }
   },
   "styleGuideExcludes": [

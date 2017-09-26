@@ -66,6 +66,16 @@
       performOnElement('shop-badge', showElement);
     }
   }
+  
+  var setCountryIcon = function(cookies) {
+    var countryCode = 'us';
+    if(cookies.indexOf('_sp_locale=') > -1){
+      var splitLocale = cookies.split('-');
+      countryCode = splitLocale[1].toLowerCase();
+  
+      document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
+    }
+  }
 
   function init() {
     var cookies = document.cookie;
@@ -75,6 +85,7 @@
 
     setLinks();
     setCartCount(cookies);
+    setCountryIcon(cookies);
 
     if((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)){
       // Cookies found display My Account
