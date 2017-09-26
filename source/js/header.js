@@ -70,15 +70,9 @@
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
     if(cookies.indexOf('_sp_locale=') > -1){
-      var splitCookies = cookies.split('; ');
-      for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
-        var key = splitCookies[cookieIndex].split('=')[0];
-        var value = splitCookies[cookieIndex].split('=')[1];
-        if(key == 'sp_country') {
-          countryCode = value;
-        }
-      }
-
+      var splitLocale = cookies.split('-');
+      countryCode = splitLocale[1].toLowerCase();
+  
       document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
     }
   }
