@@ -69,12 +69,12 @@
   
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
-    if(cookies.indexOf('_sp_locale=') > -1){
+    if(cookies.indexOf('locale=') > -1){
       var splitCookies = cookies.split(';');
       for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
         var value = splitCookies[cookieIndex].split('=')[1];
-        if(key == '_sp_locale') {
+        if(key == 'locale') {
           countryCode = value.split('-')[1];
         }
       }
