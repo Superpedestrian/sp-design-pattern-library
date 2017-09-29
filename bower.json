@@ -1,7 +1,7 @@
 {
   "name": "sp-design-pattern-library",
   "description": "Design pattern library for Superpedestrian",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "main": "dist/css/style.css",
   "authors": [
     "Superpedestrian"
@@ -30,6 +30,7 @@
     "scripts"
   ],
   "devDependencies": {
-    "bootstrap-sass": "bootstrap-sass-official#^3.3.7"
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7",
+    "flag-icon-css": "^2.8.0"
   }
 }

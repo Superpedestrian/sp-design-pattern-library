@@ -1,5 +1,9 @@
 # Changes
 
+## 0.4.5
+
+- Added region selection to header
+
 ## 0.4.4
 - Fixed header and footer links
 

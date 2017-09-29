@@ -9,7 +9,8 @@ var dist = {
   "js":"./dist/js",
   "images":"./dist/images",
   "fonts":"./dist/fonts",
-  "css":"./dist/css"
+  "css":"./dist/css",
+  "flags":"./dist/flags",
 };
 
 var templates = [
@@ -64,6 +65,20 @@ gulp.task('pl-copy:img', function(){
 gulp.task('dist-copy:img', function(){
   return gulp.src('**/*.*',{cwd: resolvePath(paths().public.images)} )
     .pipe(gulp.dest(resolvePath(dist.images)));
+});
+
+// Flags copy
+gulp.task('pl-copy:flags', function(){
+  console.log(resolvePath(paths().source.flags));
+  console.log(resolvePath(paths().public.flags));
+  return gulp.src('**/*.*',{cwd: resolvePath(paths().source.flags)} )
+    .pipe(gulp.dest(resolvePath(paths().public.flags)));
+});
+
+// Flags copy dist
+gulp.task('dist-copy:flags', function(){
+  return gulp.src('**/*.*',{cwd: resolvePath(paths().public.flags)} )
+    .pipe(gulp.dest(resolvePath(dist.flags)));
 });
 
 // Favicon copy
@@ -154,7 +169,8 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:font',
     gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
     'pl-copy:styleguide',
-    'pl-copy:styleguide-css'
+    'pl-copy:styleguide-css',
+    'pl-copy:flags'
   ),
   function(done){
     done();
@@ -167,7 +183,8 @@ gulp.task('dist-assets',
     'dist-copy:img',
     'dist-copy:css',
     'dist-copy:favicon',
-    'dist-copy:font'
+    'dist-copy:font',
+    'dist-copy:flags'
   )
 );
 

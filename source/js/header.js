@@ -55,7 +55,7 @@
     if(cookies.indexOf('item_count=') > -1){
       var splitCookies = cookies.split('; ');
       for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
-        var key = splitCookies[cookieIndex].split('=')[0];
+        var key = splitCookies[cookieIndex].split('=')[0].trim();
         var value = splitCookies[cookieIndex].split('=')[1];
         if(key == 'item_count') {
           cartCount = value;
@@ -64,6 +64,22 @@
 
       document.getElementById('shop-badge').innerHTML= (cartCount > 9) ? '9+': cartCount;
       performOnElement('shop-badge', showElement);
+    }
+  }
+  
+  var setCountryIcon = function(cookies) {
+    var countryCode = 'us';
+    if(cookies.indexOf('locale=') > -1){
+      var splitCookies = cookies.split(';');
+      for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+        var key = splitCookies[cookieIndex].split('=')[0].trim();
+        var value = splitCookies[cookieIndex].split('=')[1];
+        if(key == 'locale') {
+          countryCode = value.split('-')[1];
+        }
+      }
+
+      document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
     }
   }
 
@@ -75,6 +91,7 @@
 
     setLinks();
     setCartCount(cookies);
+    setCountryIcon(cookies);
 
     if((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)){
       // Cookies found display My Account
