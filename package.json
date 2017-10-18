@@ -10,7 +10,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
     "minimist": "^1.2.0",
-    "patternlab-node": "^2.0.0",
+    "patternlab-node": "https://sp-devops:3b3f7b828b6e977a0f891c358a0d4753f917ddfe@github.com/Superpedestrian/patternlab-node.git#superpedestrian-release",
     "styleguidekit-assets-default": "^3.0.0",
     "styleguidekit-mustache-default": "^3.0.0"
   },
@@ -35,6 +35,7 @@
     "node": ">=5.0"
   },
   "devDependencies": {
+    "gulp-add-src": "^0.2.0",
     "gulp-csslint": "^1.0.0",
     "gulp-sass-lint": "^1.3.2"
   }
