@@ -19,6 +19,10 @@ var templates = [
   "02-organisms-00-global-header/*.*"
 ];
 
+var localized_templates = [
+  "de/"
+];
+
 var gulp = require('gulp'),
   Promise = require("bluebird");
   gutil = require('gulp-util'),
@@ -27,7 +31,8 @@ var gulp = require('gulp'),
   sassLint = require('gulp-sass-lint'),
   path = require('path'),
   browserSync = require('browser-sync').create(),
-  argv = require('minimist')(process.argv.slice(2));
+  argv = require('minimist')(process.argv.slice(2)),
+  merge = require('merge-stream');
 
 function resolvePath(pathInput) {
   return path.resolve(pathInput).replace(/\\/g,"/");
@@ -138,8 +143,24 @@ gulp.task('pl-copy:styleguide-css', function(){
 
 // Templates copy to dist from public
 gulp.task('dist-copy:templates', function(){
-    return gulp.src(templates, {cwd: resolvePath(paths().public.patterns)})
-      .pipe(gulp.dest(resolvePath(dist.templates)));
+  return gulp.src(templates, {cwd: resolvePath(paths().public.patterns)})
+    .pipe(gulp.dest(resolvePath(dist.templates)));
+});
+
+// Templates copy localized files to dist from public
+gulp.task('dist-copy:localized-templates', function(){
+  var locale;
+  var folders = [];
+
+  for (var i = 0, len = localized_templates.length; i < len; i++) {
+    locale = localized_templates[i];
+    folders.push(
+      gulp.src(templates, {cwd: resolvePath(paths().public.patterns + locale)})
+        .pipe(gulp.dest(resolvePath(dist.templates + locale)))
+    );
+  }
+
+  return merge(folders);
 });
 
 /******************************************************
@@ -221,7 +242,7 @@ gulp.task('patternlab:installplugin', function (done) {
   done();
 });
 
-gulp.task('dist', gulp.series('patternlab:build', 'dist-assets', 'dist-copy:templates', function (done) {
+gulp.task('dist', gulp.series('patternlab:build', 'dist-assets', 'dist-copy:templates', 'dist-copy:localized-templates', function (done) {
   done();
 }));
 /******************************************************
