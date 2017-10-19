@@ -1,10 +1,10 @@
 {
   "bodyClass" : "sp-global",
-  "language_code" : "default",
+  "language_code" : "de",
   "company" : {
-        "name" : "Superpedestrian",
-        "url" : "http://superpedestrian.com"
-    },
+    "name" : "Superpedestrian",
+    "url" : "http://superpedestrian.com"
+  },
   "btnText": "Button",
   "primaryNav" : [
     {
@@ -18,17 +18,17 @@
       "url": "http://shop.superpedestrian.com/t/categories/bikes"
     },
     {
-      "label": "Try",
+      "label": "Versuchen",
       "icon": false,
       "url": "http://www.superpedestrian.com/ride"
     },
     {
-      "label": "Buy",
+      "label": "Kaufen",
       "icon" : false,
       "url": "http://www.superpedestrian.com/choose"
     },
     {
-      "label": "Support",
+      "label": "Unterstützung",
       "icon" : false,
       "url": "http://www.superpedestrian.com/support"
     }
@@ -36,22 +36,22 @@
   "footerNav" : {
     "sections" : [
       {
-        "title" : "Company",
+        "title" : "Unternehmen",
         "links" : [
           {
-            "label" : "About Us",
+            "label" : "Über uns",
             "url" : "https://superpedestrian.com/team"
           },
           {
-            "label" : "Team",
+            "label" : "Mannschaft",
             "url" : "https://superpedestrian.com/team"
           },
           {
-            "label" : "Careers",
+            "label" : "Karriere",
             "url" : "https://superpedestrian.com/jobs"
           },
           {
-            "label" : "Press",
+            "label" : "Drücken Sie",
             "url" : "https://superpedestrian.com/press"
           },
           {
@@ -59,7 +59,7 @@
             "url" : "https://superpedestrian.com/legal"
           },
           {
-            "label" : "Photo Credits",
+            "label" : "Bildnachweis",
             "url" : "https://superpedestrian.com/photo-credits"
           }
         ]
@@ -86,7 +86,7 @@
         ]
       },
       {
-        "title" : "Shop",
+        "title" : "Geschäft",
         "links" : [
           {
             "label": "Copenhagen Wheel",
@@ -97,36 +97,36 @@
             "url" : "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
-            "label" : "Terms of Sale",
+            "label" : "Verkaufsbedingungen",
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },
           {
-            "label" : "Return Policy",
+            "label" : "Rücknahmegarantie",
             "url" : "https://superpedestrian.com/legal/return-policy"
           },
           {
-            "label" : "Shipping",
+            "label" : "Versand",
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },
           {
-            "label" : "Privacy Policy",
+            "label" : "Datenschutz-Bestimmungen",
             "url" : "https://superpedestrian.com/legal/website-privacy-policy"
           },
           {
-            "label" : "Warranty",
+            "label" : "Garantie",
             "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           }
         ]
       },
       {
-        "title" : "community",
+        "title" : "Gemeinschaft",
         "links" : [
           {
-            "label" : "Support",
+            "label" : "Unterstützung",
             "url" : "https://superpedestrian.com/support"
           },
           {
-            "label" : "Newsletter",
+            "label" : "Rundschreiben",
             "url" : "https://superpedestrian.com/email"
           },
           {
