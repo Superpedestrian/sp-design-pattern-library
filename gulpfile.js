@@ -20,7 +20,8 @@ var templates = [
 ];
 
 var localized_templates = [
-  "de/"
+  "de/",
+  "en/"
 ];
 
 var gulp = require('gulp'),
@@ -149,16 +150,14 @@ gulp.task('dist-copy:templates', function(){
 
 // Templates copy localized files to dist from public
 gulp.task('dist-copy:localized-templates', function(){
-  var locale;
   var folders = [];
 
-  for (var i = 0, len = localized_templates.length; i < len; i++) {
-    locale = localized_templates[i];
+  localized_templates.forEach(function (locale) {
     folders.push(
       gulp.src(templates, {cwd: resolvePath(paths().public.patterns + locale)})
         .pipe(gulp.dest(resolvePath(dist.templates + locale)))
     );
-  }
+  });
 
   return merge(folders);
 });
