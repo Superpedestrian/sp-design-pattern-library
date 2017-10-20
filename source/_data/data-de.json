@@ -18,7 +18,7 @@
       "url": "http://shop.superpedestrian.com/t/categories/bikes"
     },
     {
-      "label": "Versuchen",
+      "label": "Probieren",
       "icon": false,
       "url": "http://www.superpedestrian.com/ride"
     },
@@ -28,7 +28,7 @@
       "url": "http://www.superpedestrian.com/choose"
     },
     {
-      "label": "Unterstützung",
+      "label": "Kundendienst",
       "icon" : false,
       "url": "http://www.superpedestrian.com/support"
     }
@@ -68,11 +68,11 @@
         "title" : "Partners",
         "links" : [
           {
-            "label" : "HUB Program",
+            "label" : "HUB Programm",
             "url" : "https://superpedestrian.com/partners"
           },
           {
-            "label" : "HUB Application",
+            "label" : "HUB Antrag",
             "url" : "https://superpedestrian.com/partners/apply"
           },
           {
@@ -80,7 +80,7 @@
             "url" : "https://superpedestrian.com/partners/locator"
           },
           {
-            "label" : "Fleet Inquiry",
+            "label" : "Flottenanfrage",
             "url" : "https://superpedestrian.com/partners/contact"
           }
         ]
@@ -149,7 +149,8 @@
       }
     ]
   },
-  "copyright" : "© 2017 Superpedestrian, Inc. All Rights Reserved.",
+  "download" : "Laden Sie die Copenhagen Wheel Companion-Apps herunter.",
+  "copyright" : "© 2017 Superpedestrian, Inc. Alle Rechte vorbehalten.",
   "cartNav" : "https://shop.superpedestrian.com/cart",
   "countryNav" : "https://account.superpedestrian.com/select-your-country",
   "key": "value",
