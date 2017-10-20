@@ -1,0 +1,228 @@
+{
+  "bodyClass" : "sp-global",
+  "language_code" : "default",
+  "company" : {
+        "name" : "Superpedestrian",
+        "url" : "http://superpedestrian.com"
+    },
+  "btnText": "Button",
+  "primaryNav" : [
+    {
+      "label": "Copenhagen Wheel",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/the-copenhagen-wheel"
+    },
+    {
+      "label": "Bikes",
+      "icon": false,
+      "url": "http://shop.superpedestrian.com/t/categories/bikes"
+    },
+    {
+      "label": "Try",
+      "icon": false,
+      "url": "http://www.superpedestrian.com/ride"
+    },
+    {
+      "label": "Buy",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/choose"
+    },
+    {
+      "label": "Support",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/support"
+    }
+  ],
+  "footerNav" : {
+    "sections" : [
+      {
+        "title" : "Company",
+        "links" : [
+          {
+            "label" : "About Us",
+            "url" : "https://superpedestrian.com/team"
+          },
+          {
+            "label" : "Team",
+            "url" : "https://superpedestrian.com/team"
+          },
+          {
+            "label" : "Careers",
+            "url" : "https://superpedestrian.com/jobs"
+          },
+          {
+            "label" : "Press",
+            "url" : "https://superpedestrian.com/press"
+          },
+          {
+            "label" : "Legal",
+            "url" : "https://superpedestrian.com/legal"
+          },
+          {
+            "label" : "Photo Credits",
+            "url" : "https://superpedestrian.com/photo-credits"
+          }
+        ]
+      },
+      {
+        "title" : "Partners",
+        "links" : [
+          {
+            "label" : "HUB Program",
+            "url" : "https://superpedestrian.com/partners"
+          },
+          {
+            "label" : "HUB Application",
+            "url" : "https://superpedestrian.com/partners/apply"
+          },
+          {
+            "label" : "HUB Locator",
+            "url" : "https://superpedestrian.com/partners/locator"
+          },
+          {
+            "label" : "Fleet Inquiry",
+            "url" : "https://superpedestrian.com/partners/contact"
+          }
+        ]
+      },
+      {
+        "title" : "Shop",
+        "links" : [
+          {
+            "label": "Copenhagen Wheel",
+            "url" : "https://superpedestrian.com/the-copenhagen-wheel"
+          },
+          {
+            "label" : "Bikes",
+            "url" : "http://shop.superpedestrian.com/t/categories/bikes"
+          },
+          {
+            "label" : "Terms of Sale",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Return Policy",
+            "url" : "https://superpedestrian.com/legal/return-policy"
+          },
+          {
+            "label" : "Shipping",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+          },
+          {
+            "label" : "Privacy Policy",
+            "url" : "https://superpedestrian.com/legal/website-privacy-policy"
+          },
+          {
+            "label" : "Warranty",
+            "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
+          }
+        ]
+      },
+      {
+        "title" : "community",
+        "links" : [
+          {
+            "label" : "Support",
+            "url" : "https://superpedestrian.com/support"
+          },
+          {
+            "label" : "Newsletter",
+            "url" : "https://superpedestrian.com/email"
+          },
+          {
+            "label" : "Facebook",
+            "url" : "https://www.facebook.com/copenhagenwheel"
+          },
+          {
+            "label" : "Twitter",
+            "url" : "https://twitter.com/CPHWheel"
+          },
+          {
+            "label" : "Instagram",
+            "url" : "https://www.instagram.com/copenhagenwheel"
+          },
+          {
+            "label" : "Medium",
+            "url" : "https://medium.com/@CopenhagenWheel"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright" : "© 2017 Superpedestrian, Inc. All Rights Reserved.",
+  "cartNav" : "https://shop.superpedestrian.com/cart",
+  "countryNav" : "https://account.superpedestrian.com/select-your-country",
+  "key": "value",
+  "key2": "use this for variables you want to load globally",
+  "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+  "img": {
+    "avatar": {
+      "src": "http://placeimg.com/100/100/people",
+      "alt": "Avatar"
+    },
+    "square": {
+      "src": "http://placeimg.com/300/300/nature",
+      "alt": "Square"
+    },
+    "rectangle": {
+      "src": "http://placeimg.com/400/300/tech",
+      "alt": "Rectangle"
+    },
+    "landscape-4x3": {
+      "src": "http://placeimg.com/400/300/tech",
+      "alt": "4x3 Image"
+    },
+    "landscape-16x9": {
+      "src": "http://placeimg.com/640/360/tech",
+      "alt": "16x9 Image"
+    }
+  },
+  "headline": {
+    "short": "Lorizzle pimpin' dolizzle sit amet I",
+    "medium": "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"
+  },
+  "excerpt": {
+    "short": "Shizz fo shizzle mah nizzle fo rizzle, mah home g-dizzle, gravida vizzle, arcu. Pellentesque crunk tortizzle. Sed erizzle. Black izzle sheezy telliv.",
+    "medium": "Izzle crazy tempizzle sizzle. We gonna chung gangsta get down get down fo shizzle turpizzle. Away break it down black. Pellentesque bling bling rhoncus fo shizzle. In hac the bizzle platea dictumst. Black dapibizzle. Crackalackin.",
+    "long": "Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle. Crazy orci. Shut the shizzle up maurizzle get down get down, check out this a, go to hizzle sit amizzle, malesuada izzle, pede. Pellentesque gravida. Vestibulizzle check it out mi, volutpat izzle, shiz sed, shiznit sempizzle, da bomb. Funky fresh in ipsum. Da bomb volutpat felis vizzle daahng dawg. Crizzle quis dope izzle fo shizzle my ni."
+  },
+  "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
+  "url": "http://lorizzle.nl/",
+  "name": {
+    "first": "Junius",
+    "firsti": "J",
+    "middle": "Marius",
+    "middlei": "M",
+    "last": "Koolen",
+    "lasti": "K"
+  },
+  "year": {
+    "long": "2013",
+    "short": "13"
+  },
+  "month": {
+    "long": "January",
+    "short": "Jan",
+    "digit": "01"
+  },
+  "dayofweek": {
+    "long": "Sunday",
+    "short": "Sun"
+  },
+  "day": {
+    "long": "01",
+    "short": "1",
+    "ordinal": "st"
+  },
+  "hour": {
+    "long": "06",
+    "short": "6",
+    "military": "06",
+    "ampm": "am"
+  },
+  "minute": {
+    "long": "20",
+    "short": "20"
+  },
+  "seconds": "31"
+}
