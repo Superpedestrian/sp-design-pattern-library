@@ -1,6 +1,6 @@
 {
   "bodyClass" : "sp-global",
-  "language_code" : "en",
+  "language_code" : "default",
   "company" : {
         "name" : "Superpedestrian",
         "url" : "http://superpedestrian.com"
@@ -33,6 +33,12 @@
       "url": "http://www.superpedestrian.com/support"
     }
   ],
+  "login": "Login",
+  "my_account": "My Account",
+  "profile": "Profile",
+  "account": "Account",
+  "orders": "Orders",
+  "logout" : "Logout",
   "footerNav" : {
     "sections" : [
       {
