@@ -33,6 +33,12 @@
       "url": "http://www.superpedestrian.com/support"
     }
   ],
+  "login": "Anmeldung",
+  "my_account": "Mein Konto",
+  "profile": "Profil",
+  "account": "Konto",
+  "orders": "Bestellungen",
+  "logout" : "Ausloggen",
   "footerNav" : {
     "sections" : [
       {
