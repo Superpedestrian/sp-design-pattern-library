@@ -69,7 +69,15 @@
   
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
-    if(cookies.indexOf('locale=') > -1){
+    
+    var localeParam = getQueryVariable("locale")
+    
+    if(localeParam) {
+      splitLocale = localeParam.split('-')
+      if( splitLocale[1] ) {
+        countryCode = splitLocale[1];
+      }
+    } else if(cookies.indexOf('locale=') > -1) {
       var splitCookies = cookies.split(';');
       for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
@@ -78,10 +86,23 @@
           countryCode = value.split('-')[1];
         }
       }
-
-      document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
     }
+    
+    document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
   }
+  
+  function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split('&');
+      for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split('=');
+          if (decodeURIComponent(pair[0]) == variable) {
+              return decodeURIComponent(pair[1]);
+          }
+      }
+      console.log('Query variable %s not found', variable);
+  }
+  
 
   function init() {
     var cookies = document.cookie;
