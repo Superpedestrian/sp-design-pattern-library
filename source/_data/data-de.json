@@ -13,7 +13,7 @@
       "url": "http://www.superpedestrian.com/the-copenhagen-wheel"
     },
     {
-      "label": "Bikes",
+      "label": "Fahrräder",
       "icon": false,
       "url": "http://shop.superpedestrian.com/t/categories/bikes"
     },
@@ -57,11 +57,11 @@
             "url" : "https://superpedestrian.com/jobs"
           },
           {
-            "label" : "Drücken Sie",
+            "label" : "Presse",
             "url" : "https://superpedestrian.com/press"
           },
           {
-            "label" : "Legal",
+            "label" : "Gesetz",
             "url" : "https://superpedestrian.com/legal"
           },
           {
@@ -115,7 +115,7 @@
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },
           {
-            "label" : "Datenschutz-Bestimmungen",
+            "label" : "Datenschutz",
             "url" : "https://superpedestrian.com/legal/website-privacy-policy"
           },
           {
@@ -128,11 +128,11 @@
         "title" : "Gemeinschaft",
         "links" : [
           {
-            "label" : "Unterstützung",
+            "label" : "Kundendienst",
             "url" : "https://superpedestrian.com/support"
           },
           {
-            "label" : "Rundschreiben",
+            "label" : "Mitteilungsblatt",
             "url" : "https://superpedestrian.com/email"
           },
           {
