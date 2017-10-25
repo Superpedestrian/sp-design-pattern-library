@@ -1,5 +1,12 @@
 # Changes
 
+## 0.5.0
+
+- Use SP fork of Patternlab
+- Added German translations
+- Build dist with translations rendered for each component
+- Sets fallback language to English
+
 ## 0.4.5
 
 - Added region selection to header
