@@ -73,17 +73,11 @@
     var localeParam = getQueryVariable("locale")
     
     if(localeParam) {
-      
       splitLocale = localeParam.split('-')
       if( splitLocale[1] ) {
         countryCode = splitLocale[1];
       }
-      
-      document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
-      return;
-    }
-    
-    if(cookies.indexOf('locale=') > -1){
+    } else if(cookies.indexOf('locale=') > -1) {
       var splitCookies = cookies.split(';');
       for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
@@ -92,9 +86,9 @@
           countryCode = value.split('-')[1];
         }
       }
-
-      document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
     }
+    
+    document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
   }
   
   function getQueryVariable(variable) {
