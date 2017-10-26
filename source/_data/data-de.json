@@ -1,10 +1,10 @@
 {
   "bodyClass" : "sp-global",
-  "language_code" : "default",
+  "language_code" : "de",
   "company" : {
-        "name" : "Superpedestrian",
-        "url" : "http://superpedestrian.com"
-    },
+    "name" : "Superpedestrian",
+    "url" : "http://superpedestrian.com"
+  },
   "btnText": "Button",
   "primaryNav" : [
     {
@@ -13,59 +13,59 @@
       "url": "http://www.superpedestrian.com/the-copenhagen-wheel"
     },
     {
-      "label": "Bikes",
+      "label": "Fahrräder",
       "icon": false,
       "url": "http://shop.superpedestrian.com/t/categories/bikes"
     },
     {
-      "label": "Try",
+      "label": "Probieren",
       "icon": false,
       "url": "http://www.superpedestrian.com/ride"
     },
     {
-      "label": "Buy",
+      "label": "Kaufen",
       "icon" : false,
       "url": "http://www.superpedestrian.com/choose"
     },
     {
-      "label": "Support",
+      "label": "Kundendienst",
       "icon" : false,
       "url": "http://www.superpedestrian.com/support"
     }
   ],
-  "login": "Login",
-  "my_account": "My Account",
-  "profile": "Profile",
-  "account": "Account",
-  "orders": "Orders",
-  "logout" : "Logout",
+  "login": "Anmeldung",
+  "my_account": "Mein Konto",
+  "profile": "Profil",
+  "account": "Konto",
+  "orders": "Bestellungen",
+  "logout" : "Ausloggen",
   "footerNav" : {
     "sections" : [
       {
-        "title" : "Company",
+        "title" : "Unternehmen",
         "links" : [
           {
-            "label" : "About Us",
+            "label" : "Über uns",
             "url" : "https://superpedestrian.com/team"
           },
           {
-            "label" : "Team",
+            "label" : "Mannschaft",
             "url" : "https://superpedestrian.com/team"
           },
           {
-            "label" : "Careers",
+            "label" : "Karriere",
             "url" : "https://superpedestrian.com/jobs"
           },
           {
-            "label" : "Press",
+            "label" : "Presse",
             "url" : "https://superpedestrian.com/press"
           },
           {
-            "label" : "Legal",
+            "label" : "Gesetz",
             "url" : "https://superpedestrian.com/legal"
           },
           {
-            "label" : "Photo Credits",
+            "label" : "Bildnachweis",
             "url" : "https://superpedestrian.com/photo-credits"
           }
         ]
@@ -74,11 +74,11 @@
         "title" : "Partners",
         "links" : [
           {
-            "label" : "HUB Program",
+            "label" : "HUB Programm",
             "url" : "https://superpedestrian.com/partners"
           },
           {
-            "label" : "HUB Application",
+            "label" : "HUB Antrag",
             "url" : "https://superpedestrian.com/partners/apply"
           },
           {
@@ -86,13 +86,13 @@
             "url" : "https://superpedestrian.com/partners/locator"
           },
           {
-            "label" : "Fleet Inquiry",
+            "label" : "Flottenanfrage",
             "url" : "https://superpedestrian.com/partners/contact"
           }
         ]
       },
       {
-        "title" : "Shop",
+        "title" : "Geschäft",
         "links" : [
           {
             "label": "Copenhagen Wheel",
@@ -103,36 +103,36 @@
             "url" : "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
-            "label" : "Terms of Sale",
+            "label" : "Verkaufsbedingungen",
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },
           {
-            "label" : "Return Policy",
+            "label" : "Rücknahmegarantie",
             "url" : "https://superpedestrian.com/legal/return-policy"
           },
           {
-            "label" : "Shipping",
+            "label" : "Versand",
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },
           {
-            "label" : "Privacy Policy",
+            "label" : "Datenschutz",
             "url" : "https://superpedestrian.com/legal/website-privacy-policy"
           },
           {
-            "label" : "Warranty",
+            "label" : "Garantie",
             "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           }
         ]
       },
       {
-        "title" : "community",
+        "title" : "Gemeinschaft",
         "links" : [
           {
-            "label" : "Support",
+            "label" : "Kundendienst",
             "url" : "https://superpedestrian.com/support"
           },
           {
-            "label" : "Newsletter",
+            "label" : "Mitteilungsblatt",
             "url" : "https://superpedestrian.com/email"
           },
           {
@@ -155,8 +155,8 @@
       }
     ]
   },
-  "download" : "Download the Copenhagen Wheel companion apps.",
-  "copyright" : "© 2017 Superpedestrian, Inc. All Rights Reserved.",
+  "download" : "Laden Sie die Copenhagen Wheel Companion-Apps herunter.",
+  "copyright" : "© 2017 Superpedestrian, Inc. Alle Rechte vorbehalten.",
   "cartNav" : "https://shop.superpedestrian.com/cart",
   "countryNav" : "https://account.superpedestrian.com/select-your-country",
   "key": "value",
