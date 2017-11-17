@@ -1,5 +1,9 @@
 # Changes
 
+## 0.5.1
+
+- Added Contact Us link to footer
+
 ## 0.5.0
 
 - Use SP fork of Patternlab
