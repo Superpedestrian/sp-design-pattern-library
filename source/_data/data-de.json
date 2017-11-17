@@ -121,6 +121,10 @@
           {
             "label" : "Garantie",
             "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
+          },
+          {
+            "label" : "Kontaktiere uns",
+            "url" : "mailto:info@superpedestrian.com?subject=Copenhagen%20Wheel%20Question%20from%20the%20website"
           }
         ]
       },
