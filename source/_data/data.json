@@ -67,6 +67,10 @@
           {
             "label" : "Photo Credits",
             "url" : "https://superpedestrian.com/photo-credits"
+          },
+          {
+            "label" : "Contact Us",
+            "url" : "mailto:info@superpedestrian.com?subject=Copenhagen%20Wheel%20Question%20from%20the%20website"
           }
         ]
       },
