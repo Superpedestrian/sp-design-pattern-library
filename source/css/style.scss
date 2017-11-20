@@ -7,27 +7,27 @@
  * Mixins....................Mixin styles that are included in the site
  * Variables.................Variables for styles t
 **/
- 
+
 @import "scss/abstracts/fonts";
 @import "scss/base/locale-overrides";
- 
+
 .sp-global  {
-  
-  
+
+
   /* Bring in bootstrap */
   @import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
-  @import "../components/flag-icon-css/sass/_flag-icon";
+  @import "../components/flag-icon-css/sass/flag-icon";
   @import "scss/abstracts/variables";
-  
+
   /*==============================================================================
       $ABSTRACTS
-    ============================================================================*/ 
-  
+    ============================================================================*/
+
   background: $color-white;
   color: $color-gray-85;
   font: 18px $font;
   -webkit-text-size-adjust: 100%;
-  
+
   /*==============================================================================
       $BASE
     ============================================================================*/
