@@ -1,5 +1,9 @@
 # Changes
 
+## 0.5.2
+
+- Added composer-lock.json
+
 ## 0.5.1
 
 - Added Contact Us link to footer
