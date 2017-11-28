@@ -1,5 +1,9 @@
 # Changes
 
+## 0.5.3
+
+- Resolved dependency issue for flag icon
+
 ## 0.5.2
 
 - Added composer-lock.json
