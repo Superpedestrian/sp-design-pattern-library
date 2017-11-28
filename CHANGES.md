@@ -1,5 +1,10 @@
 # Changes
 
+## 0.5.4
+
+- changed logo and wordmark to link to superpedestrian.com
+- removed bikes link from german header
+
 ## 0.5.3
 
 - Resolved dependency issue for flag icon
