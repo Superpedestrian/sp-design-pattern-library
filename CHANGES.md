@@ -4,6 +4,8 @@
 
 - changed logo and wordmark to link to superpedestrian.com
 - removed bikes link from german header
+- updated button styling
+- updated h1 styling
 
 ## 0.5.3
 
