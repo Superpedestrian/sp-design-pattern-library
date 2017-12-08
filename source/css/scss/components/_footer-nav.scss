@@ -1,7 +1,7 @@
 /*------------------------------------
     #FOOTER NAVIGATION
 ------------------------------------*/
-/** 
+/**
  * Footer central column
 */
 .c-footer-col {
@@ -44,9 +44,15 @@
 .c-footer__apps {
   padding: $space-quint 15px;
   font-size: 16px;;
+}
 
-  @media (max-width: $bp-med) {
-    padding-left: 24px;
+// Footer Privacy Seal
+.footer-privacy-seal {
+  padding-bottom: 40px;
+  padding-top: 75px;
+
+  @media only screen and (max-width: 767px) {
+      padding-top: 0;
   }
 }
 
@@ -60,11 +66,11 @@
     height: 36px;
     display: inline-block;
   }
-  
+
   .c-footer__appstore {
     background: url("../images/badge-app-store.png") no-repeat;
   }
-  
+
   .c-footer__playstore {
     background: url("../images/badge-google-play.png") no-repeat;
   }

@@ -1,5 +1,10 @@
 # Changes
 
+## 0.5.5
+
+- Added privacy seal
+- updated privacy policy link
+
 ## 0.5.4
 
 - changed logo and wordmark to link to superpedestrian.com
