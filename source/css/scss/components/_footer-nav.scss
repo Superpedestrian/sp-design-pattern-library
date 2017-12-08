@@ -1,7 +1,7 @@
 /*------------------------------------
     #FOOTER NAVIGATION
 ------------------------------------*/
-/** 
+/**
  * Footer central column
 */
 .c-footer-col {
@@ -50,6 +50,11 @@
   }
 }
 
+// Footer Privacy Seal
+.footer-privacy-seal {
+  padding-bottom: 40px;
+}
+
 .c-footer__app-badges {
   display: block;
   margin-top: $space;
@@ -60,11 +65,11 @@
     height: 36px;
     display: inline-block;
   }
-  
+
   .c-footer__appstore {
     background: url("../images/badge-app-store.png") no-repeat;
   }
-  
+
   .c-footer__playstore {
     background: url("../images/badge-google-play.png") no-repeat;
   }
