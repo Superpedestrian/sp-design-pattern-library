@@ -1,5 +1,9 @@
 # Changes
 
+## 0.5.6
+
+- New pattern for copenhagen wheel and zuhause tech spec tables
+
 ## 0.5.5
 
 - Added privacy seal
