@@ -28,3 +28,47 @@ td {
   padding: 0.2em;
   border: 1px solid $color-gray-60;
 }
+
+/**
+ * TechSpec table base styles
+ */
+.techspectable {
+  table {
+    width: auto;
+    border: none;
+  }
+
+  table > tbody > tr > td {
+    border: none;
+    border-top: none;
+    padding-right: 15px;
+    padding-bottom: 24px;
+    font-size: 18px;
+  }
+
+  .spec-label {
+    font-size: 18px;
+    font-family: "Graphik Bold", Helvetica, sans-serif;
+    color: #000;
+    line-height: 24px;
+    vertical-align: top;
+  }
+
+  .grey-text {
+    font-size: 18px;
+    font-family: "Graphik Regular", Helvetica, sans-serif;
+    color: #999797;
+    line-height: 24px;
+    vertical-align: top;
+  }
+
+  .large-grey-heading {
+    font-size: 24px;
+    color: #999797;
+  }
+
+  .techspectable .light-grey-text {
+    font-size: large;
+    color: #cbc9c9;
+  }
+}
