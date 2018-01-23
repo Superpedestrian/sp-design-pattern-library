@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.0
+
+- Added cookie banner and related js
+
 ## 0.5.7
 
 - Refactoring and added merge stream to package.json to fix builds
