@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.0
+
+- Added cookie banner and related js
+
 ## 0.5.6
 
 - New pattern for copenhagen wheel and zuhause tech spec tables
