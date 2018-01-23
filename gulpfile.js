@@ -17,6 +17,7 @@ var templates = [
   "02-organisms-00-global/*.*",
   "02-organisms-00-global-footer/*.*",
   "02-organisms-00-global-header/*.*",
+  "02-organisms-00-global-cookie-banner/*.*",
   "01-molecules-tech-spec/*.*",
   "01-molecules-tech-spec-zuhause-tech-spec-table/*.*",
   "01-molecules-tech-spec-copenhagen-tech-spec-table/*.*"
