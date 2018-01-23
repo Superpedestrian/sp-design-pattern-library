@@ -4,6 +4,10 @@
 
 - Added cookie banner and related js
 
+## 0.5.7
+
+- Refactoring and added merge stream to package.json to fix builds
+
 ## 0.5.6
 
 - New pattern for copenhagen wheel and zuhause tech spec tables
