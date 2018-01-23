@@ -26,7 +26,7 @@
     button.onclick = function() {
       trayOpen = !trayOpen;
       if(trayOpen){
-        performOnElement('arrow-menu', showElement);  
+        performOnElement('arrow-menu', showElement);
         document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-top";
       }
       else {
@@ -66,12 +66,12 @@
       performOnElement('shop-badge', showElement);
     }
   }
-  
+
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
-    
+
     var localeParam = getQueryVariable("locale")
-    
+
     if(localeParam) {
       splitLocale = localeParam.split('-')
       if( splitLocale[1] ) {
@@ -87,10 +87,10 @@
         }
       }
     }
-    
+
     document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
   }
-  
+
   function getQueryVariable(variable) {
       var query = window.location.search.substring(1);
       var vars = query.split('&');
@@ -102,7 +102,6 @@
       }
       console.log('Query variable %s not found', variable);
   }
-  
 
   function init() {
     var cookies = document.cookie;
@@ -122,6 +121,11 @@
     else {
       // Show login button
       performOnElement('account-button', hideElement);
+    }
+
+    if(!(cookies.indexOf('cookies-accepted=') > -1)) {
+      var banner = document.getElementById("cookie-banner");
+      banner.style.display = "block";
     }
   }
 
