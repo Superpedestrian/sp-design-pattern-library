@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.1
+
+- Updating cookie banner style
+
 ## 0.6.0
 
 - Added cookie banner and related js
