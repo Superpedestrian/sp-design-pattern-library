@@ -15,12 +15,12 @@
   var hideElement = function(element) {
     element.style.visibility = "hidden";
     element.style.display = "none";
-  }
+  };
 
   var showElement = function(element) {
     element.style.visibility = "";
     element.style.display = "block";
-  }
+  };
 
   var clickTray = function(button) {
     button.onclick = function() {
@@ -34,7 +34,7 @@
         document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-bottom";
       }
     }
-  }
+  };
 
   var setLinks = function () {
     var loginURL = spConfig.loginURL || 'https://account.superpedestrian.com/login?redirect=https://superpedestrian.com';
@@ -57,7 +57,7 @@
       for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
         var value = splitCookies[cookieIndex].split('=')[1];
-        if(key == 'item_count') {
+        if(key === 'item_count') {
           cartCount = value;
         }
       }
@@ -65,15 +65,15 @@
       document.getElementById('shop-badge').innerHTML= (cartCount > 9) ? '9+': cartCount;
       performOnElement('shop-badge', showElement);
     }
-  }
+  };
 
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
 
-    var localeParam = getQueryVariable("locale")
+    var localeParam = getQueryVariable("locale");
 
     if(localeParam) {
-      splitLocale = localeParam.split('-')
+      var splitLocale = localeParam.split('-');
       if( splitLocale[1] ) {
         countryCode = splitLocale[1];
       }
@@ -82,21 +82,21 @@
       for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
         var value = splitCookies[cookieIndex].split('=')[1];
-        if(key == 'locale') {
+        if(key === 'locale') {
           countryCode = value.split('-')[1];
         }
       }
     }
 
     document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
-  }
+  };
 
   function getQueryVariable(variable) {
       var query = window.location.search.substring(1);
       var vars = query.split('&');
       for (var i = 0; i < vars.length; i++) {
           var pair = vars[i].split('=');
-          if (decodeURIComponent(pair[0]) == variable) {
+          if (decodeURIComponent(pair[0]) === variable) {
               return decodeURIComponent(pair[1]);
           }
       }
@@ -123,9 +123,29 @@
       performOnElement('account-button', hideElement);
     }
 
+    // Show cookie banner if cookie isn't set and the locale is not en-US
     if(!(cookies.indexOf('cookies-accepted=') > -1)) {
       var banner = document.getElementById("cookie-banner");
-      banner.style.display = "block";
+      var localeParam = getQueryVariable("locale");
+      if(localeParam) {
+        var splitLocale = localeParam.split('-');
+        if( splitLocale[1] !== 'us') {
+          banner.style.display = "block";
+        }
+      }
+      else if(cookies.indexOf('locale=') > -1) {
+        var splitCookies = cookies.split(';');
+        for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+          var key = splitCookies[cookieIndex].split('=')[0].trim();
+          var value = splitCookies[cookieIndex].split('=')[1];
+          if(key === 'locale' && value.split('-')[1] !== 'us') {
+            banner.style.display = "block";
+          }
+        }
+      }
+      else {
+        banner.style.display = "block";
+      }
     }
   }
 
