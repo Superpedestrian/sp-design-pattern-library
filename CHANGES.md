@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.3
+
+- Added browser locale condition for cookie banner
+
 ## 0.6.2
 
 - Added locale condition for cookie banner
