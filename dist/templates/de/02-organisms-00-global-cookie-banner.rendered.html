@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title>Nullizzle shizznit velizzle, hizzle, suscipit own yo&#39;, gravida vizzle, arcu.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://use.fontawesome.com/a9bf041a16.js"></script>
+  <link rel="stylesheet" href="../../css/style.css?1517607322764" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1517607322764" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="sp-global">
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="container-fluid cookie-banner-section">
+      <div class="col-md-6 hidden-sm hidden-xs cookie-banner-heading col-left">
+        <h4>Wir verwenden Cookies auf dieser Website.</h4>
+      </div>
+      <div class="col-md-5 col-sm-11 col-xs-9 cookie-banner-text col-right">
+        Durch die Nutzung unserer Website stimmen Sie zu, dass wir Cookies auf Ihrem Gerät speichern können. Cookies bieten Ihnen eine bessere Erfahrung, aktivieren unseren Shop und verbessern unsere Website. Sehen Sie unsere an
+        <a href=https:&#x2F;&#x2F;content.superpedestrian.com&#x2F;legal&#x2F;privacy-policy>Datenschutz-Bestimmungen</a> für Details.
+      </div>
+      <div class="col-md-1 col-sm-1 col-xs-3">
+        <button class="close-button" onclick="cookiesAccepted()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      </div>
+    </div>
+  </div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "",
+      "patternBreadcrumb": {
+        "patternType": "organisms",
+        "patternSubtype": "global"
+      },
+      "patternExtension": "mustache",
+      "patternName": "Cookie Banner",
+      "patternPartial": "organisms-cookie-banner",
+      "patternState": "",
+      "patternEngineName": "mustache",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1517607322764">
+    (function() {
+      if (self != top) {
+        var cb = '1517607322764';
+        var js = [];
+        if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+          js.push('styleguide/bower_components/classList.min.js');
+        }
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+  <script id="pl-js-insert-1517607322764">
+    (function() {
+      if (self != top) {
+        var cb = '1517607322764';
+        var js = [{
+          'src': 'styleguide/bower_components/jwerty.min.js',
+          'dep': ['styleguide/js/patternlab-pattern.min.js']
+        }];
+        scriptLoader.run(js, cb, 'pl-js-insert');
+      }
+    })();
+  </script>
+
+
+  <script src="/js/retina.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/cookie-banner.js"></script>
+</body>
+
+</html>
