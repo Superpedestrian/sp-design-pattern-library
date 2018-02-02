@@ -133,6 +133,7 @@
           banner.style.display = "block";
         }
       }
+      // Check for locale cookie and show banner for non-US locale
       else if(cookies.indexOf('locale=') > -1) {
         var splitCookies = cookies.split(';');
         for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
@@ -143,6 +144,11 @@
           }
         }
       }
+      // Check for browser locale
+      else if(navigator.language.split('-')[1] === 'US' || navigator.userLanguage.split('-')[1] === 'US'){
+        banner.style.display = "none";
+      }
+      // Display banner if none of those exist and we don't know anything about their locale
       else {
         banner.style.display = "block";
       }
