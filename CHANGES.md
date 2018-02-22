@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.4
+
+- Added Spare Parts and Accessories to footer
+
 ## 0.6.3
 
 - Added browser locale condition for cookie banner
