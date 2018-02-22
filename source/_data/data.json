@@ -107,6 +107,10 @@
             "url" : "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
+            "label" : "Spare Parts and Accessories",
+            "url" : "https://shop.superpedestrian.com/t/categories/accessories"
+          },
+          {
             "label" : "Terms of Sale",
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },

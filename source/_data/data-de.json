@@ -98,6 +98,10 @@
             "url" : "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
+            "label" : "Ersatzteile und Zubehör",
+            "url" : "https://shop.superpedestrian.com/t/categories/accessories"
+          },
+          {
             "label" : "Verkaufsbedingungen",
             "url" : "https://superpedestrian.com/legal/terms-of-sale"
           },
