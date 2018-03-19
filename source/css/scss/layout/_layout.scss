@@ -343,5 +343,5 @@ $attributes: (padding, margin);
 @include build-spacing-classes(small, 16px, 24px, 24px);
 @include build-spacing-classes(medium, 24px, 36px, 36px);
 @include build-spacing-classes(large, 36px, 54px, 54px);
-@include build-spacing-classes(extra_large, 54px, 81px, 81px);
-@include build-spacing-classes(extra_extra_large, 121.5px, 182.25px, 182.25px);
+@include build-spacing-classes(extra-large, 54px, 81px, 81px);
+@include build-spacing-classes(extra-extra-large, 121.5px, 182.25px, 182.25px);
