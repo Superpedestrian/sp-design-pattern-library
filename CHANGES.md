@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.5
+
+- Added new breakpoints for drupal cards
+
 ## 0.6.4
 
 - Added Spare Parts and Accessories to footer
