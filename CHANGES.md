@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.5
+
+- Updated copyright on footer
+
 ## 0.6.4
 
 - Added Spare Parts and Accessories to footer
