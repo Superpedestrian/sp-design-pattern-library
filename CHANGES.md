@@ -1,5 +1,9 @@
 # Changes
 
+## 0.6.6
+
+- Added new breakpoints for drupal cards
+
 ## 0.6.5
 
 - Updated copyright on footer
