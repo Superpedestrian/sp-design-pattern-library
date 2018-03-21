@@ -4,6 +4,10 @@
 
 - Updated the styles for the new typography (h1, h2, h3, p and .quote)
 
+## 0.6.6
+
+- Added new breakpoints for drupal cards
+
 ## 0.6.5
 
 - Updated copyright on footer
