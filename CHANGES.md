@@ -1,5 +1,9 @@
 # Changes
 
+## 0.7.0
+
+- Updated the styles for the new typography (h1, h2, h3, p and .quote)
+
 ## 0.6.5
 
 - Updated copyright on footer
