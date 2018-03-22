@@ -1,5 +1,9 @@
 # Changes
 
+## 0.7.1
+
+- Adding back h5 and h6 styles
+
 ## 0.7.0
 
 - Updated the styles for the new typography (h1, h2, h3, p and .quote)
