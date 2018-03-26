@@ -56,6 +56,46 @@
   }
 }
 
+.sp-btn-second-white {
+
+  display: inline-block;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  font-family: "Graphik Bold", Helvetica, sans-serif;
+  padding: 10px 28px 6px 28px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  min-width: 244px;
+  max-width: 100%;
+  min-height: 44px;
+  background: $color-brand-red;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+  touch-action: manipulation;
+  color: $color-gray-85;
+
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  border: 2px solid #272525;
+  background: transparent;
+
+  &:hover, &:focus {
+    color: $color-gray-85;
+  }
+  &:active {
+    background-color: $color-gray-02;
+  }
+}
+
 .sp-btn-white {
   color: $color-brand-red;
   background: $color-white;
