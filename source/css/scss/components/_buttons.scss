@@ -91,6 +91,14 @@
   &:hover, &:focus {
     color: $color-gray-85;
   }
+
+  /**
+   * Disabled button
+   */
+  &.disabled {
+    color: $color-gray-02;
+    border-color: $color-gray-10;
+  }
 }
 
 .sp-btn-secondary-white {
