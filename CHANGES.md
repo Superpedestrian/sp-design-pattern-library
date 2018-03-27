@@ -1,5 +1,9 @@
 # Changes
 
+## 0.7.2
+
+- Added new secondary button styling
+
 ## 0.7.1
 
 - Adding back h5 and h6 styles
