@@ -1,5 +1,9 @@
 # Changes
 
+## 0.7.3
+
+- Changed "Copenhagen Wheel" to "Tech" in header
+
 ## 0.7.2
 
 - Added new secondary button styling
