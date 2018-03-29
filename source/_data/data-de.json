@@ -8,9 +8,9 @@
   "btnText": "Button",
   "primaryNav" : [
     {
-      "label": "Copenhagen Wheel",
+      "label": "Technik",
       "icon" : false,
-      "url": "http://www.superpedestrian.com/the-copenhagen-wheel"
+      "url": "http://www.superpedestrian.com/tech"
     },
     {
       "label": "Probieren",
