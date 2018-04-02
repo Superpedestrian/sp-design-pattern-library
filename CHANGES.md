@@ -1,5 +1,9 @@
 # Changes
 
+## 0.8.1
+
+- Updated font size for secondary button
+
 ## 0.8.0
 
 - Redesign footer
