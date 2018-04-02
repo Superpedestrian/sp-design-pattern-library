@@ -21,8 +21,6 @@
   ul {
     margin-top: $space;
   }
-
-  margin-top: 40px;
 }
 
 /**
@@ -42,18 +40,14 @@
 
 // Footer Mobile App Badges
 .c-footer__apps {
-  padding: $space-quint 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   font-size: 16px;;
 }
 
 // Footer Privacy Seal
 .footer-privacy-seal {
-  padding-bottom: 40px;
-  padding-top: 75px;
 
-  @media only screen and (max-width: 767px) {
-      padding-top: 0;
-  }
 }
 
 .c-footer__app-badges {
