@@ -158,6 +158,12 @@
       }
     ]
   },
+  "facebook_url": "https://www.facebook.com/copenhagenwheel",
+  "twitter_url" : "https://twitter.com/CPHWheel",
+  "instagram_url" : "https://www.instagram.com/copenhagenwheel",
+  "medium_url" : "https://medium.com/@CopenhagenWheel",
+  "youtube_url" : "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
+  "footer_form_hubspot_id": "11f07ae5-5573-4962-8a49-f177e3bdc80e",
   "download" : "Laden Sie die Copenhagen Wheel Companion-Apps herunter.",
   "copyright" : "© 2018 Superpedestrian, Inc. Alle Rechte vorbehalten.",
   "cookie-banner-heading": "Wir verwenden Cookies auf dieser Website.",
