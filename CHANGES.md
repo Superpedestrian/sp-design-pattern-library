@@ -1,5 +1,10 @@
 # Changes
 
+## 0.8.0
+
+- Redesign footer
+- Update typography 
+
 ## 0.7.3
 
 - Changed "Copenhagen Wheel" to "Tech" in header

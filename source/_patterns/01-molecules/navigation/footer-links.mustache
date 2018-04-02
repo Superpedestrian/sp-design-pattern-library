@@ -1,12 +1,11 @@
-<div class="col-sm-12 c-footer-nav">
-      {{# footerNav.sections }}
-      <div class="col-sm-3 c-footer-nav__list">
-        <h6>{{ title }}</h6>
-        <ul>
-        {{# links }}
-          <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="{{& url }}">{{& label }}</a></li>
-        {{/ links }}
-        </ul>
-      </div>
-      {{/ footerNav.sections }}
+
+{{# footerNav.sections }}
+<div class="col-sm-6 c-footer-nav__list medium-margin-bottom">
+  <h6>{{ title }}</h6>
+  <ul>
+  {{# links }}
+    <li class="c-footer-nav__item"><a class="c-footer-nav__link" href="{{& url }}">{{& label }}</a></li>
+  {{/ links }}
+  </ul>
 </div>
+{{/ footerNav.sections }}
