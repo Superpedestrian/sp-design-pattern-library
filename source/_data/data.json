@@ -45,8 +45,8 @@
         "title" : "Company",
         "links" : [
           {
-            "label" : "Contact Us",
-            "url" : "mailto:info@superpedestrian.com?subject=Copenhagen%20Wheel%20Question%20from%20the%20website"
+            "label" : "About Us",
+            "url" : "https://superpedestrian.com/team"
           },
           {
             "label" : "Press",
@@ -57,16 +57,16 @@
             "url" : "https://superpedestrian.com/jobs"
           },
           {
-            "label" : "About Us",
-            "url" : "https://superpedestrian.com/team"
-          },
-          {
             "label" : "Team",
             "url" : "https://superpedestrian.com/team"
           },
           {
             "label" : "Legal",
             "url" : "https://superpedestrian.com/legal"
+          },
+          {
+            "label" : "Contact Us",
+            "url" : "mailto:info@superpedestrian.com?subject=Copenhagen%20Wheel%20Question%20from%20the%20website"
           },
           {
             "label" : "Photo Credits",
@@ -88,15 +88,11 @@
           },
           {
             "label" : "Demo",
-            "url" : "https://superpedestrian.com/try"
+            "url" : "https://superpedestrian.com/ride"
           },
           {
-            "label" : "Accessories",
+            "label" : "Parts & Accessories",
             "url" : "https://shop.superpedestrian.com/t/categories/accessories"
-          },
-          {
-            "label" : "Support",
-            "url" : "https://superpedestrian.com/support"
           },
           {
             "label" : "Return Policy",
@@ -109,39 +105,22 @@
           {
             "label" : "Warranty",
             "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
-          }
-        ]
-      },
-      {
-        "title" : "Explore",
-        "links" : [
-          {
-            "label" : "Blog",
-            "url" : "https://blog.superpedestrian.com"
           },
           {
-            "label" : "Tech",
-            "url" : "https://superpedestrian.com/tech"
+            "label" : "Support",
+            "url" : "https://superpedestrian.com/support"
           },
-          {
-            "label" : "Reviews",
-            "url" : "https://www.facebook.com/copenhagenwheel"
-          },
-          {
-            "label" : "Video",
-            "url" : "https://twitter.com/CPHWheel"
-          },
-          {
-            "label" : "Store Locator",
-            "url" : "https://www.superpedestrian.com/ride"
-          }
         ]
       },
       {
         "title" : "Retail",
         "links" : [
           {
-            "label" : "Store Locator",
+            "label" : "Become a Retailer",
+            "url" : "https://superpedestrian.com/partners/apply"
+          },
+          {
+            "label" : "Find a Store",
             "url" : "https://superpedestrian.com/partners/locator"
           },
           {
@@ -149,17 +128,29 @@
             "url" : "https://superpedestrian.com/partners"
           },
           {
-            "label" : "Become a retailer",
-            "url" : "https://superpedestrian.com/partners/apply"
-          },
-          {
             "label" : "Fleet Inquiry",
             "url" : "https://superpedestrian.com/partners/contact"
           }
         ]
       }
-    ]
+    ],
+    "properties": {
+      "terms_conditions" : {
+            "label" : "Terms & Conditions",
+            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+      },
+      "privacy_policy": {
+        "label" : "Privacy Policy",
+        "url" : "https://content.superpedestrian.com/legal/privacy-policy"
+      }
+    }
   },
+  "facebook_url": "https://www.facebook.com/copenhagenwheel",
+  "twitter_url" : "https://twitter.com/CPHWheel",
+  "instagram_url" : "https://www.instagram.com/copenhagenwheel",
+  "medium_url" : "https://medium.com/@CopenhagenWheel",
+  "youtube_url" : "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
+  "footer_form_hubspot_id": "7b1ff236-1087-4865-9998-538a07fda5c8",
   "download" : "Download the Copenhagen Wheel companion apps.",
   "copyright" : "© 2018 Superpedestrian, Inc. All Rights Reserved.",
   "cookie-banner-heading": "We use cookies on this site.",
