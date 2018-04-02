@@ -83,7 +83,7 @@
 }
 
 .c-footer .hubspot-form .hs_email label {
-  @extend .small-margin-bottom;
+  margin-bottom: 8px;
 }
 
 .c-footer .hubspot-form .hs-form-required {
@@ -102,7 +102,7 @@
   margin-bottom: 0px;
   width: 50%;
   
-  @extend .small-margin-top;
+  margin-top: 8px;
   
   @media (min-width: $bp-med-2) {
     margin-left: 15px;

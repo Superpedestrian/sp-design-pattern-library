@@ -36,6 +36,7 @@
  */
 .c-footer-nav__link {
   color: $color-white;
+  line-height: 21px;
 }
 
 // Footer Mobile App Badges
@@ -43,11 +44,6 @@
   padding-right: 15px;
   padding-left: 15px;
   font-size: 16px;;
-}
-
-// Footer Privacy Seal
-.footer-privacy-seal {
-
 }
 
 .c-footer__app-badges {
@@ -67,5 +63,13 @@
 
   .c-footer__playstore {
     background: url("../images/badge-google-play.png") no-repeat;
+  }
+}
+
+// Footer Privacy Seal
+.footer-privacy-seal {
+  img {
+    width: 120px;
+    height: 36px;
   }
 }
