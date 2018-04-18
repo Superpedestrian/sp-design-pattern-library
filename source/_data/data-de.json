@@ -26,6 +26,11 @@
       "label": "Kundendienst",
       "icon" : false,
       "url": "http://www.superpedestrian.com/support"
+    },
+    {
+      "label" : "Blog",
+      "icon" : false,
+      "url": "https://blog.superpedestrian.com/"
     }
   ],
   "login": "Anmeldung",
@@ -39,6 +44,10 @@
       {
         "title" : "Unternehmen",
         "links" : [
+          {
+            "label" : "Blog",
+            "url" : "https://blog.superpedestrian.com/"
+          },
           {
             "label" : "Über uns",
             "url" : "https://superpedestrian.com/team"
@@ -79,6 +88,10 @@
           {
             "label" : "Bikes",
             "url" : "http://shop.superpedestrian.com/t/categories/bikes"
+          },
+          {
+            "label" : "Reviews",
+            "url" : "http://superpedestrian.com/reviews"
           },
           {
             "label" : "Demo",
