@@ -37,11 +37,11 @@
   };
 
   var setLinks = function () {
-    var loginURL = spConfig.loginURL || 'https://account.superpedestrian.com/login?redirect=https://superpedestrian.com';
+    var loginURL = spConfig.loginURL || 'https://account.superpedestrian.com/login?redirect=https://www.superpedestrian.com';
     var profileURL = spConfig.profileURL || 'https://account.superpedestrian.com/profile';
     var ordersURL = spConfig.ordersURL || 'https://shop.superpedestrian.com/account';
     var logoutURL = spConfig.logoutURL || 'https://account.superpedestrian.com/logout';
-    var logoutNext = spConfig.logoutNext || 'https://superpedestrian.com';
+    var logoutNext = spConfig.logoutNext || 'https://www.superpedestrian.com';
 
     document.getElementById('sp-login-url').href = loginURL;
     document.getElementById('sp-profile-url').href = profileURL;
