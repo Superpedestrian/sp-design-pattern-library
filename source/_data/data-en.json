@@ -3,7 +3,7 @@
   "language_code" : "en",
   "company" : {
         "name" : "Superpedestrian",
-        "url" : "http://superpedestrian.com"
+        "url" : "http://www.superpedestrian.com"
     },
   "btnText": "Button",
   "primaryNav" : [
@@ -55,23 +55,23 @@
           },
           {
             "label" : "About Us",
-            "url" : "https://superpedestrian.com/team"
+            "url" : "https://www.superpedestrian.com/team"
           },
           {
             "label" : "Press",
-            "url" : "https://superpedestrian.com/press"
+            "url" : "https://www.superpedestrian.com/press"
           },
           {
             "label" : "Careers",
-            "url" : "https://superpedestrian.com/jobs"
+            "url" : "https://www.superpedestrian.com/jobs"
           },
           {
             "label" : "Team",
-            "url" : "https://superpedestrian.com/team"
+            "url" : "https://www.superpedestrian.com/team"
           },
           {
             "label" : "Legal",
-            "url" : "https://superpedestrian.com/legal"
+            "url" : "https://www.superpedestrian.com/legal"
           },
           {
             "label" : "Contact Us",
@@ -79,7 +79,7 @@
           },
           {
             "label" : "Photo Credits",
-            "url" : "https://superpedestrian.com/photo-credits"
+            "url" : "https://www.superpedestrian.com/photo-credits"
           },
 
         ]
@@ -89,7 +89,7 @@
         "links" : [
           {
             "label": "Tech",
-            "url" : "https://superpedestrian.com/tech"
+            "url" : "https://www.superpedestrian.com/tech"
           },
           {
             "label" : "Bikes",
@@ -97,11 +97,11 @@
           },
           {
             "label" : "Reviews",
-            "url" : "http://superpedestrian.com/reviews"
+            "url" : "http://www.superpedestrian.com/reviews"
           },
           {
             "label" : "Demo",
-            "url" : "https://superpedestrian.com/ride"
+            "url" : "https://www.superpedestrian.com/ride"
           },
           {
             "label" : "Parts & Accessories",
@@ -109,19 +109,19 @@
           },
           {
             "label" : "Return Policy",
-            "url" : "https://superpedestrian.com/legal/return-policy"
+            "url" : "https://www.superpedestrian.com/legal/return-policy"
           },
           {
             "label" : "Shipping",
-            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+            "url" : "https://www.superpedestrian.com/legal/terms-of-sale"
           },
           {
             "label" : "Warranty",
-            "url" : "https://superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
+            "url" : "https://www.superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           },
           {
             "label" : "Support",
-            "url" : "https://superpedestrian.com/support"
+            "url" : "https://www.superpedestrian.com/support"
           },
         ]
       },
@@ -130,19 +130,19 @@
         "links" : [
           {
             "label" : "Become a Retailer",
-            "url" : "https://superpedestrian.com/partners/apply"
+            "url" : "https://www.superpedestrian.com/partners/apply"
           },
           {
             "label" : "Find a Store",
-            "url" : "https://superpedestrian.com/partners/locator"
+            "url" : "https://www.superpedestrian.com/partners/locator"
           },
           {
             "label" : "Program",
-            "url" : "https://superpedestrian.com/partners"
+            "url" : "https://www.superpedestrian.com/partners"
           },
           {
             "label" : "Fleet Inquiry",
-            "url" : "https://superpedestrian.com/partners/contact"
+            "url" : "https://www.superpedestrian.com/partners/contact"
           }
         ]
       }
@@ -150,11 +150,11 @@
     "properties": {
       "terms_conditions" : {
             "label" : "Terms & Conditions",
-            "url" : "https://superpedestrian.com/legal/terms-of-sale"
+            "url" : "https://www.superpedestrian.com/legal/terms-of-sale"
       },
       "privacy_policy": {
         "label" : "Privacy Policy",
-        "url" : "https://content.superpedestrian.com/legal/privacy-policy"
+        "url" : "https://www.superpedestrian.com/legal/privacy-policy"
       }
     }
   },
@@ -170,7 +170,7 @@
   "cookie-banner-text-1": "By using our site, you agree we can store cookies on your device. Cookies provide you a better experience, enable our store, and improve our site. View our",
   "cookie-banner-text-2": "for details.",
   "privacy-policy": "privacy policy",
-  "privacy-policy-url": "https://content.superpedestrian.com/legal/privacy-policy",
+  "privacy-policy-url": "https://www.superpedestrian.com/legal/privacy-policy",
   "cartNav" : "https://shop.superpedestrian.com/cart",
   "countryNav" : "https://account.superpedestrian.com/select-your-country",
   "key": "value",

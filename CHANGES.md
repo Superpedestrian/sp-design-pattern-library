@@ -1,5 +1,9 @@
 # Changes
 
+## 0.8.3
+
+- Update links to point to www
+
 ## 0.8.2
 
 - Updated header and footer
