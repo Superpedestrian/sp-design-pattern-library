@@ -130,7 +130,22 @@
   }
 
   .cookie-banner-heading {
-    color: $color-white;
+    padding-bottom: 16px;
+    h3 {
+      color: $color-white;
+    }
+  }
+
+  .sp-btn-secondary {
+    background: $color-white;
+    font-size: 18px;
+    min-width: 200px;
+    margin-right: 12px;
+    opacity: 1;
+  }
+
+  .sp-btn-secondary-white {
+    min-width: 200px;
   }
 
   .fa-times {
