@@ -36,6 +36,11 @@
     }
   };
 
+  // function for auto-accepting cookies when we're in the US
+  var cookiesAccepted = function() {
+    document.cookie = "cookies-accepted=yes;path=/"
+  };
+
   var setLinks = function () {
     var loginURL = spConfig.loginURL || 'https://account.superpedestrian.com/login?redirect=https://www.superpedestrian.com';
     var profileURL = spConfig.profileURL || 'https://account.superpedestrian.com/profile';
@@ -132,6 +137,9 @@
         if( splitLocale[1] !== 'us') {
           banner.style.display = "block";
         }
+        else {
+          cookiesAccepted();
+        }
       }
       // Check for locale cookie and show banner for non-US locale
       else if(cookies.indexOf('locale=') > -1) {
@@ -142,11 +150,15 @@
           if(key === 'locale' && value.split('-')[1] !== 'us') {
             banner.style.display = "block";
           }
+          else {
+            cookiesAccepted();
+          }
         }
       }
       // Check for browser locale
       else if(navigator.language.split('-')[1] === 'US' || navigator.userLanguage.split('-')[1] === 'US'){
         banner.style.display = "none";
+        cookiesAccepted();
       }
       // Display banner if none of those exist and we don't know anything about their locale
       else {
