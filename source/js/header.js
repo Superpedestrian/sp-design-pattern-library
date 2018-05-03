@@ -147,11 +147,13 @@
         for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
           var key = splitCookies[cookieIndex].split('=')[0].trim();
           var value = splitCookies[cookieIndex].split('=')[1];
-          if(key === 'locale' && value.split('-')[1] !== 'us') {
-            banner.style.display = "block";
-          }
-          else {
-            cookiesAccepted();
+          if(key === 'locale') {
+            if(value.split('-')[1] !== 'us') {
+              banner.style.display = "block";
+            }
+            else {
+              cookiesAccepted();
+            }
           }
         }
       }
