@@ -36,6 +36,11 @@
       "label" : "Blog",
       "icon" : false,
       "url": "https://blog.superpedestrian.com/"
+    },
+    {
+      "label" : "Fleet",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/fleet"
     }
   ],
   "login": "Login",
