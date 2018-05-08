@@ -38,7 +38,10 @@
 
   // function for auto-accepting cookies when we're in the US
   var cookiesAccepted = function() {
-    document.cookie = "cookies-accepted=yes;path=/"
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "cookies-accepted=yes;" + expires + ";path=/"
   };
 
   var setLinks = function () {
@@ -129,9 +132,10 @@
     }
 
     // Show cookie banner if cookie isn't set and the locale is not en-US
+    var localeParam = getQueryVariable("locale");
     if(!(cookies.indexOf('cookies-accepted=') > -1)) {
       var banner = document.getElementById("cookie-banner");
-      var localeParam = getQueryVariable("locale");
+
       if(localeParam) {
         var splitLocale = localeParam.split('-');
         if( splitLocale[1] !== 'us') {
@@ -165,6 +169,26 @@
       // Display banner if none of those exist and we don't know anything about their locale
       else {
         banner.style.display = "block";
+      }
+    }
+    // Cookies are accepted, set locale cookie
+    else {
+      // Locale cookie not set
+      if(!(cookies.indexOf('locale=') > -1)) {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        // Check url param for locale
+        if (localeParam) {
+          document.cookie = "locale=" + localeParam + ";" + expires + ";path=/";
+        }
+        // Check browser language
+        else if(navigator.language) {
+          document.cookie = "locale" + navigator.language + ";" + expires + ";path=/";
+        }
+        else if(navigator.userLanguage) {
+          document.cookie = "locale" + navigator.userLanguage + ";" + expires + ";path=/";
+        }
       }
     }
   }
