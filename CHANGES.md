@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.1
+
+- Fixed cookie domain
+
 ## 0.9.0
 
 - Update cookie banner design to use accept/reject
