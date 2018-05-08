@@ -4,10 +4,12 @@
   <![endif]-->
   <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
   <script>
-    hbspt.forms.create({
-  	portalId: "4012688",
-  	formId: "{{ footer_form_hubspot_id }}",
-  	css: ""
-  });
+    if(document.cookie.indexOf('cookies-accepted=') > -1) {
+      hbspt.forms.create({
+       portalId: "4012688",
+       formId: "{{ footer_form_hubspot_id }}",
+       css: ""
+      });
+    }
   </script>
 </div>
