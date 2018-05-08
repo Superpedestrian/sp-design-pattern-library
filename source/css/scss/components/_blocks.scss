@@ -235,3 +235,270 @@
   font-size: $font-size-med;
   font-weight: normal;
 }
+
+
+/*------------------------------------*\
+  #LARGE SPREAD BLOCK
+\*------------------------------------*/
+
+/**
+ * 1) The large spread block contains a title and various elements over an image with a gradient overlay.
+ */
+
+section.c-block-large-spread{
+  padding:54px $pad-quad-and-half;
+  max-width:$primary-column;
+  margin:0 auto;
+  background-size:cover;
+  background-position:center center;
+  position:relative;
+  &.large-spread-hero{
+    padding:$pad-quad-and-half;
+    min-height:550px;
+  }
+  &.content-right{
+    .c-block-large-spread__gradient{
+      background: linear-gradient(-135deg, rgba($color-gray-90,1) 0%,rgba($color-gray-90,0) 50%,rgba($color-gray-90,0) 100%);
+    }
+    .c-block-large-spread__content{
+      margin-left:auto;
+    }
+  }
+  &.margin-small{
+    margin-bottom:$space-triple;
+    @media(max-width:$bp-tablet){
+      margin-bottom:$space-double;
+    }
+  }
+  &.margin-medium{
+    margin-bottom:$space-quad-and-half;
+    @media(max-width:$bp-tablet){
+      margin-bottom:$space-triple;
+    }
+  }
+  &.margin-large{
+    margin-bottom:54px; // This is placeholder until we have variables.scss set.
+    @media(max-width:$bp-tablet){
+      margin-bottom:$space-quad-and-half;
+    }
+  }
+  &.margin-xl{
+    margin-bottom:81px; // This is placeholder until we have variables.scss set.
+    @media(max-width:$bp-tablet){
+      margin-bottom:54px;
+    }
+  }
+  &.margin-xxl{
+    margin-bottom:182px; // This is placeholder until we have variables.scss set.
+    @media(max-width:$bp-tablet){
+      margin-bottom:122px;
+    }
+  }
+  .c-block-large-spread__gradient{
+    background: linear-gradient(135deg, rgba($color-gray-90,1) 0%,rgba($color-gray-90,0) 50%,rgba($color-gray-90,0) 100%);
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+  }
+  .c-block-large-spread__content{
+    position:relative;
+    max-width:50%;
+    @media(max-width:$bp-tablet){
+      max-width:none;
+    }
+    .c-block-large-spread__title{
+      color:$color-white;
+      margin-bottom:$space-triple;
+    }
+    h1.c-block-large-spread__title{
+      font-size: 54px;
+      line-height: 60px;
+      @media(max-width:$bp-tablet){
+        font-size: 50px;
+        line-height: 56px;
+      }
+      @media(max-width:$bp-mobile){
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .c-block-large-spread__copy{
+      color:$color-white;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 24px;
+      *{
+        color:$color-white;
+      }
+    }
+    .sp-btn{
+
+    }
+  }
+}
+
+
+ /*------------------------------------*\
+  #MEDIUM SPREAD BLOCK
+\*------------------------------------*/
+
+/**
+ * 1) The medium spread block contains a title and text over an image with a gradient overlay.
+ */
+
+ div.c-block-medium-spread{
+    padding:$pad-triple;
+    width:500px;
+    height:500px;
+    background-size:cover;
+    background-position:center center;
+    position:relative;
+    @media(max-width:$bp-tablet){
+      width:100%;
+    }
+    .c-block-medium-spread__gradient{
+      background: linear-gradient(135deg, rgba($color-gray-90,1) 0%,rgba($color-gray-90,0) 50%,rgba($color-gray-90,0) 100%);
+      position:absolute;
+      width:100%;
+      height:100%;
+      left:0;
+      top:0;
+    }
+    .c-block-medium-spread__content{
+      position:relative;
+      max-width:50%;
+      @media(max-width:$bp-tablet){
+        max-width:none;
+      }
+      .c-block-medium-spread__title{
+        color:$color-white;
+        margin-bottom:$space-and-half;
+      }
+      .c-block-medium-spread__copy{
+        color:$color-white;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+        *{
+          color:$color-white;
+        }
+      }
+    }
+ }
+
+
+ /*------------------------------------*\
+  #SIDE BY SIDE BLOCK
+\*------------------------------------*/
+
+/**
+ * 1) The side by side block contains a title and text in a container with a background color on one side and a box with a background image on the other.
+ */
+
+ div.c-block-side-by-side{
+    width:500px;
+    height:238px;
+    position:relative;
+    display:flex;
+    @media(max-width:$bp-tablet){
+      width:100%;
+    }
+    &.content-right{
+      .c-block-side-by-side__content{
+        order:2;
+      }
+    }
+    .c-block-side-by-side__content{
+      width:50%;
+      padding:$pad-triple;
+      background-color:$color-gray-02;
+      height:100%;
+      @media(max-width:$bp-tablet){
+        width:100%;
+      }
+      .c-block-side-by-side__title{
+        margin-bottom:$space-and-half;
+      }
+      .c-block-side-by-side__copy{
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+    }
+    .c-block-side-by-side__image{
+      width:50%;
+      height:100%;
+      background-size:cover;
+      background-position:center center;
+      @media(max-width:$bp-tablet){
+        width:0%;
+      }
+    }
+ }
+
+
+ /*------------------------------------*\
+  #OVER UNDER BLOCK
+\*------------------------------------*/
+
+/**
+ * 1) The over under block contains a title and text in a container with a background color below a box with a background image.
+ */
+
+ .c-block-over-under{
+      height:500px;
+      width:500px;
+      @media(max-width:$bp-tablet){
+        width:100%;
+      }
+    .c-block-over-under__image{
+      height:262px;
+      width:100%;
+      background-size:cover;
+      background-position:center center;
+    }
+    .c-block-over-under__content{
+      width:100%;
+      padding:$pad-triple;
+      background-color:$color-gray-02;
+      height:238px;
+      .c-block-over-under__title{
+        margin-bottom:$space-and-half;
+      }
+      .c-block-over-under__copy{
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 24px;
+      }
+    }
+ }
+
+  /*------------------------------------*\
+  #RESOURCE BLOCK
+\*------------------------------------*/
+
+/**
+ * 1) The resource block contains a title and link inside a container with a background color.
+ */
+
+ div.c-block-resource{
+  position:relative;
+    width:238px;
+    height:238px;
+    padding:$pad-triple;
+    background-color:$color-gray-02;
+    .c-block-resource__content{
+      .c-block-resource__title{
+
+      }
+    }
+    .c-block-resource__link{
+      position:absolute;
+      bottom:$space-triple;
+      a{
+        font-family: "Graphik Semibold";
+      }
+    }
+ }
