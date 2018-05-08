@@ -1,17 +1,16 @@
 <div class="cookie-banner" id="cookie-banner">
   <div class="container-fluid cookie-banner-section">
-    <div class="col-md-6 hidden-sm hidden-xs cookie-banner-heading col-left">
-      <h4>{{ cookie-banner-heading }}</h4>
-    </div>
-    <div class="col-md-5 col-sm-11 col-xs-9 cookie-banner-text col-right">
+    <div class="col-md-6 col-xs-12 cookie-banner-text col-left">
+      <div class="cookie-banner-heading">
+        <h3>{{ cookie-banner-heading }}</h3>
+      </div>
+      <div class="cookie-banner-text">
         {{ cookie-banner-text-1 }}
-        <a href={{ privacy-policy-url }}>{{ privacy-policy }}</a>
-        {{ cookie-banner-text-2 }}
+      </div>
     </div>
-    <div class="col-md-1 col-sm-1 col-xs-3">
-      <button class="close-button" onclick="cookiesAccepted()">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </button>
+    <div class="col-md-6 col-sm-11 col-xs-offset-2 col-xs-8 col-right">
+        <button class="sp-btn-secondary-white reverse-oreo small" onclick="cookiesAccepted()">{{ accept }}</button>
+        <button class="sp-btn-secondary-white small" onclick="cookiesDeclined()">{{ decline }}</a>
     </div>
   </div>
 </div>

@@ -36,6 +36,14 @@
     }
   };
 
+  // function for auto-accepting cookies when we're in the US
+  var cookiesAccepted = function() {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = "cookies-accepted=yes;" + expires + ";path=/"
+  };
+
   var setLinks = function () {
     var loginURL = spConfig.loginURL || 'https://account.superpedestrian.com/login?redirect=https://www.superpedestrian.com';
     var profileURL = spConfig.profileURL || 'https://account.superpedestrian.com/profile';
@@ -124,13 +132,17 @@
     }
 
     // Show cookie banner if cookie isn't set and the locale is not en-US
+    var localeParam = getQueryVariable("locale");
     if(!(cookies.indexOf('cookies-accepted=') > -1)) {
       var banner = document.getElementById("cookie-banner");
-      var localeParam = getQueryVariable("locale");
+
       if(localeParam) {
         var splitLocale = localeParam.split('-');
         if( splitLocale[1] !== 'us') {
           banner.style.display = "block";
+        }
+        else {
+          cookiesAccepted();
         }
       }
       // Check for locale cookie and show banner for non-US locale
@@ -139,18 +151,44 @@
         for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
           var key = splitCookies[cookieIndex].split('=')[0].trim();
           var value = splitCookies[cookieIndex].split('=')[1];
-          if(key === 'locale' && value.split('-')[1] !== 'us') {
-            banner.style.display = "block";
+          if(key === 'locale') {
+            if(value.split('-')[1] !== 'us') {
+              banner.style.display = "block";
+            }
+            else {
+              cookiesAccepted();
+            }
           }
         }
       }
       // Check for browser locale
       else if(navigator.language.split('-')[1] === 'US' || navigator.userLanguage.split('-')[1] === 'US'){
         banner.style.display = "none";
+        cookiesAccepted();
       }
       // Display banner if none of those exist and we don't know anything about their locale
       else {
         banner.style.display = "block";
+      }
+    }
+    // Cookies are accepted, set locale cookie
+    else {
+      // Locale cookie not set
+      if(!(cookies.indexOf('locale=') > -1)) {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        // Check url param for locale
+        if (localeParam) {
+          document.cookie = "locale=" + localeParam + ";" + expires + ";path=/";
+        }
+        // Check browser language
+        else if(navigator.language) {
+          document.cookie = "locale" + navigator.language + ";" + expires + ";path=/";
+        }
+        else if(navigator.userLanguage) {
+          document.cookie = "locale" + navigator.userLanguage + ";" + expires + ";path=/";
+        }
       }
     }
   }

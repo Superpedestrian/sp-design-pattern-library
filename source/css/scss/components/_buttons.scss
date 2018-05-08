@@ -136,6 +136,15 @@
   &:hover, &:focus {
     color: $color-white;
   }
+
+  &.small {
+    min-width: 200px;
+  }
+
+  &.reverse-oreo {
+    background: $color-white;
+    color: $color-gray-90;
+  }
 }
 
 .sp-btn-white {
