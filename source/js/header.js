@@ -37,23 +37,11 @@
   };
 
   // function for auto-accepting cookies when we're in the US
-  var cookiesAccepted = function() {
+  var cookiesAccepted = function(locale) {
     var cookies = document.cookie;
-    var localeParam = getQueryVariable("locale");
     document.cookie = "cookies-accepted=yes;path=/";
-
     if(!(cookies.indexOf('locale=') > -1)) {
-      // Check url param for locale
-      if (localeParam) {
-        document.cookie = "locale=" + localeParam + ";path=/";
-      }
-      // Check browser language
-      else if(navigator.language) {
-        document.cookie = "locale=" + navigator.language + ";path=/";
-      }
-      else if(navigator.userLanguage) {
-        document.cookie = "locale=" + navigator.userLanguage + ";path=/";
-      }
+      document.cookie = "locale=" + locale + ";path=/";
     }
   };
 
@@ -68,7 +56,7 @@
     document.getElementById('sp-profile-url').href = profileURL;
     document.getElementById('sp-orders-url').href = ordersURL;
     document.getElementById('sp-logout-url').href = logoutURL + '?next=' + logoutNext;
-  }
+  };
 
 
   var setCartCount = function(cookies) {
@@ -154,7 +142,7 @@
           banner.style.display = "block";
         }
         else {
-          cookiesAccepted();
+          cookiesAccepted(localeParam);
         }
       }
       // Check for locale cookie and show banner for non-US locale
@@ -168,7 +156,7 @@
               banner.style.display = "block";
             }
             else {
-              cookiesAccepted();
+              cookiesAccepted(value);
             }
           }
         }
@@ -176,7 +164,12 @@
       // Check for browser locale
       else if(navigator.language.split('-')[1] === 'US' || navigator.userLanguage.split('-')[1] === 'US'){
         banner.style.display = "none";
-        cookiesAccepted();
+        if(navigator.language){
+          cookiesAccepted(navigator.language);
+        }
+        else {
+          cookiesAccepted(navigator.userLanguage)
+        }
       }
       // Display banner if none of those exist and we don't know anything about their locale
       else {
