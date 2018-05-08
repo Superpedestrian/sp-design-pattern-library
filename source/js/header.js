@@ -38,10 +38,23 @@
 
   // function for auto-accepting cookies when we're in the US
   var cookiesAccepted = function() {
-    var d = new Date();
-    d.setTime(d.getTime() + (365*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = "cookies-accepted=yes;" + expires + ";path=/"
+    var cookies = document.cookie;
+    var localeParam = getQueryVariable("locale");
+    document.cookie = "cookies-accepted=yes;path=/";
+
+    if(!(cookies.indexOf('locale=') > -1)) {
+      // Check url param for locale
+      if (localeParam) {
+        document.cookie = "locale=" + localeParam + ";path=/";
+      }
+      // Check browser language
+      else if(navigator.language) {
+        document.cookie = "locale=" + navigator.language + ";path=/";
+      }
+      else if(navigator.userLanguage) {
+        document.cookie = "locale=" + navigator.userLanguage + ";path=/";
+      }
+    }
   };
 
   var setLinks = function () {
@@ -77,7 +90,6 @@
 
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
-
     var localeParam = getQueryVariable("locale");
 
     if(localeParam) {
@@ -169,26 +181,6 @@
       // Display banner if none of those exist and we don't know anything about their locale
       else {
         banner.style.display = "block";
-      }
-    }
-    // Cookies are accepted, set locale cookie
-    else {
-      // Locale cookie not set
-      if(!(cookies.indexOf('locale=') > -1)) {
-        var d = new Date();
-        d.setTime(d.getTime() + (365*24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
-        // Check url param for locale
-        if (localeParam) {
-          document.cookie = "locale=" + localeParam + ";" + expires + ";path=/";
-        }
-        // Check browser language
-        else if(navigator.language) {
-          document.cookie = "locale" + navigator.language + ";" + expires + ";path=/";
-        }
-        else if(navigator.userLanguage) {
-          document.cookie = "locale" + navigator.userLanguage + ";" + expires + ";path=/";
-        }
       }
     }
   }
