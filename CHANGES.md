@@ -1,5 +1,10 @@
 # Changes
 
+## 0.9.0
+
+- Update cookie banner design to use accept/reject
+- Don't use cookies unless cookies accepted
+
 ## 0.8.4
 
 - Added Fleet page in header
