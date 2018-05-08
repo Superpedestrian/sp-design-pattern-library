@@ -39,9 +39,9 @@
   // function for auto-accepting cookies when we're in the US
   var cookiesAccepted = function(locale) {
     var cookies = document.cookie;
-    document.cookie = "cookies-accepted=yes;path=/";
+    document.cookie = "cookies-accepted=yes;path=/;domain=.superpedestrian.com";
     if(!(cookies.indexOf('locale=') > -1)) {
-      document.cookie = "locale=" + locale + ";path=/";
+      document.cookie = "locale=" + locale + ";path=/;domain=.superpedestrian.com";
     }
   };
 
