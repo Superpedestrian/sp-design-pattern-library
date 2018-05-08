@@ -37,8 +37,12 @@
   };
 
   // function for auto-accepting cookies when we're in the US
-  var cookiesAccepted = function() {
-    document.cookie = "cookies-accepted=yes;path=/"
+  var cookiesAccepted = function(locale) {
+    var cookies = document.cookie;
+    document.cookie = "cookies-accepted=yes;path=/";
+    if(!(cookies.indexOf('locale=') > -1)) {
+      document.cookie = "locale=" + locale + ";path=/";
+    }
   };
 
   var setLinks = function () {
@@ -52,7 +56,7 @@
     document.getElementById('sp-profile-url').href = profileURL;
     document.getElementById('sp-orders-url').href = ordersURL;
     document.getElementById('sp-logout-url').href = logoutURL + '?next=' + logoutNext;
-  }
+  };
 
 
   var setCartCount = function(cookies) {
@@ -74,7 +78,6 @@
 
   var setCountryIcon = function(cookies) {
     var countryCode = 'us';
-
     var localeParam = getQueryVariable("locale");
 
     if(localeParam) {
@@ -129,16 +132,17 @@
     }
 
     // Show cookie banner if cookie isn't set and the locale is not en-US
+    var localeParam = getQueryVariable("locale");
     if(!(cookies.indexOf('cookies-accepted=') > -1)) {
       var banner = document.getElementById("cookie-banner");
-      var localeParam = getQueryVariable("locale");
+
       if(localeParam) {
         var splitLocale = localeParam.split('-');
         if( splitLocale[1] !== 'us') {
           banner.style.display = "block";
         }
         else {
-          cookiesAccepted();
+          cookiesAccepted(localeParam);
         }
       }
       // Check for locale cookie and show banner for non-US locale
@@ -152,7 +156,7 @@
               banner.style.display = "block";
             }
             else {
-              cookiesAccepted();
+              cookiesAccepted(value);
             }
           }
         }
@@ -160,7 +164,12 @@
       // Check for browser locale
       else if(navigator.language.split('-')[1] === 'US' || navigator.userLanguage.split('-')[1] === 'US'){
         banner.style.display = "none";
-        cookiesAccepted();
+        if(navigator.language){
+          cookiesAccepted(navigator.language);
+        }
+        else {
+          cookiesAccepted(navigator.userLanguage)
+        }
       }
       // Display banner if none of those exist and we don't know anything about their locale
       else {
