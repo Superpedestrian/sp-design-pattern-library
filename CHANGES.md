@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.2
+
+- Fixed issue with nav language split causing JS errors
+
 ## 0.9.1
 
 - Fixed cookie domain
