@@ -136,7 +136,7 @@
     if(!(cookies.indexOf('cookies-accepted=') > -1)) {
       var banner = document.getElementById("cookie-banner");
 
-      if(localeParam) {
+      if(localeParam && localeParam.split('-').length > 1) {
         var splitLocale = localeParam.split('-');
         if( splitLocale[1] !== 'us') {
           banner.style.display = "block";
@@ -162,14 +162,13 @@
         }
       }
       // Check for browser locale
-      else if(navigator.language.split('-')[1] === 'US' || navigator.userLanguage.split('-')[1] === 'US'){
+      else if(navigator.language && navigator.language.split('-').length > 1 && navigator.language.split('-')[1] === 'US') {
         banner.style.display = "none";
-        if(navigator.language){
-          cookiesAccepted(navigator.language);
-        }
-        else {
-          cookiesAccepted(navigator.userLanguage)
-        }
+        cookiesAccepted(navigator.language);
+      }
+      else if(navigator.userLanguage && navigator.userLanguage.split('-').length > 1 && navigator.userLanguage.split('-')[1] === 'US') {
+        banner.style.display = "none";
+        cookiesAccepted(navigator.userLanguage);
       }
       // Display banner if none of those exist and we don't know anything about their locale
       else {
