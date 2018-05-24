@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.3
+
+- Added style changes for the gdpr footer form
+
 ## 0.9.2
 
 - Fixed issue with nav language split causing JS errors
