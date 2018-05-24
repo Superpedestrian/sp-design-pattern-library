@@ -145,6 +145,10 @@
     background: $color-white;
     color: $color-gray-90;
   }
+
+  @media (max-width: 900px) {
+    padding: 10px 20px 6px 20px;
+  }
 }
 
 .sp-btn-white {
