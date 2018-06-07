@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.4
+
+- Updated the german tech page link
+
 ## 0.9.3
 
 - Added style changes for the gdpr footer form
