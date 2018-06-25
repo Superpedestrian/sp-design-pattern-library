@@ -1,21 +1,16 @@
 {
   "bodyClass" : "sp-global",
-  "language_code" : "en",
+  "language_code" : "default",
   "company" : {
-        "name" : "Superpedestrian",
-        "url" : "http://www.superpedestrian.com"
-    },
+    "name" : "Superpedestrian",
+    "url" : "http://www.superpedestrian.com"
+  },
   "btnText": "Button",
   "primaryNav" : [
     {
       "label": "Tech",
       "icon" : false,
       "url": "http://www.superpedestrian.com/tech"
-    },
-    {
-      "label": "Bikes",
-      "icon": false,
-      "url": "http://shop.superpedestrian.com/t/categories/bikes"
     },
     {
       "label": "Try",
@@ -28,14 +23,16 @@
       "url": "http://www.superpedestrian.com/choose"
     },
     {
-      "label": "Support",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/support"
-    },
-    {
       "label" : "Blog",
       "icon" : false,
       "url": "https://blog.superpedestrian.com/"
+    }
+  ],
+  "topNav" : [
+    {
+      "label": "Support",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/support"
     },
     {
       "label" : "Fleet",
@@ -44,7 +41,7 @@
     }
   ],
   "login": "Login",
-  "my_account": "My Account",
+  "my_account": "Account",
   "profile": "Profile",
   "account": "Account",
   "orders": "Orders",
@@ -154,8 +151,8 @@
     ],
     "properties": {
       "terms_conditions" : {
-            "label" : "Terms & Conditions",
-            "url" : "https://www.superpedestrian.com/legal/terms-of-sale"
+        "label" : "Terms & Conditions",
+        "url" : "https://www.superpedestrian.com/legal/terms-of-sale"
       },
       "privacy_policy": {
         "label" : "Privacy Policy",
@@ -166,7 +163,6 @@
   "facebook_url": "https://www.facebook.com/copenhagenwheel",
   "twitter_url" : "https://twitter.com/CPHWheel",
   "instagram_url" : "https://www.instagram.com/copenhagenwheel",
-  "medium_url" : "https://medium.com/@CopenhagenWheel",
   "youtube_url" : "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
   "footer_form_hubspot_id": "7b1ff236-1087-4865-9998-538a07fda5c8",
   "download" : "Download the Copenhagen Wheel companion apps.",
