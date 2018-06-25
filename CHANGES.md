@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.6
+
+- Fixed the language code
+
 ## 0.9.5
 
 - Updated the header and german translations
