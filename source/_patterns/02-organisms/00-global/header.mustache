@@ -1,25 +1,37 @@
-<div class="header-nav">
-    <nav class="navBar">
-        <div class="logo-left hidden-sm hidden-xs">
-            {{> molecules-logo-link }}
+<nav class="navBar">
+  <nav class="wrapper top-row">
+    <ul>
+      {{> molecules-top-nav }}
+      {{> molecules-country-nav }}
+    </ul>
+  </nav>
+  <nav class="wrapper">
+    <div class="logo">
+      {{> molecules-wordmark-link }}
+    </div><!-- Logo -->
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" id="label-for-toggle" class="label-toggle">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+    <div class="visible-xs cart-icon">
+      <a href="{{ & cartNav }}">
+        <div class="cartButton" alt="cart">
+          <span id="shop-badge"></span>
         </div>
-        <nav class="wrapper">
-            <div class="logo-left-mobile hidden-md hidden-lg">
-                {{> molecules-logo-link }}
-            </div>
-            <div class="logo">
-                {{> molecules-wordmark-link }}
-            </div><!-- Logo -->
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="label-toggle"></label>
-            <ul class="c-primary-nav__list" id="nav-list">
-                {{> molecules-primary-nav }}
-                {{> molecules-cart-nav }}
-                {{> molecules-country-nav }}
-                {{> molecules-login-nav }}
-            </ul>
-        </nav>
-        <div class="logo-left logo-right">
-        </div>
-    </nav>
-</div>
+      </a>
+    </div>
+    <ul class="bottom-row">
+      {{> molecules-primary-nav }}
+      {{> molecules-login-nav }}
+      <div class="hidden-xs">
+        {{> molecules-cart-nav }}
+      </div>
+    </ul>
+  </nav>
+</nav>
+

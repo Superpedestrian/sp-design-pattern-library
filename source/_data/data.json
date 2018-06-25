@@ -13,11 +13,6 @@
       "url": "http://www.superpedestrian.com/tech"
     },
     {
-      "label": "Bikes",
-      "icon": false,
-      "url": "http://shop.superpedestrian.com/t/categories/bikes"
-    },
-    {
       "label": "Try",
       "icon": false,
       "url": "http://www.superpedestrian.com/ride"
@@ -28,14 +23,16 @@
       "url": "http://www.superpedestrian.com/choose"
     },
     {
-      "label": "Support",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/support"
-    },
-    {
       "label" : "Blog",
       "icon" : false,
       "url": "https://blog.superpedestrian.com/"
+    }
+  ],
+  "topNav" : [
+    {
+      "label": "Support",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/support"
     },
     {
       "label" : "Fleet",
@@ -44,7 +41,7 @@
     }
   ],
   "login": "Login",
-  "my_account": "My Account",
+  "my_account": "Account",
   "profile": "Profile",
   "account": "Account",
   "orders": "Orders",
