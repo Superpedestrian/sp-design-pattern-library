@@ -78,7 +78,7 @@ nav {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    width: 50%;
+    width: 60%;
 
     a {
       color: $color-gray-85;
@@ -113,7 +113,6 @@ nav {
       li {
         display: block;
         padding: 0 0 16px 0;
-        font: 14px Arial, sans-serif;
         text-transform: uppercase;
       }
       .sp-global .header-nav nav li {
@@ -225,7 +224,6 @@ nav {
       padding-top: 10px;
       padding-bottom: 10px;
       z-index: 999;
-      padding-left: 30px;
       width: 100vw;
     }
 
@@ -246,6 +244,17 @@ nav {
       transition: all 1s ease;
       width: 100%;
       visibility: hidden;
+
+      .bottom-row {
+        margin-top: 24px !important;
+      }
+    }
+
+    .secondary-nav {
+      margin-top: 25px;
+      a {
+        font-size: 16px;
+      }
     }
 
     li {
@@ -254,8 +263,12 @@ nav {
       visibility: hidden;
       text-align: left;
       a {
-        font-size: 16px;
+        font-size: 24px;
       }
+    }
+
+    .sub-menu {
+      padding-left: 30px;
     }
 
     .c-primary-nav__link {
@@ -298,6 +311,7 @@ nav {
     .cart-icon {
       display: inline-block;
       float: right;
+      margin-right: 10px;
     }
   }
 }
@@ -322,7 +336,7 @@ nav {
 #hamburger span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   background: $color-gray-85;
   border-radius: 9px;
@@ -349,7 +363,7 @@ nav {
 }
 
 #hamburger span:nth-child(2) {
-  top: 8px;
+  top: 10px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -357,7 +371,7 @@ nav {
 }
 
 #hamburger span:nth-child(3) {
-  top: 16px;
+  top: 20px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
