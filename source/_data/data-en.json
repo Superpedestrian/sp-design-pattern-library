@@ -1,6 +1,6 @@
 {
   "bodyClass" : "sp-global",
-  "language_code" : "default",
+  "language_code" : "en",
   "company" : {
     "name" : "Superpedestrian",
     "url" : "http://www.superpedestrian.com"
@@ -87,7 +87,7 @@
           {
             "label" : "Photo Credits",
             "url" : "https://www.superpedestrian.com/photo-credits"
-          },
+          }
 
         ]
       },
@@ -129,7 +129,7 @@
           {
             "label" : "Support",
             "url" : "https://www.superpedestrian.com/support"
-          },
+          }
         ]
       },
       {
