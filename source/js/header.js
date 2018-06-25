@@ -36,6 +36,12 @@
     }
   };
 
+  document.querySelector('#hamburger').addEventListener('click', classToggle);
+
+  function classToggle() {
+    this.classList.toggle('open');
+  }
+
   // function for auto-accepting cookies when we're in the US
   var cookiesAccepted = function(locale) {
     var cookies = document.cookie;
