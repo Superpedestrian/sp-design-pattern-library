@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.5
+
+- Updated the header and german translations
+
 ## 0.9.4
 
 - Updated the german tech page link
