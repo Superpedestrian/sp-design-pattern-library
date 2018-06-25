@@ -53,6 +53,7 @@ h1 {
   background-color: $color-white;
   box-shadow: 0 3px 32px 0 rgba(0,0,0,0.08);
   position: fixed;
+  top: 0;
   min-width: 100%;
 }
 
@@ -63,13 +64,16 @@ h1 {
   a::before {
     content: none;
   }
+  a {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 // Content Wrapper
 .wrapper {
   margin: 0 auto;
-  max-width: 960px;
-  padding: 0 2%;
+  max-width: 964px;
 }
 
 // Full Navigation, including mobile menu
