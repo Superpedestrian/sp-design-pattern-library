@@ -8,12 +8,17 @@
   "btnText": "Button",
   "primaryNav" : [
     {
-      "label": "Technik",
+      "label": "Tech",
       "icon" : false,
       "url": "http://www.superpedestrian.com/de/tech"
     },
     {
-      "label": "Probieren",
+      "label" : "FAHRRÄDER",
+      "icon": false,
+      "url" : "http://shop.superpedestrian.com/t/categories/bikes"
+    },
+    {
+      "label": "Testen",
       "icon": false,
       "url": "http://www.superpedestrian.com/ride"
     },
@@ -23,14 +28,16 @@
       "url": "http://www.superpedestrian.com/choose"
     },
     {
-      "label": "Kundendienst",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/support"
-    },
-    {
       "label" : "Blog",
       "icon" : false,
       "url": "https://blog.superpedestrian.com/"
+    }
+  ],
+  "topNav" : [
+    {
+      "label": "Support",
+      "icon" : false,
+      "url": "http://www.superpedestrian.com/support"
     },
     {
       "label" : "Flotte",
@@ -38,7 +45,7 @@
       "url": "http://www.superpedestrian.com/fleet"
     }
   ],
-  "login": "Anmeldung",
+  "login": "Login",
   "my_account": "Mein Konto",
   "profile": "Profil",
   "account": "Konto",
@@ -62,15 +69,15 @@
             "url" : "https://www.superpedestrian.com/press"
           },
           {
-            "label" : "Karriere",
+            "label" : "Jobs",
             "url" : "https://www.superpedestrian.com/jobs"
           },
           {
-            "label" : "Mannschaft",
+            "label" : "Team",
             "url" : "https://www.superpedestrian.com/team"
           },
           {
-            "label" : "Gesetz",
+            "label" : "Rechtliches",
             "url" : "https://www.superpedestrian.com/legal"
           },
           {
@@ -91,19 +98,19 @@
             "url" : "https://www.superpedestrian.com/tech"
           },
           {
-            "label" : "Bikes",
+            "label" : "FAHRRÄDER",
             "url" : "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
-            "label" : "Bewertungen",
+            "label" : "Reviews",
             "url" : "http://www.superpedestrian.com/reviews"
           },
           {
-            "label" : "Demo",
+            "label" : "Testfahrt",
             "url" : "https://www.superpedestrian.com/ride"
           },
           {
-            "label" : "Ersatzteile und Zubehör",
+            "label" : "Ersatzteile & Zubehör",
             "url" : "https://shop.superpedestrian.com/t/categories/accessories"
           },
           {
@@ -119,28 +126,28 @@
             "url" : "https://www.superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           },
           {
-            "label" : "Kundendienst",
+            "label" : "Support",
             "url" : "https://www.superpedestrian.com/support"
           }
         ]
       },
       {
-        "title" : "Einzelhandel",
+        "title" : "HÄNDLER",
         "links" : [
           {
-            "label" : "Werden Sie ein Einzelhändler",
+            "label" : "Händler werden",
             "url" : "https://www.superpedestrian.com/partners/apply"
           },
           {
-            "label" : "Finde ein Geschäft",
+            "label" : "Finde einen Händler",
             "url" : "https://www.superpedestrian.com/partners/locator"
           },
           {
-            "label" : "Programm",
+            "label" : "Partnerprogramm",
             "url" : "https://www.superpedestrian.com/partners"
           },
           {
-            "label" : "Flottenanfrage",
+            "label" : "Flottenbetreiber",
             "url" : "https://www.superpedestrian.com/partners/contact"
           }
         ]
@@ -157,10 +164,9 @@
       }
     }
   },
-  "facebook_url": "https://www.facebook.com/copenhagenwheel",
-  "twitter_url" : "https://twitter.com/CPHWheel",
+  "facebook_url": "https://www.facebook.com/SuperpedestrianDeutschland/",
+  "twitter_url" : "https://twitter.com/SuperpedDE",
   "instagram_url" : "https://www.instagram.com/copenhagenwheel",
-  "medium_url" : "https://medium.com/@CopenhagenWheel",
   "youtube_url" : "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
   "footer_form_hubspot_id": "11f07ae5-5573-4962-8a49-f177e3bdc80e",
   "download" : "Laden Sie die Copenhagen Wheel Companion-Apps herunter.",
