@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.8
+
+- Aligned header to footer, removed unnecessary styles
+
 ## 0.9.7
 
 - Added z-index to navbar
