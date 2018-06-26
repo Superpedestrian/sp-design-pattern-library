@@ -1,17 +1,3 @@
-// Base Styles
-body {
-  background-color: $color-gray-85;
-  color: $color-white;
-  font-family: 'Oswald', sans-serif;
-  line-height: 2em;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: 3em;
-  padding: 3em 0 1em 0;
-}
-
 .top-row {
   display: flex;
   justify-content: flex-end !important;
@@ -220,7 +206,7 @@ nav {
     }
 
     .logo {
-      padding-left: 15px;
+      padding-left: 30px;
     }
 
     .c-primary-nav__link, .arrow-menu li {
@@ -270,6 +256,7 @@ nav {
       display: block;
       visibility: hidden;
       text-align: left;
+      padding-left: 15px;
       a {
         font-size: 24px;
       }
