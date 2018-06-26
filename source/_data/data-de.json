@@ -13,11 +13,6 @@
       "url": "http://www.superpedestrian.com/de/tech"
     },
     {
-      "label" : "FAHRRÄDER",
-      "icon": false,
-      "url" : "http://shop.superpedestrian.com/t/categories/bikes"
-    },
-    {
       "label": "Testen",
       "icon": false,
       "url": "http://www.superpedestrian.com/ride"
