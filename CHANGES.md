@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.7
+
+- Added z-index to navbar
+
 ## 0.9.6
 
 - Fixed the language code
