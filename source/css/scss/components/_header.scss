@@ -55,12 +55,12 @@ h1 {
   position: fixed;
   top: 0;
   min-width: 100%;
+  z-index: 999;
 }
 
 .logo {
   display: inline-block;
   margin: 14px 0;
-  width: 45px;
   a::before {
     content: none;
   }
@@ -217,6 +217,10 @@ nav {
       height: inherit;
       visibility: visible;
       opacity: 1;
+    }
+
+    .logo {
+      padding-left: 15px;
     }
 
     .c-primary-nav__link, .arrow-menu li {
