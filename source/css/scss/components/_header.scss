@@ -55,6 +55,7 @@ h1 {
   position: fixed;
   top: 0;
   min-width: 100%;
+  z-index: 999;
 }
 
 .logo {
@@ -411,9 +412,5 @@ nav {
 // Section with My Account dropdown
 .dropdown-area {
   display: block;
-}
-
-#dropdown-area {
-  z-index: 999;
 }
 
