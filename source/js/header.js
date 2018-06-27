@@ -102,7 +102,7 @@
       }
     }
 
-    document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode;
+    document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode.toLowerCase();
   };
 
   function getQueryVariable(variable) {
