@@ -8,7 +8,7 @@
   "btnText": "Button",
   "primaryNav" : [
     {
-      "label": "Tech",
+      "label": "Technik",
       "icon" : false,
       "url": "http://www.superpedestrian.com/de/tech"
     },
@@ -86,10 +86,10 @@
         ]
       },
       {
-        "title" : "Geschäft",
+        "title" : "Shop",
         "links" : [
           {
-            "label": "Tech",
+            "label": "Technik",
             "url" : "https://www.superpedestrian.com/tech"
           },
           {
