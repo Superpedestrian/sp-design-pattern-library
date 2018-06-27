@@ -1,5 +1,10 @@
 # Changes
 
+## 0.9.9
+
+- Updated German translations
+- Fixed country flag
+
 ## 0.9.8
 
 - Aligned header to footer, removed unnecessary styles
