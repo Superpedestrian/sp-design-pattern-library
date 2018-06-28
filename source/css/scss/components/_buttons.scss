@@ -24,7 +24,6 @@
   text-transform: uppercase;
   transition: background 0.2s ease;
   touch-action: manipulation;
-  position: relative;
 
   vertical-align: middle;
   cursor: pointer;
@@ -37,7 +36,12 @@
   user-select: none;
   text-decoration: none;
 
-  &:hover, &:focus {
+  &:focus {
+    background: $color-brand-red;
+    color: $color-white;
+  }
+
+  &:hover {
     background: $color-button-hover-red;
     color: $color-white;    
   }
@@ -90,7 +94,11 @@
   border: 2px solid $color-gray-85;
   background: transparent;
 
-  &:hover, &:focus {
+  &:focus {
+    color: $color-gray-85;
+  }
+
+  &:hover {
     background: $color-brand-red;
     color: $color-white;
   }
