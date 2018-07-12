@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title>Nullizzle shizznit velizzle, hizzle, suscipit own yo&#39;, gravida vizzle, arcu.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://use.fontawesome.com/a9bf041a16.js"></script>
+  <link rel="stylesheet" href="../../css/style.css?1531407546245" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1531407546245" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="sp-global">
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="container-fluid cookie-banner-section">
+      <div class="col-md-6 col-xs-12 cookie-banner-text col-left">
+        <div class="cookie-banner-heading">
+          <h3>This site uses cookies.</h3>
+        </div>
+        <div class="cookie-banner-text">
+          Without cookies you will not be able to buy a Wheel or log in to your account. We use cookies to manage users, analyze our web traffic, and provide a better experience. We share information about your use of the site with partners that help us understand
+          our web traffic.
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-11 col-md-offset-0 col-xs-offset-2 col-xs-8 col-right">
+        <button class="sp-btn-secondary-white reverse-oreo small" onclick="cookiesAccepted()">Accept</button>
+        <button class="sp-btn-secondary-white small" onclick="cookiesDeclined()">Decline</a>
+    </div>
+  </div>
+</div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternExtension":"mustache","patternName":"Cookie Banner","patternPartial":"organisms-cookie-banner","patternState":"","patternEngineName":"mustache","extraOutput":{}}
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+  
+  var scriptLoader = {
+    
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+    
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1531407546245">
+  (function() {
+    if (self != top) {
+      var cb = '1531407546245';
+      var js = [];
+      if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+        js.push('styleguide/bower_components/classList.min.js');
+      }
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+<script id="pl-js-insert-1531407546245">
+  (function() {
+    if (self != top) {
+      var cb = '1531407546245';
+      var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
+      scriptLoader.run(js,cb,'pl-js-insert');
+    }
+  })();
+</script>
+
+
+  <script src="/js/retina.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/cookie-banner.js"></script>
+</body>
+</html>
