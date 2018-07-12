@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.10
+- Added hover effects to button elements
+
 ## 0.9.9
 
 - Updated German translations
