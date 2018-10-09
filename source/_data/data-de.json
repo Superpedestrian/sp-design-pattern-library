@@ -26,11 +26,6 @@
       "label": "Kaufen",
       "icon" : false,
       "url": "http://www.superpedestrian.com/choose"
-    },
-    {
-      "label" : "Blog",
-      "icon" : false,
-      "url": "https://blog.superpedestrian.com/"
     }
   ],
   "topNav" : [
@@ -56,10 +51,6 @@
       {
         "title" : "Unternehmen",
         "links" : [
-          {
-            "label" : "Blog",
-            "url" : "https://blog.superpedestrian.com/"
-          },
           {
             "label" : "Über uns",
             "url" : "https://www.superpedestrian.com/team"
