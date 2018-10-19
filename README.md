@@ -110,3 +110,31 @@ To install a specific StarterKit from GitHub type:
     npm install [starterkit-vendor/starterkit-name]
 
     gulp patternlab:loadstarterkit --kit=[starterkit-name]
+
+### Problems building PatternLab / How to Fix
+
+As of October 2018, we all got a similar error when running `gulp patternlab:serve`. If you get the following error:
+
+```
+====[ Pattern Lab / Node - v2.12.0 ]====
+
+[13:01:03] Using gulpfile ~/sp-design-pattern-library/gulpfile.js
+/usr/local/lib/node_modules/gulp/bin/gulp.js:129
+    gulpInst.start.apply(gulpInst, toRun);
+
+TypeError: Cannot read property 'apply' of undefined
+at /usr/local/lib/node_modules/gulp/bin/gulp.js:129:19
+at nextTickCallbackWith0Args (node.js:452:9)
+at process._tickCallback (node.js:381:13)
+at Function.Module.runMain (module.js:431:11)
+at startup (node.js:139:18)
+at node.js:999:3
+```
+
+Fix it as follows:
+
+1) `nvm use 9`
+
+2) `npm install gulpjs/gulp-cli -g`
+
+3) Delete your `node_modules` folder and run `npm install`
