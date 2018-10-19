@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.11
+- Removed links to blog from header and footer
+
 ## 0.9.10
 - Added hover effects to button elements
 
