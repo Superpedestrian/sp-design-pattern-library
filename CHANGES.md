@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.12
+- Changed footer form from HubSpot form to MailChimp form.
+
 ## 0.9.11
 - Removed links to blog from header and footer
 
