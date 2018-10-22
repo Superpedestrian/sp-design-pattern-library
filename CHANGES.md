@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.13
+- Made a tweek to the copy in the Footer form.
+
 ## 0.9.12
 - Changed footer form from HubSpot form to MailChimp form.
 
