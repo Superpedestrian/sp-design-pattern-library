@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.14
+- Updated gulp dependency to fix build
+
 ## 0.9.13
 - Made a tweek to the copy in the Footer form.
 
