@@ -1,0 +1,39 @@
+<nav class="navBar">
+  <nav class="wrapper top-row">
+    <ul>
+      {{> molecules-country-nav }}
+    </ul>
+  </nav>
+  <nav class="wrapper">
+    <div class="logo">
+      {{> molecules-wordmark-link }}
+    </div><!-- Logo -->
+
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" id="label-for-toggle" class="label-toggle">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+    <div class="visible-xs cart-icon">
+      <a href="{{ & cartNav }}">
+        <div class="cartButton" alt="cart">
+          <span id="shop-badge"></span>
+        </div>
+      </a>
+    </div>
+    <ul class="bottom-row">
+      {{> molecules-unified-nav }}
+      {{> molecules-login-nav }}
+      <div class="hidden-xs">
+        {{> molecules-cart-nav }}
+      </div>
+      <div class="visible-xs secondary-nav">
+        {{> molecules-country-nav }}
+      </div>
+    </ul>
+  </nav>
+</nav>
+

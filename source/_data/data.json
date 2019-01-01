@@ -28,6 +28,18 @@
       "url": "http://www.superpedestrian.com/choose"
     }
   ],
+  "unifiedNav": [
+    {
+      "label": "Fleet",
+      "icon": false,
+      "url": "http://www.superpedestrian.com/fleet"
+    },
+    {
+      "label": "Copenhagen Wheel",
+      "icon": false,
+      "url": "http://www.superpedestrian.com/tech"
+    }
+  ],
   "topNav" : [
     {
       "label": "Support",
