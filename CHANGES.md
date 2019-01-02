@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.16
+- Corrected a spelling mistake..
+
 ## 0.9.15
 - Added a unified header
 
