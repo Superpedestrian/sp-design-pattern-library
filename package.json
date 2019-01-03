@@ -1,7 +1,7 @@
 {
   "name": "sp-patternlab-gulp",
   "description": "Superpedestrian pattern lab",
-  "version": "0.9.16",
+  "version": "0.9.17",
   "dependencies": {
     "bluebird": "^3.5.0",
     "browser-sync": "^2.0.0",
