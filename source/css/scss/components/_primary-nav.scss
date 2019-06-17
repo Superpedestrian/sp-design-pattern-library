@@ -38,7 +38,8 @@
  * Nav Links
  */
 .c-primary-nav__link {
-  display: block;
+  display: flex;
+  justify-items: center;
   color: $color-gray-85;
   font: 14px "Graphik Regular", Helvetica, sans-serif;
   text-transform: uppercase;

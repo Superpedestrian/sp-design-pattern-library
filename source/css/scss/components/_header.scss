@@ -31,7 +31,6 @@
   width: 1.5em !important;
   height: 1.5em;
   border-radius: 50%;
-  bottom: 4px;
 }
 
 
@@ -42,11 +41,18 @@
   top: 0;
   min-width: 100%;
   z-index: 999;
+  height: 100px;
+
+  &.navBar-black {
+    background-color: $color-gray-85;
+    color: $color-gray-02;
+    height: 86px;
+  }
 }
 
 .logo {
   display: inline-block;
-  margin: 14px 0;
+  margin: 20px 0 14px 0;
   a::before {
     content: none;
   }
@@ -67,8 +73,7 @@ nav {
   ul {
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
-    width: 60%;
+    width: 33%;
 
     a {
       color: $color-gray-85;
@@ -151,6 +156,7 @@ nav {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    height:100%;
   }
 
   ol, ul {
@@ -168,7 +174,7 @@ nav {
     position: relative;
     display: block;
     padding: 12px 0;
-    margin: 0 12px;
+    margin: auto 12px;
     letter-spacing: 1px;
     font-size: 12px;
     line-height: 16px;
@@ -177,7 +183,7 @@ nav {
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
     color: #000;
   }
-  a::before {
+  a:not(.no-hover)::before {
     content: '';
     display: block;
     position: absolute;
@@ -189,6 +195,8 @@ nav {
     transform-origin: right top;
     transform: scale(0, 1);
     transition: color 0.1s,transform 0.2s ease-out;
+
+
   }
   a:active::before {
     background-color: #000;
@@ -212,7 +220,6 @@ nav {
     .c-primary-nav__link, .arrow-menu li {
       color: $color-gray-85;
       background-color: $color-white;
-      display: block;
       visibility: visible;
       font-size: 12px;
       padding-top: 10px;
@@ -230,7 +237,7 @@ nav {
     }
     ul {
       background-color: $color-white;
-      display: block;
+      display: none;
       height: 0;
       list-style-type: none;
       opacity: 0;
@@ -239,7 +246,7 @@ nav {
       width: 100%;
       visibility: hidden;
 
-      .bottom-row {
+      .bottom-row, .main-row {
         margin-top: 24px !important;
       }
     }
@@ -289,8 +296,6 @@ nav {
     .label-toggle {
       cursor: pointer;
       display: inline-block;
-      float: right;
-      margin-top: 5px;
       margin-right: 15px;
     }
 
@@ -298,14 +303,8 @@ nav {
       display: block;
     }
 
-    .wrapper {
-      display: block;
-      padding: 12.5px 0;
-    }
-
     .cart-icon {
       display: inline-block;
-      float: right;
       margin-right: 10px;
     }
   }
@@ -315,8 +314,9 @@ nav {
   width: 30px;
   height: 20px;
   position: relative;
-  margin-right: 15px;
-  margin-top: 8px;
+  margin-right: 26px;
+  position: relative;
+  bottom: 4px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
