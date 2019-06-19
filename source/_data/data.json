@@ -6,33 +6,6 @@
     "url": "http://www.superpedestrian.com"
   },
   "btnText": "Button",
-  "blackNavItems": [
-    {
-      "label": "Tech",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/tech"
-    },
-    {
-      "label": "Bikes",
-      "icon": false,
-      "url": "http://shop.superpedestrian.com/t/categories/bikes"
-    },
-    {
-      "label": "Try",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/ride"
-    },
-    {
-      "label": "Buy",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/choose"
-    },
-    {
-      "label": "Support",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/support"
-    }
-  ],
   "unifiedNav": [
     {
       "label": "Fleet",
@@ -68,11 +41,6 @@
           "label": "Support",
           "icon": false,
           "url": "http://www.superpedestrian.com/support"
-        },
-        {
-          "label": "Login",
-          "icon": false,
-          "url": "http://www.superpedestrian.com/login"
         }
       ]
     }

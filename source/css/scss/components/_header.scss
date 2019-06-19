@@ -83,7 +83,7 @@
   }
 }
 
-.accordion-btn {
+#accordion-btn {
   float: right;
   margin-right: 42px;
 }
@@ -122,6 +122,25 @@
           color: white;
         }
       }
+
+      a {
+        padding: 28px 0;
+      }
+
+      .arrow-menu {
+        width: 300px;
+
+        a {
+          padding: 10px 0;
+        }
+      }
+
+      a::before {
+        background-color: white;
+      }
+      a.open::before {
+        background-color: white;
+      }
     }
   }
 }
@@ -141,6 +160,7 @@
 // Content Wrapper
 .wrapper {
   margin: 0 auto;
+  padding: 0 25px;
   max-width: 964px;
 }
 
@@ -188,11 +208,11 @@ nav {
     .arrow-menu {
       width: 234px;
       padding:  32px 24px 16px 24px;
-      margin-left: -168px;
-      margin-top: 24px;
+      margin-left: -311px;
+      margin-top: 80px;
       position: absolute;
-      background: $color-white;
-      border: 1px solid $color-gray-10;
+      background: $color-gray-85;
+      opacity: 90%;
       -moz-box-shadow: 0 3px 32px 0 rgba(0,0,0,0.08);
       -webkit-box-shadow: 0 3px 32px 0 rgba(0,0,0,0.08);
       box-shadow: 0 3px 32px 0 rgba(0,0,0,0.08);
@@ -211,32 +231,9 @@ nav {
       }
 
       .sub-menu {
+        width: max-content;
         margin-left: 24px;
       }
-    }
-
-    .arrow-menu:after, .arrow-menu:before {
-      bottom: 100%;
-      left: 80%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    .arrow-menu:after {
-      border-color: rgba(255, 255, 255, 0);
-      border-bottom-color: $color-white;
-      border-width: 16px;
-      margin-left: -16px;
-    }
-    .arrow-menu:before {
-      border-color: rgba(228, 226, 226, 0);
-      border-bottom-color: $color-gray-10;
-      border-width: 17px;
-      margin-left: -17px;
     }
 
     .wrapper {
@@ -245,6 +242,11 @@ nav {
       justify-content: space-between;
       height:100%;
     }
+  }
+
+  #user_dropdown {
+    text-align: center;
+    width: 32px;
   }
 
   #menu-toggle {display: none;}
@@ -292,15 +294,18 @@ nav {
     transform-origin: right top;
     transform: scale(0, 1);
     transition: color 0.1s,transform 0.2s ease-out;
-
-
   }
   a:active::before {
     background-color: #000;
   }
-  a:hover::before, a.on {
+  a:hover::before, a.on, a.open::before {
     transform-origin: left top;
     transform: scale(1, 1);
+  }
+
+  a.open:not(.no-hover)::before {
+    bottom: -5px;
+    background-color: white;
   }
 
   @media screen and (max-width: 768px) {
@@ -374,11 +379,14 @@ nav {
     li {
       color: $color-gray-85;
       display: block;
-      visibility: hidden;
       text-align: left;
       padding-left: 15px;
       a, .nav-item {
         font-size: 24px;
+      }
+
+      &.mobile-sub-menu a {
+        font-size: 16px;
       }
     }
 

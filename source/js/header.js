@@ -14,6 +14,14 @@
     }
   }
 
+  function performOnClass(name, func) {
+    var items = document.getElementsByClassName(name);
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      func(item);
+    }
+  }
+
   var hideElement = function (element) {
     element.style.visibility = "hidden";
     element.style.display = "none";
@@ -25,12 +33,10 @@
   };
 
   var toggleElement = function (element) {
-    if (element.classList.contains('hide') || !element.classList.contains('show')) {
-      element.classList.remove('hide');
-      element.classList.add('show');
+    if (element.style.display && element.style.display === 'none') {
+      showElement(element);
     } else {
-      element.classList.remove('show');
-      element.classList.add('hide');
+      hideElement(element);
     }
   }
 
@@ -39,11 +45,11 @@
       trayOpen = !trayOpen;
       if (trayOpen) {
         performOnElement('arrow-menu', showElement);
-        document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-top";
+        document.getElementById('user_dropdown').className = "open";
       }
       else {
         performOnElement('arrow-menu', hideElement);
-        document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-bottom";
+        document.getElementById('user_dropdown').className = "";
       }
     }
   };
@@ -57,17 +63,36 @@
     document.querySelector('#hamburger').classList.toggle('open');
   }
 
-  var toggleNested = document.querySelector('#toggle_nested');
-  if (toggleNested) {
-    toggleNested.addEventListener('click', toggleNested);
+  var toggleNestedBtn = document.querySelector('#toggle_nested');
+  if (toggleNestedBtn) {
+    toggleNestedBtn.addEventListener('click', toggleNested);
   }
 
-  function toggleNested() {
+  var rotated = false;
+  function rotate() {
+    var accordionBtn = document.getElementById('accordion-btn');
+    var deg = rotated ? 0 : 180;
+    accordionBtn.style.webkitTransform = 'rotate(' + deg + 'deg)';
+    accordionBtn.style.mozTransform = 'rotate(' + deg + 'deg)';
+    accordionBtn.style.msTransform = 'rotate(' + deg + 'deg)';
+    accordionBtn.style.oTransform = 'rotate(' + deg + 'deg)';
+    accordionBtn.style.transform = 'rotate(' + deg + 'deg)';
+
+    rotated = !rotated;
+  }
+
+  function toggleNested(thisElement) {
     var items = document.getElementsByClassName('nested-nav');
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
       toggleElement(item);
     }
+
+    // rotate caret
+    rotate();
+
+
+
   }
 
   function classToggle() {
@@ -90,10 +115,29 @@
     var logoutURL = spConfig.logoutURL || 'https://account.superpedestrian.com/logout';
     var logoutNext = spConfig.logoutNext || 'https://www.superpedestrian.com';
 
-    document.getElementById('sp-login-url').href = loginURL;
-    document.getElementById('sp-profile-url').href = profileURL;
-    document.getElementById('sp-orders-url').href = ordersURL;
-    document.getElementById('sp-logout-url').href = logoutURL + '?next=' + logoutNext;
+    var spLoginUrls = document.getElementsByClassName('sp-login-url');
+    for (var i = 0; i < spLoginUrls.length; i++) {
+      var item = spLoginUrls[i];
+      item.href = loginURL;
+    }
+
+    var spProfileUrls = document.getElementsByClassName('sp-profile-url');
+    for (var i = 0; i < spProfileUrls.length; i++) {
+      var item = spProfileUrls[i];
+      item.href = profileURL;
+    }
+
+    var spOrdersUrls = document.getElementsByClassName('sp-orders-url');
+    for (var i = 0; i < spOrdersUrls.length; i++) {
+      var item = spOrdersUrls[i];
+      item.href = ordersURL;
+    }
+
+    var spLogoutUrls = document.getElementsByClassName('sp-logout-url');
+    for (var i = 0; i < spLogoutUrls.length; i++) {
+      var item = spLogoutUrls[i];
+      item.href = logoutURL;
+    }
   };
 
 
@@ -109,7 +153,11 @@
         }
       }
 
-      document.getElementById('shop-badge').innerHTML = (cartCount > 9) ? '9+' : cartCount;
+      var shopBadge = document.getElementById('shop-badge');
+      if (shopBadge) {
+        shopBadge.innerHTML = (cartCount > 9) ? '9+' : cartCount;
+      }
+
       performOnElement('shop-badge', showElement);
     }
   };
@@ -152,80 +200,95 @@
     console.log('Query variable %s not found', variable);
   }
 
-  // function init() {
-  var cookies = document.cookie;
-  performOnElement('arrow-menu', hideElement);
-  // Allow dropdown area to be shown after we've hidden the submenu
-  document.getElementById('dropdown-area').className = '';
-
-  setLinks();
-  setCartCount(cookies);
-  setCountryIcon(cookies);
-
-  if ((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)) {
-    // Cookies found display My Account
-    performOnElement('login-button', hideElement);
-    performOnElement('account-button', clickTray);
-  }
-  else {
-    // Show login button
-    performOnElement('account-button', hideElement);
+  function hideLoggedIn() {
+    var cookies = document.cookie;
+    if ((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)) {
+      performOnClass('hidden-logged-in', hideElement);
+    }
+    else {
+      performOnClass('visible-logged-in', hideElement);
+    }
   }
 
+  function init() {
+    var cookies = document.cookie;
+    performOnElement('arrow-menu', hideElement);
+    // Allow dropdown area to be shown after we've hidden the submenu
+    var dropdownArea = document.getElementById('dropdown-area');
+    if (dropdownArea) {
+      dropdownArea.className = '';
+    }
 
+    setLinks();
+    setCartCount(cookies);
+    setCountryIcon(cookies);
 
+    if ((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)) {
+      // Cookies found display My Account
+      performOnElement('login-button', hideElement);
+      performOnElement('account-button', clickTray);
+      performOnClass('hidden-logged-in', function (element) {
+        element.parentNode.removeChild(element);
+      });
+      performOnClass('visible-logged-in', showElement);
+    }
+    else {
+      // Show login button
+      performOnElement('account-button', hideElement);
+      performOnClass('hidden-logged-in', showElement);
+      performOnClass('visible-logged-in', hideElement);
+    }
 
-  // Show cookie banner if cookie isn't set and the locale is not en-US
-  var localeParam = getQueryVariable("locale");
-  // TODO: Remove
-  cookiesAccepted('en');
-  if (!(cookies.indexOf('cookies-accepted=') > -1)) {
-    var banner = document.getElementById("cookie-banner");
-    if (banner) {
-      if (localeParam && localeParam.split('-').length > 1) {
-        var splitLocale = localeParam.split('-');
-        if (splitLocale[1] !== 'us') {
-          banner.style.display = "block";
+    performOnClass('nested-nav', function (element) {
+      hideElement(element);
+    });
+
+    // Show cookie banner if cookie isn't set and the locale is not en-US
+    var localeParam = getQueryVariable("locale");
+    if (!(cookies.indexOf('cookies-accepted=') > -1)) {
+      var banner = document.getElementById("cookie-banner");
+      if (banner) {
+        if (localeParam && localeParam.split('-').length > 1) {
+          var splitLocale = localeParam.split('-');
+          if (splitLocale[1] !== 'us') {
+            banner.style.display = "block";
+          }
+          else {
+            cookiesAccepted(localeParam);
+          }
         }
-        else {
-          cookiesAccepted(localeParam);
-        }
-      }
-      // Check for locale cookie and show banner for non-US locale
-      else if (cookies.indexOf('locale=') > -1) {
-        var splitCookies = cookies.split(';');
-        for (cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
-          var key = splitCookies[cookieIndex].split('=')[0].trim();
-          var value = splitCookies[cookieIndex].split('=')[1];
-          if (key === 'locale') {
-            if (value.split('-')[1] !== 'us') {
-              banner.style.display = "block";
-            }
-            else {
-              cookiesAccepted(value);
+        // Check for locale cookie and show banner for non-US locale
+        else if (cookies.indexOf('locale=') > -1) {
+          var splitCookies = cookies.split(';');
+          for (cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+            var key = splitCookies[cookieIndex].split('=')[0].trim();
+            var value = splitCookies[cookieIndex].split('=')[1];
+            if (key === 'locale') {
+              if (value.split('-')[1] !== 'us') {
+                banner.style.display = "block";
+              }
+              else {
+                cookiesAccepted(value);
+              }
             }
           }
         }
-      }
-      // Check for browser locale
-      else if (navigator.language && navigator.language.split('-').length > 1 && navigator.language.split('-')[1] === 'US') {
-        banner.style.display = "none";
-        cookiesAccepted(navigator.language);
-      }
-      else if (navigator.userLanguage && navigator.userLanguage.split('-').length > 1 && navigator.userLanguage.split('-')[1] === 'US') {
-        banner.style.display = "none";
-        cookiesAccepted(navigator.userLanguage);
-      }
-      // Display banner if none of those exist and we don't know anything about their locale
-      else {
-        banner.style.display = "block";
+        // Check for browser locale
+        else if (navigator.language && navigator.language.split('-').length > 1 && navigator.language.split('-')[1] === 'US') {
+          banner.style.display = "none";
+          cookiesAccepted(navigator.language);
+        }
+        else if (navigator.userLanguage && navigator.userLanguage.split('-').length > 1 && navigator.userLanguage.split('-')[1] === 'US') {
+          banner.style.display = "none";
+          cookiesAccepted(navigator.userLanguage);
+        }
+        // Display banner if none of those exist and we don't know anything about their locale
+        else {
+          banner.style.display = "block";
+        }
       }
     }
-
-    // }
-
-
   }
 
-  // document.addEventListener('ready', init);
+  init();
 })();
