@@ -1,4 +1,4 @@
-!function(){
+!(function () {
 
   // State Variables
   var trayOpen = false;
@@ -9,23 +9,35 @@
   */
   function performOnElement(name, func) {
     var item = document.getElementById(name);
-    func(item);
+    if (item) {
+      func(item);
+    }
   }
 
-  var hideElement = function(element) {
+  var hideElement = function (element) {
     element.style.visibility = "hidden";
     element.style.display = "none";
   };
 
-  var showElement = function(element) {
+  var showElement = function (element) {
     element.style.visibility = "";
     element.style.display = "block";
   };
 
-  var clickTray = function(button) {
-    button.onclick = function() {
+  var toggleElement = function (element) {
+    if (element.classList.contains('hide') || !element.classList.contains('show')) {
+      element.classList.remove('hide');
+      element.classList.add('show');
+    } else {
+      element.classList.remove('show');
+      element.classList.add('hide');
+    }
+  }
+
+  var clickTray = function (button) {
+    button.onclick = function () {
       trayOpen = !trayOpen;
-      if(trayOpen){
+      if (trayOpen) {
         performOnElement('arrow-menu', showElement);
         document.getElementById('account-caret').className = "glyphicon glyphicon-triangle-top";
       }
@@ -36,17 +48,37 @@
     }
   };
 
-  document.querySelector('#menu-toggle').addEventListener('click', classToggle);
+  var menuToggle = document.querySelector('#menu-toggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', classToggle);
+  }
+
+  function classToggle() {
+    document.querySelector('#hamburger').classList.toggle('open');
+  }
+
+  var toggleNested = document.querySelector('#toggle_nested');
+  if (toggleNested) {
+    toggleNested.addEventListener('click', toggleNested);
+  }
+
+  function toggleNested() {
+    var items = document.getElementsByClassName('nested-nav');
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      toggleElement(item);
+    }
+  }
 
   function classToggle() {
     document.querySelector('#hamburger').classList.toggle('open');
   }
 
   // function for auto-accepting cookies when we're in the US
-  var cookiesAccepted = function(locale) {
+  var cookiesAccepted = function (locale) {
     var cookies = document.cookie;
     document.cookie = "cookies-accepted=yes;path=/;domain=.superpedestrian.com";
-    if(!(cookies.indexOf('locale=') > -1)) {
+    if (!(cookies.indexOf('locale=') > -1)) {
       document.cookie = "locale=" + locale + ";path=/;domain=.superpedestrian.com";
     }
   };
@@ -65,86 +97,94 @@
   };
 
 
-  var setCartCount = function(cookies) {
+  var setCartCount = function (cookies) {
     var cartCount = 0;
-    if(cookies.indexOf('item_count=') > -1){
+    if (cookies.indexOf('item_count=') > -1) {
       var splitCookies = cookies.split('; ');
-      for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+      for (cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
         var value = splitCookies[cookieIndex].split('=')[1];
-        if(key === 'item_count') {
+        if (key === 'item_count') {
           cartCount = value;
         }
       }
 
-      document.getElementById('shop-badge').innerHTML= (cartCount > 9) ? '9+': cartCount;
+      document.getElementById('shop-badge').innerHTML = (cartCount > 9) ? '9+' : cartCount;
       performOnElement('shop-badge', showElement);
     }
   };
 
-  var setCountryIcon = function(cookies) {
+  var setCountryIcon = function (cookies) {
     var countryCode = 'us';
     var localeParam = getQueryVariable("locale");
 
-    if(localeParam) {
+    if (localeParam) {
       var splitLocale = localeParam.split('-');
-      if( splitLocale[1] ) {
+      if (splitLocale[1]) {
         countryCode = splitLocale[1];
       }
-    } else if(cookies.indexOf('locale=') > -1) {
+    } else if (cookies.indexOf('locale=') > -1) {
       var splitCookies = cookies.split(';');
-      for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+      for (cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
         var key = splitCookies[cookieIndex].split('=')[0].trim();
         var value = splitCookies[cookieIndex].split('=')[1];
-        if(key === 'locale') {
+        if (key === 'locale') {
           countryCode = value.split('-')[1];
         }
       }
     }
 
-    document.getElementById('country-badge').className = "flag-icon flag-icon-squared flag-icon-" + countryCode.toLowerCase();
+    var countryBadge = document.getElementById('country-badge');
+    if (countryBadge) {
+      countryBadge.className = "flag-icon flag-icon-squared flag-icon-" + countryCode.toLowerCase();
+    }
   };
 
   function getQueryVariable(variable) {
-      var query = window.location.search.substring(1);
-      var vars = query.split('&');
-      for (var i = 0; i < vars.length; i++) {
-          var pair = vars[i].split('=');
-          if (decodeURIComponent(pair[0]) === variable) {
-              return decodeURIComponent(pair[1]);
-          }
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (decodeURIComponent(pair[0]) === variable) {
+        return decodeURIComponent(pair[1]);
       }
-      console.log('Query variable %s not found', variable);
+    }
+    console.log('Query variable %s not found', variable);
   }
 
-  function init() {
-    var cookies = document.cookie;
-    performOnElement('arrow-menu', hideElement);
-    // Allow dropdown area to be shown after we've hidden the submenu
-    document.getElementById('dropdown-area').className = '';
+  // function init() {
+  var cookies = document.cookie;
+  performOnElement('arrow-menu', hideElement);
+  // Allow dropdown area to be shown after we've hidden the submenu
+  document.getElementById('dropdown-area').className = '';
 
-    setLinks();
-    setCartCount(cookies);
-    setCountryIcon(cookies);
+  setLinks();
+  setCartCount(cookies);
+  setCountryIcon(cookies);
 
-    if((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)){
-      // Cookies found display My Account
-      performOnElement('login-button', hideElement);
-      performOnElement('account-button', clickTray);
-    }
-    else {
-      // Show login button
-      performOnElement('account-button', hideElement);
-    }
+  if ((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)) {
+    // Cookies found display My Account
+    performOnElement('login-button', hideElement);
+    performOnElement('account-button', clickTray);
+  }
+  else {
+    // Show login button
+    performOnElement('account-button', hideElement);
+  }
 
-    // Show cookie banner if cookie isn't set and the locale is not en-US
-    var localeParam = getQueryVariable("locale");
-    if(!(cookies.indexOf('cookies-accepted=') > -1)) {
-      var banner = document.getElementById("cookie-banner");
 
-      if(localeParam && localeParam.split('-').length > 1) {
+
+
+  // Show cookie banner if cookie isn't set and the locale is not en-US
+  var localeParam = getQueryVariable("locale");
+  // TODO: Remove
+  cookiesAccepted('en');
+  if (!(cookies.indexOf('cookies-accepted=') > -1)) {
+    var banner = document.getElementById("cookie-banner");
+    if (banner) {
+      if (localeParam && localeParam.split('-').length > 1) {
         var splitLocale = localeParam.split('-');
-        if( splitLocale[1] !== 'us') {
+        if (splitLocale[1] !== 'us') {
           banner.style.display = "block";
         }
         else {
@@ -152,13 +192,13 @@
         }
       }
       // Check for locale cookie and show banner for non-US locale
-      else if(cookies.indexOf('locale=') > -1) {
+      else if (cookies.indexOf('locale=') > -1) {
         var splitCookies = cookies.split(';');
-        for(cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
+        for (cookieIndex = 0; cookieIndex < splitCookies.length; cookieIndex++) {
           var key = splitCookies[cookieIndex].split('=')[0].trim();
           var value = splitCookies[cookieIndex].split('=')[1];
-          if(key === 'locale') {
-            if(value.split('-')[1] !== 'us') {
+          if (key === 'locale') {
+            if (value.split('-')[1] !== 'us') {
               banner.style.display = "block";
             }
             else {
@@ -168,11 +208,11 @@
         }
       }
       // Check for browser locale
-      else if(navigator.language && navigator.language.split('-').length > 1 && navigator.language.split('-')[1] === 'US') {
+      else if (navigator.language && navigator.language.split('-').length > 1 && navigator.language.split('-')[1] === 'US') {
         banner.style.display = "none";
         cookiesAccepted(navigator.language);
       }
-      else if(navigator.userLanguage && navigator.userLanguage.split('-').length > 1 && navigator.userLanguage.split('-')[1] === 'US') {
+      else if (navigator.userLanguage && navigator.userLanguage.split('-').length > 1 && navigator.userLanguage.split('-')[1] === 'US') {
         banner.style.display = "none";
         cookiesAccepted(navigator.userLanguage);
       }
@@ -181,7 +221,11 @@
         banner.style.display = "block";
       }
     }
+
+    // }
+
+
   }
 
-  init();
-}();
+  // document.addEventListener('ready', init);
+})();

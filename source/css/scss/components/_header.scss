@@ -33,6 +33,60 @@
   border-radius: 50%;
 }
 
+// Hidden, but actually not there
+
+.no-mobile {
+  display: block;
+  visibility: visible;
+
+  &.hide {
+    display: block;
+  }
+
+  &.c-primary-nav__link {
+    &.hide {
+      display: block;
+    }
+    display: flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    &.c-primary-nav__link {
+      display: none;
+
+      &.show {
+        display: none;
+      }
+    }
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.only-mobile, .only-mobile.c-primary-nav__link {
+  display: none;
+  visibility: hidden;
+
+
+  @media screen and (min-width: 768px) {
+    &.show {
+      display: none !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &.c-primary-nav__link {
+      display: flex;
+    }
+    display: block;
+    visibility: visible;
+  }
+}
+
+.accordion-btn {
+  float: right;
+  margin-right: 42px;
+}
 
 .navBar {
   background-color: $color-white;
@@ -47,12 +101,34 @@
     background-color: $color-gray-85;
     color: $color-gray-02;
     height: 86px;
+    margin-top:100px;
+
+    .wrapper {
+      justify-content: flex-end;
+
+      ul {
+        width: 80%;
+        justify-content: flex-end;
+
+        .c-primary-nav__link {
+          flex-grow: 1;
+
+          .cartButton {
+            background: url("../images/iconCartWhite.svg") no-repeat;
+          }
+        }
+
+        a {
+          color: white;
+        }
+      }
+    }
   }
 }
 
 .logo {
   display: inline-block;
-  margin: 40px 0 14px 0;
+  margin: 27px 0 14px 0;
   a::before {
     content: none;
   }
@@ -72,8 +148,12 @@
 nav {
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 33%;
+
+    .c-primary-nav__link {
+      flex-grow: 1;
+    }
 
     a {
       color: $color-gray-85;
@@ -86,6 +166,22 @@ nav {
   li  {
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .nested-nav {
+    margin-left: 42px;
+
+    &.c-primary-nav__link {
+      width: calc(100vw - 42px);
+    }
+  }
+
+  .nested-nav, #show_nested_nav, #hide_nested_nav {
+    visibility: hidden;
+  }
+
+  #show_nested_nav, #hide_nested_nav {
+    margin-right: 40px
   }
 
   @media (min-width: $screen-sm-min) {
@@ -170,7 +266,8 @@ nav {
     text-decoration: none;
     transition: color 0.1s, background-color 0.1s;
   }
-  a {
+  a, .nav-item {
+    cursor: pointer;
     position: relative;
     display: block;
     padding: 12px 0;
@@ -178,7 +275,7 @@ nav {
     letter-spacing: 1px;
     font-size: 12px;
     line-height: 16px;
-    font-weight: 900;
+    font-weight: 500;
     text-transform: uppercase;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
     color: #000;
@@ -207,10 +304,26 @@ nav {
   }
 
   @media screen and (max-width: 768px) {
+    #country-badge {
+      font-size: 16px;
+    }
+
+    &.navBar {
+      height: 77px;
+    }
+
+    .logo {
+      margin: 33px 0 14px 0;
+    }
+
     .arrow-menu {
       height: inherit;
       visibility: visible;
       opacity: 1;
+    }
+
+    #show_nested_nav {
+      visibility: visible;
     }
 
     .logo {
@@ -226,6 +339,10 @@ nav {
       padding-bottom: 10px;
       z-index: 999;
       width: 100vw;
+
+      a, .nav-item {
+        width: 100%;
+      }
     }
 
     nav {
@@ -245,10 +362,6 @@ nav {
       transition: all 1s ease;
       width: 100%;
       visibility: hidden;
-
-      .bottom-row, .main-row {
-        margin-top: 24px !important;
-      }
     }
 
     .secondary-nav {
@@ -264,7 +377,7 @@ nav {
       visibility: hidden;
       text-align: left;
       padding-left: 15px;
-      a {
+      a, .nav-item {
         font-size: 24px;
       }
     }
@@ -287,7 +400,11 @@ nav {
       visibility: visible;
       .c-primary-nav__link {
         visibility: visible;
+        &.nested-nav {
+          display: none;
+        }
       }
+
       .arrow-menu li {
         visibility: visible;
       }
@@ -297,7 +414,7 @@ nav {
       cursor: pointer;
       display: inline-block;
       float: right;
-      margin-top: 41px;
+      margin-top: 33px;
       margin-right: 26px;
     }
 
