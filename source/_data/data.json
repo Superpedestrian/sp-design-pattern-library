@@ -45,13 +45,6 @@
       ]
     }
   ],
-  "topNav": [
-    {
-      "label": "Fleet",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/fleet"
-    }
-  ],
   "login": "Login",
   "my_account": "Account",
   "profile": "Profile",
@@ -90,7 +83,7 @@
           {
             "label": "Photo Credits",
             "url": "https://www.superpedestrian.com/photo-credits"
-          },
+          }
         ]
       },
       {
@@ -131,7 +124,7 @@
           {
             "label": "Support",
             "url": "https://www.superpedestrian.com/support"
-          },
+          }
         ]
       },
       {

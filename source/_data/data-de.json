@@ -6,28 +6,6 @@
     "url": "http://www.superpedestrian.com"
   },
   "btnText": "Button",
-  "primaryNav": [
-    {
-      "label": "Technik",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/de/tech"
-    },
-    {
-      "label": "Fahrräder",
-      "icon": false,
-      "url": "https://info.superpedestrian.com/ich-mochte-ein-neues-fahrrad-mit-dem-copenhagen-wheel"
-    },
-    {
-      "label": "Testen",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/ride"
-    },
-    {
-      "label": "Kaufen",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/choose"
-    }
-  ],
   "unifiedNav": [
     {
       "label": "Flotte",
@@ -35,21 +13,36 @@
       "url": "http://www.superpedestrian.com/fleet"
     },
     {
-      "label": "Consumer",
+      "label": "Verbraucher",
       "icon": false,
-      "url": "http://www.superpedestrian.com/copenhagenwheel"
-    }
-  ],
-  "topNav": [
-    {
-      "label": "Support",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/support"
-    },
-    {
-      "label": "Flotte",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/fleet"
+      "url": "http://www.superpedestrian.com/copenhagenwheel",
+      "nestedNav": [
+        {
+          "label": "Technik",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/tech"
+        },
+        {
+          "label": "Fahrräder",
+          "icon": false,
+          "url": "http://shop.superpedestrian.com/t/categories/bikes"
+        },
+        {
+          "label": "Testen",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/ride"
+        },
+        {
+          "label": "Kaufen",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/choose"
+        },
+        {
+          "label": "Support",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/support"
+        }
+      ]
     }
   ],
   "login": "Login",

@@ -6,28 +6,6 @@
     "url": "http://www.superpedestrian.com"
   },
   "btnText": "Button",
-  "primaryNav": [
-    {
-      "label": "Tech",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/tech"
-    },
-    {
-      "label": "Bikes",
-      "icon": false,
-      "url": "http://shop.superpedestrian.com/t/categories/bikes"
-    },
-    {
-      "label": "Try",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/ride"
-    },
-    {
-      "label": "Buy",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/choose"
-    }
-  ],
   "unifiedNav": [
     {
       "label": "Fleet",
@@ -37,19 +15,34 @@
     {
       "label": "Consumer",
       "icon": false,
-      "url": "http://www.superpedestrian.com/copenhagenwheel"
-    }
-  ],
-  "topNav": [
-    {
-      "label": "Support",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/support"
-    },
-    {
-      "label": "Fleet",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/fleet"
+      "url": false,
+      "nestedNav": [
+        {
+          "label": "Tech",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/tech"
+        },
+        {
+          "label": "Bikes",
+          "icon": false,
+          "url": "http://shop.superpedestrian.com/t/categories/bikes"
+        },
+        {
+          "label": "Try",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/ride"
+        },
+        {
+          "label": "Buy",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/choose"
+        },
+        {
+          "label": "Support",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/support"
+        }
+      ]
     }
   ],
   "login": "Login",

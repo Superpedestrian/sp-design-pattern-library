@@ -68,17 +68,18 @@
     toggleNestedBtn.addEventListener('click', toggleNested);
   }
 
-  var rotated = false;
-  function rotate() {
+  var rotatedCaret = false;
+
+  function rotateCaret() {
     var accordionBtn = document.getElementById('accordion-btn');
-    var deg = rotated ? 0 : 180;
+    var deg = rotatedCaret ? 0 : 180;
     accordionBtn.style.webkitTransform = 'rotate(' + deg + 'deg)';
     accordionBtn.style.mozTransform = 'rotate(' + deg + 'deg)';
     accordionBtn.style.msTransform = 'rotate(' + deg + 'deg)';
     accordionBtn.style.oTransform = 'rotate(' + deg + 'deg)';
     accordionBtn.style.transform = 'rotate(' + deg + 'deg)';
 
-    rotated = !rotated;
+    rotatedCaret = !rotatedCaret;
   }
 
   function toggleNested(thisElement) {
@@ -88,11 +89,7 @@
       toggleElement(item);
     }
 
-    // rotate caret
-    rotate();
-
-
-
+    rotateCaret();
   }
 
   function classToggle() {
@@ -115,31 +112,22 @@
     var logoutURL = spConfig.logoutURL || 'https://account.superpedestrian.com/logout';
     var logoutNext = spConfig.logoutNext || 'https://www.superpedestrian.com';
 
-    var spLoginUrls = document.getElementsByClassName('sp-login-url');
-    for (var i = 0; i < spLoginUrls.length; i++) {
-      var item = spLoginUrls[i];
-      item.href = loginURL;
-    }
+    performOnClass('sp-login-url', function (element) {
+      element.href = loginURL;
+    });
 
-    var spProfileUrls = document.getElementsByClassName('sp-profile-url');
-    for (var i = 0; i < spProfileUrls.length; i++) {
-      var item = spProfileUrls[i];
-      item.href = profileURL;
-    }
+    performOnClass('sp-profile-url', function (element) {
+      element.href = profileURL;
+    });
 
-    var spOrdersUrls = document.getElementsByClassName('sp-orders-url');
-    for (var i = 0; i < spOrdersUrls.length; i++) {
-      var item = spOrdersUrls[i];
-      item.href = ordersURL;
-    }
+    performOnClass('sp-orders-url', function (element) {
+      element.href = ordersURL;
+    });
 
-    var spLogoutUrls = document.getElementsByClassName('sp-logout-url');
-    for (var i = 0; i < spLogoutUrls.length; i++) {
-      var item = spLogoutUrls[i];
-      item.href = logoutURL;
-    }
+    performOnClass('sp-logout-url', function (element) {
+      element.href = logoutURL;
+    });
   };
-
 
   var setCartCount = function (cookies) {
     var cartCount = 0;
@@ -198,16 +186,6 @@
       }
     }
     console.log('Query variable %s not found', variable);
-  }
-
-  function hideLoggedIn() {
-    var cookies = document.cookie;
-    if ((cookies.indexOf('_sp_sso=') > -1) && (cookies.indexOf('_sp_user=') > -1)) {
-      performOnClass('hidden-logged-in', hideElement);
-    }
-    else {
-      performOnClass('visible-logged-in', hideElement);
-    }
   }
 
   function init() {
