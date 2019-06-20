@@ -1,5 +1,11 @@
 # Changes
 
+## 0.9.19
+- Refactor header into multiple patterns
+
+## 0.9.18
+- Add an empty header
+
 ## 0.9.17
 - Updated link for unified header
 
@@ -86,7 +92,7 @@
 ## 0.8.0
 
 - Redesign footer
-- Update typography 
+- Update typography
 
 ## 0.7.3
 
@@ -204,10 +210,10 @@
 
 ## 0.2.8
 - Modified fonts for mobile displays
- 
+
 ## 0.2.7
 - Added button styles
-- Added mobile styles for headers 
+- Added mobile styles for headers
 - Added section styles for drupal
 
 ## 0.2.6
