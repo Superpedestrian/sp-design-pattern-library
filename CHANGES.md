@@ -4,7 +4,7 @@
 - Refactor header into multiple patterns
 
 ## 0.9.18
-- Add an empty header
+- Added an empty header
 
 ## 0.9.17
 - Updated link for unified header
