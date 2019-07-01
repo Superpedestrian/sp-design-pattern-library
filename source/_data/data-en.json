@@ -10,12 +10,14 @@
     {
       "label": "Fleet",
       "icon": false,
-      "url": "http://www.superpedestrian.com/fleet"
+      "url": "http://www.superpedestrian.com",
+      "hasChildren": false
     },
     {
       "label": "Consumer",
       "icon": false,
-      "url": false,
+      "url": "http://www.superpedestrian.com/copenhagenwheel",
+      "hasChildren": true,
       "nestedNav": [
         {
           "label": "Tech",

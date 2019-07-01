@@ -43,6 +43,10 @@
   color: $color-gray-85;
   font: 14px "Graphik Regular", Helvetica, sans-serif;
   text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 }
 
 .cartButton {
