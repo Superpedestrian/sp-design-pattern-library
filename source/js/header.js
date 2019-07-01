@@ -29,7 +29,12 @@
 
   var showElement = function (element) {
     element.style.visibility = "";
-    element.style.display = "block";
+    var previousDisplay = element.getAttribute('data-display');
+    if (previousDisplay) {
+      element.style.display = previousDisplay;
+    } else {
+      element.style.display = "block";
+    }
   };
 
   var toggleElement = function (element) {
@@ -59,19 +64,19 @@
     menuToggle.addEventListener('click', classToggle);
   }
 
-  function classToggle() {
-    document.querySelector('#hamburger').classList.toggle('open');
-  }
-
   var toggleNestedBtn = document.querySelector('#toggle_nested');
   if (toggleNestedBtn) {
     toggleNestedBtn.addEventListener('click', toggleNested);
   }
 
+  function classToggle() {
+    document.querySelector('#hamburger').classList.toggle('open');
+  }
+
   var rotatedCaret = false;
 
   function rotateCaret() {
-    var accordionBtn = document.getElementById('accordion-btn');
+    var accordionBtn = document.getElementById('accordion_btn');
     var deg = rotatedCaret ? 0 : 180;
     accordionBtn.style.webkitTransform = 'rotate(' + deg + 'deg)';
     accordionBtn.style.mozTransform = 'rotate(' + deg + 'deg)';
@@ -82,13 +87,12 @@
     rotatedCaret = !rotatedCaret;
   }
 
-  function toggleNested(thisElement) {
-    var items = document.getElementsByClassName('nested-nav');
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
-      toggleElement(item);
-    }
+  performOnClass('nested-nav', function (element) {
+    element.setAttribute('data-display', "flex");
+  });
 
+  function toggleNested() {
+    performOnClass('nested-nav', toggleElement)
     rotateCaret();
   }
 

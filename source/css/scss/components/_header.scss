@@ -33,59 +33,20 @@
   border-radius: 50%;
 }
 
-// Hidden, but actually not there
-
-.no-mobile {
-  display: block;
-  visibility: visible;
-
-  &.hide {
-    display: block;
-  }
-
-  &.c-primary-nav__link {
-    &.hide {
-      display: block;
-    }
-    display: flex;
-  }
-
-  @media screen and (max-width: 768px) {
-    &.c-primary-nav__link {
-      display: none;
-
-      &.show {
-        display: none;
-      }
-    }
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.only-mobile, .only-mobile.c-primary-nav__link {
-  display: none;
-  visibility: hidden;
-
-
-  @media screen and (min-width: 768px) {
-    &.show {
-      display: none !important;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    &.c-primary-nav__link {
-      display: flex;
-    }
-    display: block;
-    visibility: visible;
-  }
-}
-
-#accordion-btn {
+#accordion_container {
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
   float: right;
-  margin-right: 42px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+#accordion_btn {
+  background: url("../images/iconAccordion.svg") no-repeat;
+  height: 12px;
+  width: 19px;
 }
 
 .navBar {
@@ -121,10 +82,21 @@
         a {
           color: white;
         }
+
+        .sub-menu a {
+          height: 36px;
+        }
       }
 
       a {
-        padding: 28px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 74px;
+
+        .glyphicon-user {
+          top: -1px;
+        }
       }
 
       .arrow-menu {
@@ -188,26 +160,10 @@ nav {
     vertical-align: middle;
   }
 
-  .nested-nav {
-    margin-left: 42px;
-
-    &.c-primary-nav__link {
-      width: calc(100vw - 42px);
-    }
-  }
-
-  .nested-nav, #show_nested_nav, #hide_nested_nav {
-    visibility: hidden;
-  }
-
-  #show_nested_nav, #hide_nested_nav {
-    margin-right: 40px
-  }
-
   @media (min-width: $screen-sm-min) {
     .arrow-menu {
       width: 234px;
-      padding:  32px 24px 16px 24px;
+      padding:  16px;
       margin-left: -311px;
       margin-top: 80px;
       position: absolute;
@@ -309,6 +265,18 @@ nav {
   }
 
   @media screen and (max-width: 768px) {
+    .nested-nav {
+      margin-left: 42px;
+    }
+
+    .nested-nav, #show_nested_nav, #hide_nested_nav {
+      visibility: hidden;
+    }
+
+    #show_nested_nav, #hide_nested_nav {
+      margin-right: 40px
+    }
+
     #country-badge {
       font-size: 16px;
     }
@@ -343,11 +311,6 @@ nav {
       padding-top: 10px;
       padding-bottom: 10px;
       z-index: 999;
-      width: 100vw;
-
-      a, .nav-item {
-        width: 100%;
-      }
     }
 
     nav {
@@ -367,6 +330,8 @@ nav {
       transition: all 1s ease;
       width: 100%;
       visibility: hidden;
+      overflow-y: scroll;
+      padding-bottom: 10px;
     }
 
     .secondary-nav {
@@ -385,8 +350,18 @@ nav {
         font-size: 24px;
       }
 
-      &.mobile-sub-menu a {
-        font-size: 16px;
+      .nav-item {
+        width: 100%;
+      }
+
+      &.mobile-sub-menu {
+        display: flex;
+
+        a {
+          margin-top: 15px;
+          padding: 5px 0;
+          font-size: 16px;
+        }
       }
     }
 
@@ -404,7 +379,7 @@ nav {
 
     #menu-toggle:checked ~ ul {
       opacity: 1;
-      height: 100vh;
+      height: calc(100vh - 77px);
       visibility: visible;
       .c-primary-nav__link {
         visibility: visible;
@@ -423,7 +398,6 @@ nav {
       display: inline-block;
       float: right;
       margin-top: 33px;
-      margin-right: 26px;
     }
 
     .burger {
