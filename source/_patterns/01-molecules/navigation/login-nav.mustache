@@ -1,13 +1,13 @@
-<li id="login-button" class="c-primary-nav__link"><a id="sp-login-url" href="#">{{ login }}</a></li>
+<li id="login-button" class="c-primary-nav__link"><a class="sp-login-url" href="#">{{ login }}</a></li>
 <li id="account-button" class="c-primary-nav__link">
-  <a>
+  <a id="user_dropdown">
     <i class="glyphicon glyphicon-user"></i>
   </a>
   <div id="dropdown-area" class="dropdown-area hidden">
     <ul id="arrow-menu" class="arrow-menu">
-      <li class="sub-menu"><a id="sp-profile-url" href="#">{{ profile }}</a> </li>
-      <li class="sub-menu"><a id="sp-orders-url" href="#">{{ account }} &amp; {{ orders }}</a></li>
-      <li class="sub-menu"><a id="sp-logout-url" href="#">{{ logout }}</a></li>
+      <li class="sub-menu"><a class="sp-profile-url" href="#">{{ profile }}</a> </li>
+      <li class="sub-menu"><a class="sp-orders-url" href="#">{{ account }} &amp; {{ orders }}</a></li>
+      <li class="sub-menu"><a class="sp-logout-url" href="#">{{ logout }}</a></li>
     </ul>
   </div>
 </li>

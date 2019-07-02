@@ -4,13 +4,13 @@
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
 ******************************************************/
 var dist = {
-  "root":"./dist/",
-  "templates":"./dist/templates/",
-  "js":"./dist/js",
-  "images":"./dist/images",
-  "fonts":"./dist/fonts",
-  "css":"./dist/css",
-  "flags":"./dist/flags",
+  "root": "./dist/",
+  "templates": "./dist/templates/",
+  "js": "./dist/js",
+  "images": "./dist/images",
+  "fonts": "./dist/fonts",
+  "css": "./dist/css",
+  "flags": "./dist/flags",
 };
 
 var templates = [
@@ -18,7 +18,9 @@ var templates = [
   "02-organisms-00-global-footer/*.*",
   "02-organisms-00-global-header/*.*",
   "02-organisms-00-global-empty-header/*.*",
-  "02-organisms-00-global-unified-header/*.*",
+  "02-organisms-00-global-mobile-header/*.*",
+  "02-organisms-00-global-black-header/*.*",
+  "02-organisms-00-global-white-header/*.*",
   "02-organisms-00-global-cookie-banner/*.*",
   "01-molecules-tech-spec/*.*",
   "01-molecules-tech-spec-zuhause-tech-spec-table/*.*",
@@ -32,7 +34,7 @@ var localized_templates = [
 
 var gulp = require('gulp'),
   Promise = require("bluebird");
-  gutil = require('gulp-util'),
+gutil = require('gulp-util'),
   git = Promise.promisifyAll(require('gulp-git')),
   sass = require('gulp-sass'),
   sassLint = require('gulp-sass-lint'),
@@ -42,11 +44,11 @@ var gulp = require('gulp'),
   merge = require('merge-stream');
 
 function resolvePath(pathInput) {
-  return path.resolve(pathInput).replace(/\\/g,"/");
+  return path.resolve(pathInput).replace(/\\/g, "/");
 }
 
 // SASS compilation
-gulp.task('pl-sass', function(){
+gulp.task('pl-sass', function () {
   return gulp.src(path.resolve(paths().source.css, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(path.resolve(paths().source.css)));
@@ -56,91 +58,91 @@ gulp.task('pl-sass', function(){
  * COPY TASKS - stream assets from source to destination
 ******************************************************/
 // JS copy
-gulp.task('pl-copy:js', function(){
-  return gulp.src('**/*.js', {cwd: resolvePath(paths().source.js)} )
+gulp.task('pl-copy:js', function () {
+  return gulp.src('**/*.js', { cwd: resolvePath(paths().source.js) })
     .pipe(gulp.dest(resolvePath(paths().public.js)));
 });
 
 // JS copy dist
-gulp.task('dist-copy:js', function(){
-  return gulp.src('**/*.js', {cwd: resolvePath(paths().public.js)} )
+gulp.task('dist-copy:js', function () {
+  return gulp.src('**/*.js', { cwd: resolvePath(paths().public.js) })
     .pipe(gulp.dest(resolvePath(dist.js)));
 });
 
 // Images copy
-gulp.task('pl-copy:img', function(){
-  return gulp.src('**/*.*',{cwd: resolvePath(paths().source.images)} )
+gulp.task('pl-copy:img', function () {
+  return gulp.src('**/*.*', { cwd: resolvePath(paths().source.images) })
     .pipe(gulp.dest(resolvePath(paths().public.images)));
 });
 
 // Images copy dist
-gulp.task('dist-copy:img', function(){
-  return gulp.src('**/*.*',{cwd: resolvePath(paths().public.images)} )
+gulp.task('dist-copy:img', function () {
+  return gulp.src('**/*.*', { cwd: resolvePath(paths().public.images) })
     .pipe(gulp.dest(resolvePath(dist.images)));
 });
 
 // Flags copy
-gulp.task('pl-copy:flags', function(){
+gulp.task('pl-copy:flags', function () {
   console.log(resolvePath(paths().source.flags));
   console.log(resolvePath(paths().public.flags));
-  return gulp.src('**/*.*',{cwd: resolvePath(paths().source.flags)} )
+  return gulp.src('**/*.*', { cwd: resolvePath(paths().source.flags) })
     .pipe(gulp.dest(resolvePath(paths().public.flags)));
 });
 
 // Flags copy dist
-gulp.task('dist-copy:flags', function(){
-  return gulp.src('**/*.*',{cwd: resolvePath(paths().public.flags)} )
+gulp.task('dist-copy:flags', function () {
+  return gulp.src('**/*.*', { cwd: resolvePath(paths().public.flags) })
     .pipe(gulp.dest(resolvePath(dist.flags)));
 });
 
 // Favicon copy
-gulp.task('pl-copy:favicon', function(){
-  return gulp.src('favicon.ico', {cwd: resolvePath(paths().source.root)} )
+gulp.task('pl-copy:favicon', function () {
+  return gulp.src('favicon.ico', { cwd: resolvePath(paths().source.root) })
     .pipe(gulp.dest(resolvePath(paths().public.root)));
 });
 
 // Favicon copy dist
-gulp.task('dist-copy:favicon', function(){
-  return gulp.src('favicon.ico', {cwd: resolvePath(paths().public.root)} )
+gulp.task('dist-copy:favicon', function () {
+  return gulp.src('favicon.ico', { cwd: resolvePath(paths().public.root) })
     .pipe(gulp.dest(resolvePath(dist.root)));
 });
 
 // Fonts copy
-gulp.task('pl-copy:font', function(){
-  return gulp.src('**/*.*', {cwd: resolvePath(paths().source.fonts)})
+gulp.task('pl-copy:font', function () {
+  return gulp.src('**/*.*', { cwd: resolvePath(paths().source.fonts) })
     .pipe(gulp.dest(resolvePath(paths().public.fonts)));
 });
 
 // Fonts copy dist
-gulp.task('dist-copy:font', function(){
-  return gulp.src('**/*.*', {cwd: resolvePath(paths().public.fonts)})
+gulp.task('dist-copy:font', function () {
+  return gulp.src('**/*.*', { cwd: resolvePath(paths().public.fonts) })
     .pipe(gulp.dest(resolvePath(dist.fonts)));
 });
 
 // CSS Copy
-gulp.task('pl-copy:css', function(){
+gulp.task('pl-copy:css', function () {
   return gulp.src(resolvePath(paths().source.css) + '/*.css')
     .pipe(gulp.dest(resolvePath(paths().public.css)))
     .pipe(browserSync.stream());
 });
 
 // CSS Copy dist
-gulp.task('dist-copy:css', function(){
+gulp.task('dist-copy:css', function () {
   return gulp.src(resolvePath(paths().public.css) + '/*.css')
     .pipe(gulp.dest(resolvePath(dist.css)));
 });
 
 // Styleguide Copy everything but css
-gulp.task('pl-copy:styleguide', function(){
+gulp.task('pl-copy:styleguide', function () {
   return gulp.src(resolvePath(paths().source.styleguide) + '/**/!(*.css)')
     .pipe(gulp.dest(resolvePath(paths().public.root)))
     .pipe(browserSync.stream());
 });
 
 // Styleguide Copy and flatten css
-gulp.task('pl-copy:styleguide-css', function(){
+gulp.task('pl-copy:styleguide-css', function () {
   return gulp.src(resolvePath(paths().source.styleguide) + '/**/*.css')
-    .pipe(gulp.dest(function(file){
+    .pipe(gulp.dest(function (file) {
       //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
       file.path = path.join(file.base, path.basename(file.path));
       return resolvePath(path.join(paths().public.styleguide, '/css'));
@@ -149,18 +151,18 @@ gulp.task('pl-copy:styleguide-css', function(){
 });
 
 // Templates copy to dist from public
-gulp.task('dist-copy:templates', function(){
-  return gulp.src(templates, {cwd: resolvePath(paths().public.patterns)})
+gulp.task('dist-copy:templates', function () {
+  return gulp.src(templates, { cwd: resolvePath(paths().public.patterns) })
     .pipe(gulp.dest(resolvePath(dist.templates)));
 });
 
 // Templates copy localized files to dist from public
-gulp.task('dist-copy:localized-templates', function(){
+gulp.task('dist-copy:localized-templates', function () {
   var folders = [];
 
   localized_templates.forEach(function (locale) {
     folders.push(
-      gulp.src(templates, {cwd: resolvePath(paths().public.patterns + locale)})
+      gulp.src(templates, { cwd: resolvePath(paths().public.patterns + locale) })
         .pipe(gulp.dest(resolvePath(dist.templates + locale)))
     );
   });
@@ -193,12 +195,12 @@ gulp.task('pl-assets', gulp.series(
     'pl-copy:img',
     'pl-copy:favicon',
     'pl-copy:font',
-    gulp.series('pl-sass', 'pl-copy:css', function(done){done();}),
+    gulp.series('pl-sass', 'pl-copy:css', function (done) { done(); }),
     'pl-copy:styleguide',
     'pl-copy:styleguide-css',
     'pl-copy:flags'
   ),
-  function(done){
+  function (done) {
     done();
   })
 );
@@ -238,7 +240,7 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build, function(done){
+gulp.task('patternlab:build', gulp.series('pl-assets', build, function (done) {
   done();
 }));
 
@@ -297,7 +299,7 @@ function watch() {
   gulp.watch(patternWatches, { awaitWriteFinish: true }).on('change', gulp.series(build, 'pl-copy:js', reload));
 }
 
-gulp.task('patternlab:connect', gulp.series(function(done) {
+gulp.task('patternlab:connect', gulp.series(function (done) {
   browserSync.init({
     server: {
       baseDir: resolvePath(paths().public.root)
@@ -324,7 +326,7 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
         'text-align: center'
       ]
     }
-  }, function(){
+  }, function () {
     console.log('PATTERN LAB NODE WATCHING FOR CHANGES');
     done();
   });
@@ -351,52 +353,52 @@ gulp.task('scsslint', function () {
 
 // Compound tasks
 gulp.task('lint', gulp.parallel('scsslint'));
-gulp.task('commitdist', gulp.series('dist', function(done) {
+gulp.task('commitdist', gulp.series('dist', function (done) {
   var version = require('./package.json').version;
   var tag;
   var branch;
 
-  git.revParseAsync({args: '--abbrev-ref HEAD'})
-  .then(function(parsedBranch) {
-    if (parsedBranch === 'HEAD') {
-      // We're on Travis and need to check it.
-      branch = process.env.PULL_REQUEST !== 'false' ?
-        process.env.TRAVIS_BRANCH :
-        process.env.TRAVIS_PULL_REQUEST_BRANCH;
-    } else {
-      branch = parsedBranch;
-    }
-    if (branch === 'master') {
-      tag = new Date().toISOString().replace(/:/g, '.') + '-' + version;
-    } else if (branch === 'release') {
-      tag = version;
-    } else {
-      tag = branch + '-' + new Date().toISOString().replace(/:/g, '.') + '-' + version;
-    }
-  }).then(function() {
-    return git.checkoutAsync(tag, {args: '-b'})
-  }).then(function() {
-    gutil.log('Force adding dist to git');
-    var stream = gulp.src('dist/')
-                 .pipe(git.add({args: '-f'}))
-                 .pipe(git.commit('Distribution for ' + version));
-    stream.on('end', function() {
-      gutil.log('Tagging');
-      git.tagAsync(tag, '')
-      .then(function() {
-        gutil.log('Checking out original branch');
-        return git.checkoutAsync(branch);
-      }).then(function() {
-        gutil.log('Pushing tag to remote');
-        return git.pushAsync('origin', [], {args: " --tags"});
-      }).error(function(err) {
-        throw err;
-        gutil.log('Added and commited');
-      }).done(function() {
-        done()
-      })
+  git.revParseAsync({ args: '--abbrev-ref HEAD' })
+    .then(function (parsedBranch) {
+      if (parsedBranch === 'HEAD') {
+        // We're on Travis and need to check it.
+        branch = process.env.PULL_REQUEST !== 'false' ?
+          process.env.TRAVIS_BRANCH :
+          process.env.TRAVIS_PULL_REQUEST_BRANCH;
+      } else {
+        branch = parsedBranch;
+      }
+      if (branch === 'master') {
+        tag = new Date().toISOString().replace(/:/g, '.') + '-' + version;
+      } else if (branch === 'release') {
+        tag = version;
+      } else {
+        tag = branch + '-' + new Date().toISOString().replace(/:/g, '.') + '-' + version;
+      }
+    }).then(function () {
+      return git.checkoutAsync(tag, { args: '-b' })
+    }).then(function () {
+      gutil.log('Force adding dist to git');
+      var stream = gulp.src('dist/')
+        .pipe(git.add({ args: '-f' }))
+        .pipe(git.commit('Distribution for ' + version));
+      stream.on('end', function () {
+        gutil.log('Tagging');
+        git.tagAsync(tag, '')
+          .then(function () {
+            gutil.log('Checking out original branch');
+            return git.checkoutAsync(branch);
+          }).then(function () {
+            gutil.log('Pushing tag to remote');
+            return git.pushAsync('origin', [], { args: " --tags" });
+          }).error(function (err) {
+            throw err;
+            gutil.log('Added and commited');
+          }).done(function () {
+            done()
+          })
+      });
+    }).error(function (err) {
+      throw err;
     });
-  }).error(function(err) {
-    throw err;
-  });
 }));
