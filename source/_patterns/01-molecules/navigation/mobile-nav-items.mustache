@@ -1,0 +1,22 @@
+{{# unifiedNav }}
+    {{^hasChildren}}
+        <li class="c-primary-nav__link">
+            <a href="{{ url }}">
+                {{ label }}
+            </a>
+        </li>
+    {{/hasChildren}}
+    {{#hasChildren}}
+        <li id="toggle_nested" class="c-primary-nav__link">
+            <div class="nav-item">
+                {{ label }}
+                <div id="accordion_container">
+                    <div id="accordion_btn" alt="&or;"></div>
+                </div>
+            </div>
+        </li>
+    {{/hasChildren}}
+    {{#nestedNav}}
+        <li class="c-primary-nav__link nested-nav"><a href="{{ url }}">{{ label }}</a></li>
+    {{/nestedNav}}
+{{/ unifiedNav }}

@@ -1,55 +1,50 @@
 {
-  "bodyClass" : "sp-global",
-  "language_code" : "default",
-  "company" : {
-        "name" : "Superpedestrian",
-        "url" : "http://www.superpedestrian.com"
-    },
+  "bodyClass": "sp-global",
+  "language_code": "default",
+  "company": {
+    "name": "Superpedestrian",
+    "url": "http://www.superpedestrian.com"
+  },
   "btnText": "Button",
-  "primaryNav" : [
-    {
-      "label": "Tech",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/tech"
-    },
-    {
-      "label" : "Bikes",
-      "icon": false,
-      "url" : "http://shop.superpedestrian.com/t/categories/bikes"
-    },
-    {
-      "label": "Try",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/ride"
-    },
-    {
-      "label": "Buy",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/choose"
-    }
-  ],
   "unifiedNav": [
     {
       "label": "Fleet",
       "icon": false,
-      "url": "http://www.superpedestrian.com/fleet"
+      "url": "http://www.superpedestrian.com",
+      "hasChildren": false
     },
     {
-      "label": "Copenhagen Wheel",
+      "label": "Consumer",
       "icon": false,
-      "url": "http://www.superpedestrian.com/copenhagenwheel"
-    }
-  ],
-  "topNav" : [
-    {
-      "label": "Support",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/support"
-    },
-    {
-      "label" : "Fleet",
-      "icon" : false,
-      "url": "http://www.superpedestrian.com/fleet"
+      "url": "http://www.superpedestrian.com/copenhagenwheel",
+      "hasChildren": true,
+      "nestedNav": [
+        {
+          "label": "Tech",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/tech"
+        },
+        {
+          "label": "Bikes",
+          "icon": false,
+          "url": "http://shop.superpedestrian.com/t/categories/bikes"
+        },
+        {
+          "label": "Try",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/ride"
+        },
+        {
+          "label": "Buy",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/choose"
+        },
+        {
+          "label": "Support",
+          "icon": false,
+          "url": "http://www.superpedestrian.com/support"
+        }
+      ]
     }
   ],
   "login": "Login",
@@ -57,130 +52,129 @@
   "profile": "Profile",
   "account": "Account",
   "orders": "Orders",
-  "logout" : "Logout",
-  "footerNav" : {
-    "sections" : [
+  "logout": "Logout",
+  "footerNav": {
+    "sections": [
       {
-        "title" : "Company",
-        "links" : [
+        "title": "Company",
+        "links": [
           {
-            "label" : "About Us",
-            "url" : "https://www.superpedestrian.com/team"
+            "label": "About Us",
+            "url": "https://www.superpedestrian.com/team"
           },
           {
-            "label" : "Press",
-            "url" : "https://www.superpedestrian.com/press"
+            "label": "Press",
+            "url": "https://www.superpedestrian.com/press"
           },
           {
-            "label" : "Careers",
-            "url" : "https://www.superpedestrian.com/jobs"
+            "label": "Careers",
+            "url": "https://www.superpedestrian.com/jobs"
           },
           {
-            "label" : "Team",
-            "url" : "https://www.superpedestrian.com/team"
+            "label": "Team",
+            "url": "https://www.superpedestrian.com/team"
           },
           {
-            "label" : "Legal",
-            "url" : "https://www.superpedestrian.com/legal"
+            "label": "Legal",
+            "url": "https://www.superpedestrian.com/legal"
           },
           {
-            "label" : "Contact Us",
-            "url" : "mailto:info@superpedestrian.com?subject=Copenhagen%20Wheel%20Question%20from%20the%20website"
+            "label": "Contact Us",
+            "url": "mailto:info@superpedestrian.com?subject=Copenhagen%20Wheel%20Question%20from%20the%20website"
           },
           {
-            "label" : "Photo Credits",
-            "url" : "https://www.superpedestrian.com/photo-credits"
-          },
-
+            "label": "Photo Credits",
+            "url": "https://www.superpedestrian.com/photo-credits"
+          }
         ]
       },
       {
-        "title" : "Shop",
-        "links" : [
+        "title": "Shop",
+        "links": [
           {
             "label": "Tech",
-            "url" : "https://www.superpedestrian.com/tech"
+            "url": "https://www.superpedestrian.com/tech"
           },
           {
-            "label" : "Bikes",
-            "url" : "http://shop.superpedestrian.com/t/categories/bikes"
+            "label": "Bikes",
+            "url": "http://shop.superpedestrian.com/t/categories/bikes"
           },
           {
-            "label" : "Reviews",
-            "url" : "http://www.superpedestrian.com/reviews"
+            "label": "Reviews",
+            "url": "http://www.superpedestrian.com/reviews"
           },
           {
-            "label" : "Demo",
-            "url" : "https://www.superpedestrian.com/ride"
+            "label": "Demo",
+            "url": "https://www.superpedestrian.com/ride"
           },
           {
-            "label" : "Parts & Accessories",
-            "url" : "https://shop.superpedestrian.com/t/categories/accessories"
+            "label": "Parts & Accessories",
+            "url": "https://shop.superpedestrian.com/t/categories/accessories"
           },
           {
-            "label" : "Return Policy",
-            "url" : "https://www.superpedestrian.com/legal/return-policy"
+            "label": "Return Policy",
+            "url": "https://www.superpedestrian.com/legal/return-policy"
           },
           {
-            "label" : "Shipping",
-            "url" : "https://www.superpedestrian.com/legal/terms-of-sale"
+            "label": "Shipping",
+            "url": "https://www.superpedestrian.com/legal/terms-of-sale"
           },
           {
-            "label" : "Warranty",
-            "url" : "https://www.superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
+            "label": "Warranty",
+            "url": "https://www.superpedestrian.com/legal/limited-warranty-for-the-copenhagen-wheel"
           },
           {
-            "label" : "Support",
-            "url" : "https://www.superpedestrian.com/support"
-          },
+            "label": "Support",
+            "url": "https://www.superpedestrian.com/support"
+          }
         ]
       },
       {
-        "title" : "Retail",
-        "links" : [
+        "title": "Retail",
+        "links": [
           {
-            "label" : "Become a Retailer",
-            "url" : "https://www.superpedestrian.com/partners/apply"
+            "label": "Become a Retailer",
+            "url": "https://www.superpedestrian.com/partners/apply"
           },
           {
-            "label" : "Find a Store",
-            "url" : "https://www.superpedestrian.com/partners/locator"
+            "label": "Find a Store",
+            "url": "https://www.superpedestrian.com/partners/locator"
           },
           {
-            "label" : "Program",
-            "url" : "https://www.superpedestrian.com/partners"
+            "label": "Program",
+            "url": "https://www.superpedestrian.com/partners"
           },
           {
-            "label" : "Fleet Inquiry",
-            "url" : "https://www.superpedestrian.com/partners/contact"
+            "label": "Fleet Inquiry",
+            "url": "https://www.superpedestrian.com/partners/contact"
           }
         ]
       }
     ],
     "properties": {
-      "terms_conditions" : {
-            "label" : "Terms & Conditions",
-            "url" : "https://www.superpedestrian.com/legal/terms-of-sale"
+      "terms_conditions": {
+        "label": "Terms & Conditions",
+        "url": "https://www.superpedestrian.com/legal/terms-of-sale"
       },
       "privacy_policy": {
-        "label" : "Privacy Policy",
-        "url" : "https://www.superpedestrian.com/legal/privacy-policy"
+        "label": "Privacy Policy",
+        "url": "https://www.superpedestrian.com/legal/privacy-policy"
       }
     }
   },
   "facebook_url": "https://www.facebook.com/copenhagenwheel",
-  "twitter_url" : "https://twitter.com/CPHWheel",
-  "instagram_url" : "https://www.instagram.com/copenhagenwheel",
-  "youtube_url" : "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
+  "twitter_url": "https://twitter.com/CPHWheel",
+  "instagram_url": "https://www.instagram.com/copenhagenwheel",
+  "youtube_url": "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
   "footer_form_hubspot_id": "7b1ff236-1087-4865-9998-538a07fda5c8",
-  "download" : "Download the Copenhagen Wheel companion apps.",
-  "copyright" : "© 2018 Superpedestrian, Inc. All Rights Reserved.",
+  "download": "Download the Copenhagen Wheel companion apps.",
+  "copyright": "© 2018 Superpedestrian, Inc. All Rights Reserved.",
   "cookie-banner-heading": "This site uses cookies.",
   "cookie-banner-text-1": "Without cookies you will not be able to buy a Wheel or log in to your account. We use cookies to manage users, analyze our web traffic, and provide a better experience. We share information about your use of the site with partners that help us understand our web traffic.",
   "accept": "Accept",
   "decline": "Decline",
-  "cartNav" : "https://shop.superpedestrian.com/cart",
-  "countryNav" : "https://account.superpedestrian.com/select-your-country",
+  "cartNav": "https://shop.superpedestrian.com/cart",
+  "countryNav": "https://account.superpedestrian.com/select-your-country",
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
