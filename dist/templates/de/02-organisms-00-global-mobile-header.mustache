@@ -1,0 +1,28 @@
+<nav class="navBar visible-xs">
+  <nav>
+    <div class="logo">
+      {{> molecules-wordmark-link }}
+    </div><!-- Logo -->
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" id="label-for-toggle" class="label-toggle">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+    <ul>
+      {{> molecules-mobile-nav-items }}
+      <li class="c-primary-nav__link nested-nav hidden-logged-in">
+        <a class="sp-login-url" href="#">
+          Login
+        </a>
+      </li>
+      <li class="c-primary-nav__link nested-nav">
+        {{> molecules-cart-nav }}
+      </li>
+      {{> molecules-mobile-account-nav}}
+      {{> molecules-country-nav }}
+    </ul>
+  </nav>
+</nav>
