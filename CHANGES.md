@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.21
+- Add important css marker to breakpoint classes
+
 ## 0.9.20
 - Fix breakpoints
 
