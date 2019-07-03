@@ -67,7 +67,7 @@
  * Hide on small screens
  */
 .hide-small {
-  @media all and (max-width: $bp-med) {
+  @media all and (max-width: $bp-med-2) {
     display: none;
   }
 }
@@ -76,7 +76,7 @@
  * Hide on medium screens
  */
 .hide-med {
-  @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+  @media all and (min-width: 769px) and (max-width: $bp-large) {
     display: none;
   }
 }
