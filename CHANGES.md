@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.20
+- Fix breakpoints
+
 ## 0.9.19
 - Refactor header into multiple patterns
 
