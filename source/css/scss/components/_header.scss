@@ -379,7 +379,7 @@ nav {
 
     #menu-toggle:checked ~ ul {
       opacity: 1;
-      height: calc(100vh - 77px);
+      height: calc(100vh - 75px);
       visibility: visible;
       .c-primary-nav__link {
         visibility: visible;

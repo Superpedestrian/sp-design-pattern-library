@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.22
+- Fix Mobile Nav Dropdown
+
 ## 0.9.21
 - Add important css marker to breakpoint classes
 
