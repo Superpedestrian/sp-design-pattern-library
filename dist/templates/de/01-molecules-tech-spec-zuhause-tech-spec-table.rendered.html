@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <title>Nullizzle shizznit velizzle, hizzle, suscipit own yo&#39;, gravida vizzle, arcu.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://use.fontawesome.com/a9bf041a16.js"></script>
+  <link rel="stylesheet" href="../../css/style.css?1562598112027" media="all" />
+  <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1562598112027" media="all" />
+
+  <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+
+  <!-- End Pattern Lab -->
+
+</head>
+
+<body class="sp-global">
+  <div class="container-fluid text-section techspectable">
+    <div class="col-sm-12 col-left">
+      <h1> Spezifikationen </h1>
+    </div>
+    <div class="col-sm-6 col-left">
+      <table class="tech-specs">
+        <tbody>
+          <tr>
+            <td class="spec-label"> Motor</td>
+            <td class="grey-text"> 250 W</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Höchstgeschwidigkeit</td>
+            <td class="grey-text"> 25 km/h</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Reichweite</td>
+            <td class="grey-text"> Bis zu 50 km</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Batterie</td>
+            <td class="grey-text"> 48 V - 279 Wh Li-ion</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Batterielebensdauer</td>
+            <td class="grey-text"> 1000 Ladezyklen</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Ladezeit</td>
+            <td class="grey-text"> 2 Stunden (80%) 4 Stunden (100%)</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Gewicht</td>
+            <td class="grey-text"> 7.6 kg</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Fahrradantrieb</td>
+            <td class="grey-text"> Single-speed, 7/8/9/10-fach, SRAM/Shimano-kompatibel</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Kosten</td>
+            <td class="grey-text"> 1749 € inkl. MWST</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6 col-right col-stacked">
+      <table class="tech-specs">
+        <tbody>
+          <tr>
+            <td class="spec-label"> Fahrradaussetzerabstand</td>
+            <td class="grey-text"> 120 mm (single-speed), 135 mm (alle Fahrradantrieb)</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Kabellose Verbindung</td>
+            <td class="grey-text"> Bluetooth Low Energy (4.0)</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Smartphone</td>
+            <td class="grey-text"> iOS, Android (Erforderlich)</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Reifen</td>
+            <td class="grey-text"> 25mm, 35mm, 50mm</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Bremsenart</td>
+            <td class="grey-text"> Felgenbremsen und Nutzbremsung</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Felgegröße</td>
+            <td class="grey-text"> 559mm (26-Zoll), 622mm (700c/29er)</td>
+          </tr>
+          <tr>
+            <td class="spec-label"> Rückgabe</td>
+            <td class="grey-text"> 30 Tagen</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+    {
+      "cssEnabled": false,
+      "patternLineageExists": false,
+      "patternLineages": [],
+      "lineage": [],
+      "patternLineageRExists": false,
+      "patternLineagesR": [],
+      "lineageR": [],
+      "patternLineageEExists": false,
+      "patternDesc": "<p>Tech Spec Table for Zuhause</p>\n",
+      "patternBreadcrumb": {
+        "patternType": "molecules",
+        "patternSubtype": "tech-spec"
+      },
+      "patternExtension": "mustache",
+      "patternName": "Zuhause Tech Spec Table",
+      "patternPartial": "molecules-zuhause-tech-spec-table",
+      "patternState": "",
+      "patternEngineName": "mustache",
+      "extraOutput": {}
+    }
+  </script>
+
+  <script>
+    /*!
+     * scriptLoader - v0.1
+     *
+     * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+     * Licensed under the MIT license
+     *
+     */
+
+    var scriptLoader = {
+
+      run: function(js, cb, target) {
+        var s = document.getElementById(target + '-' + cb);
+        for (var i = 0; i < js.length; i++) {
+          var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+          var c = document.createElement('script');
+          c.src = '../../' + src + '?' + cb;
+          if (typeof js[i] != 'string') {
+            if (js[i].dep !== undefined) {
+              c.onload = function(dep, cb, target) {
+                return function() {
+                  scriptLoader.run(dep, cb, target);
+                }
+              }(js[i].dep, cb, target);
+            }
+          }
+          s.parentNode.insertBefore(c, s);
+        }
+      }
+
+    }
+  </script>
+
+  <script id="pl-js-polyfill-insert-1562598112027">
+    (function() {
+      if (self != top) {
+        var cb = '1562598112027';
+        var js = [];
+        if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
+          js.push('styleguide/bower_components/classList.min.js');
+        }
+        scriptLoader.run(js, cb, 'pl-js-polyfill-insert');
+      }
+    })();
+  </script>
+
+  <script id="pl-js-insert-1562598112027">
+    (function() {
+      if (self != top) {
+        var cb = '1562598112027';
+        var js = [{
+          'src': 'styleguide/bower_components/jwerty.min.js',
+          'dep': ['styleguide/js/patternlab-pattern.min.js']
+        }];
+        scriptLoader.run(js, cb, 'pl-js-insert');
+      }
+    })();
+  </script>
+
+
+  <script src="/js/retina.min.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/cookie-banner.js"></script>
+</body>
+
+</html>
