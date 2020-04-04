@@ -9,7 +9,7 @@
     "gulp-git": "^2.9.0",
     "gulp-sass": "^4.0.2",
     "gulp-util": "^3.0.8",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "patternlab-node": "https://github.com/Superpedestrian/patternlab-node.git#superpedestrian-release",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0"
