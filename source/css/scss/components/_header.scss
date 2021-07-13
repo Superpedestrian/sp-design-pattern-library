@@ -160,7 +160,7 @@ nav {
     vertical-align: middle;
   }
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: 769px) {
     .arrow-menu {
       width: 234px;
       padding:  16px;
@@ -379,7 +379,7 @@ nav {
 
     #menu-toggle:checked ~ ul {
       opacity: 1;
-      height: calc(100vh - 77px);
+      height: calc(100vh - 75px);
       visibility: visible;
       .c-primary-nav__link {
         visibility: visible;
