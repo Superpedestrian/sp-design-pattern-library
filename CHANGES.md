@@ -1,5 +1,8 @@
 # Changes
 
+## 0.9.23
+- Change logo color
+
 ## 0.9.22
 - Fix Mobile Nav Dropdown
 
