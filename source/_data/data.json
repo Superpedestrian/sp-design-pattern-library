@@ -12,39 +12,6 @@
       "icon": false,
       "url": "http://www.superpedestrian.com",
       "hasChildren": false
-    },
-    {
-      "label": "Consumer",
-      "icon": false,
-      "url": "http://www.superpedestrian.com/copenhagenwheel",
-      "hasChildren": true,
-      "nestedNav": [
-        {
-          "label": "Tech",
-          "icon": false,
-          "url": "http://www.superpedestrian.com/tech"
-        },
-        {
-          "label": "Bikes",
-          "icon": false,
-          "url": "http://shop.superpedestrian.com/t/categories/bikes"
-        },
-        {
-          "label": "Try",
-          "icon": false,
-          "url": "http://www.superpedestrian.com/ride"
-        },
-        {
-          "label": "Buy",
-          "icon": false,
-          "url": "http://www.superpedestrian.com/choose"
-        },
-        {
-          "label": "Support",
-          "icon": false,
-          "url": "http://www.superpedestrian.com/support"
-        }
-      ]
     }
   ],
   "login": "Login",
@@ -168,7 +135,7 @@
   "youtube_url": "https://www.youtube.com/channel/UCixGpLlbHeXodjBY1nOTm-g",
   "footer_form_hubspot_id": "7b1ff236-1087-4865-9998-538a07fda5c8",
   "download": "Download the Copenhagen Wheel companion apps.",
-  "copyright": "© 2018 Superpedestrian, Inc. All Rights Reserved.",
+  "copyright": "© 2021 Superpedestrian, Inc. All Rights Reserved.",
   "cookie-banner-heading": "This site uses cookies.",
   "cookie-banner-text-1": "Without cookies you will not be able to buy a Wheel or log in to your account. We use cookies to manage users, analyze our web traffic, and provide a better experience. We share information about your use of the site with partners that help us understand our web traffic.",
   "accept": "Accept",

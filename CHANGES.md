@@ -1,5 +1,9 @@
 # Changes
 
+## 0.9.24
+- Remove consumer
+- update footer year
+
 ## 0.9.23
 - Change logo color
 
