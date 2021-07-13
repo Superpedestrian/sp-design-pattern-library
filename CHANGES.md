@@ -1,8 +1,9 @@
 # Changes
 
 ## 0.9.24
-- Remove consumer
+- Remove consumer link from header
 - update footer year
+- remove press link from footer
 
 ## 0.9.23
 - Change logo color
