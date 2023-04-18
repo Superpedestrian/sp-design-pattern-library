@@ -4,7 +4,7 @@
   "version": "0.9.22",
   "dependencies": {
     "bluebird": "^3.5.5",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.1",
     "gulp": "^4.0.2",
     "gulp-git": "^2.9.0",
     "gulp-sass": "^4.0.2",
