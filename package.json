@@ -7,7 +7,7 @@
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-git": "^2.9.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-util": "^3.0.8",
     "minimist": "^1.2.0",
     "patternlab-node": "https://github.com/Superpedestrian/patternlab-node.git#superpedestrian-release",
